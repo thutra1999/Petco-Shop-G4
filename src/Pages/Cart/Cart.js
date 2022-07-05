@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { IncreaseQuantity, DecreaseQuantity, DeleteCart } from '../actions/index';
+import { IncreaseQuantity, DecreaseQuantity, DeleteCart } from '../../actions/index';
 import './Cart.css';
 import {Link} from 'react-router-dom';
 

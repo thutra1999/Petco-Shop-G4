@@ -1,16 +1,14 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home";
-import DogList from "./Pages/DogList";
-import Shop from "./Pages/Shop";
-import Contact from "./Pages/Contact";
+import Home from "./Pages/Home/Home";
+import DogList from "./Pages/DogList/DogList";
+import Shop from "./Pages/Shop/Shop";
+import Contact from "./Pages/Contact/Contact";
 import NoPage from "./Pages/NoPage";
-import Admin from "./Pages/Admin";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
-import Cart from "./Pages/Cart";
+import Cart from "./Pages/Cart/Cart";
 import Intro from "./Pages/Intro";
-
 
 function App() {
   return (
@@ -24,16 +22,14 @@ function App() {
           <Route path="shop/:id" element={<Shop />} />
           <Route path="shop" element={<Shop />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="admin" element={<Admin />} />
           <Route path="cart" element={<Cart />} />
           <Route path="*" element={<NoPage />} />
           <Route path="intro" element={<Intro />} />
         </Route>
-        
       </Routes>
       <Footer />
+      
     </BrowserRouter>
-    
     </React.Fragment>
   );
 }

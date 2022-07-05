@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ProductItem from "../Components/ProductItem/ProductItem";
+import ProductItem from "../../Components/ProductItem/ProductItem";
 import "./Shop.css";
 import { Link } from "react-router-dom";
 

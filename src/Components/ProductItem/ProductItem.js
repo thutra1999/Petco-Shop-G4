@@ -79,6 +79,8 @@ function ProductItem(props) {
 
   return (
     <>
+     
+      <div class="row">{list_product}</div>
       <ReactPaginate
         previousLabel="Previous"
         nextLabel="Next"
@@ -99,7 +101,7 @@ function ProductItem(props) {
         activeClassName="active"
         forcePage={page}
       />
-      <div class="row">{list_product}</div>
+      
     </>
   );
 }

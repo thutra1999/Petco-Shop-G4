@@ -1,7 +1,7 @@
 import './Home.css';
-import img01 from "../img/doghome01.png"
-import img02 from "../img/doghome02.png"
-import ProductItem from "../Components/ProductItem/ProductItem";
+import img01 from "../../img/doghome01.png"
+import img02 from "../../img/doghome02.png"
+import ProductItem from "../../Components/ProductItem/ProductItem";
 
 import React, { useEffect, useState } from "react";
 
