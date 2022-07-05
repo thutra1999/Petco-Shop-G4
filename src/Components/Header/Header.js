@@ -176,6 +176,9 @@ const Header = (props) => {
                 <Link to="/contact" class="nav-link">
                   Liên hệ
                 </Link>
+                <Link to="/intro" class="nav-link">
+                  Introdution
+                </Link>
               </div>
               <div className="header_item row ms-auto">
                 <div className="input-search col">
