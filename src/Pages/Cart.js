@@ -136,7 +136,7 @@ const Cart = (props) => {
         <div className='col-lg-6 col-md-6 col-sm-12'>
           <div class="form-floating mb-3">
             <input type="name" class="form-control" id="" placeholder="Name..."></input>
-            <label for="floatingInput">Họ Tên</label>
+            <label for="floatingInput">Họ Và Tên</label>
           </div>
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="" placeholder="Adress..."></input>
