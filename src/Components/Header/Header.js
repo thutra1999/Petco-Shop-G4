@@ -27,23 +27,23 @@ const Header = (props) => {
   const loginHandler = () => {
     setFormLogin(
       <>
-        <div class="title h1 text-center">Login</div>
+        <div class="title h1 text-center">Đăng nhập</div>
         <div class="row item_header-form">
-          <div class="title h3">Username</div>
+          <div class="title h3">Tên đăng nhập</div>
           <input type="text" placeholder="Enter your username" />
-          <div class="title h3">Password</div>
+          <div class="title h3">Mật khẩu</div>
           <input type="password" placeholder="Enter your password" />
           <button className="btn btn-danger">Login</button>
         </div>
 
         <div className="row">
           <span>
-            Forgot password? <u onClick={resetPasswordHandler}>Click Here</u>
+            Quên mật khẩu ? <u onClick={resetPasswordHandler}>Bấm vào đây</u>
           </span>
         </div>
         <div className="row">
           <span>
-            Don't have an account <u onClick={signUpHandler}>Sign up</u>
+            Chưa có tài khoản ? <u onClick={signUpHandler}>Đăng ký tài khoản</u>
           </span>
         </div>
       </>
@@ -53,24 +53,24 @@ const Header = (props) => {
   const signUpHandler = () => {
     setFormLogin(
       <>
-        <div class="title h1 text-center">Login</div>
+        <div class="title h1 text-center">Đăng nhập</div>
         <div class="row item_header-form">
-          <div class="title h3">Username</div>
+          <div class="title h3">Tên đăng nhập</div>
           <input type="text" placeholder="Enter your username" />
-          <div class="title h3">Password</div>
+          <div class="title h3">Mật khẩu</div>
           <input type="password" placeholder="Enter your password" />
-          <div class="title h3">Repeat Password</div>
+          <div class="title h3">Xác nhận mật khẩu</div>
           <input type="password" placeholder="Repeat your password" />
-          <button className="btn btn-danger">Create</button>
+          <button className="btn btn-danger">Tạo tài khoản</button>
         </div>
         <div className="row">
           <span>
-            Forgot password? <u onClick={resetPasswordHandler}>Click Here</u>
+            Quên mật khẩu ? <u onClick={resetPasswordHandler}>Bấm vào đây</u>
           </span>
         </div>
         <div className="row">
           <span>
-            Already have an account <u onClick={loginHandler}>Login</u>
+            Đã có tài khoản <u onClick={loginHandler}>Đăng nhập</u>
           </span>
         </div>
       </>
@@ -80,21 +80,21 @@ const Header = (props) => {
   const resetPasswordHandler = () => {
     setFormLogin(
       <>
-        <div class="title h1 text-center">Sign Up</div>
+        <div class="title h1 text-center">Đăng ký</div>
         <div class="row item_header-form">
-          <div class="title h3">Username</div>
+          <div class="title h3">Tên đăng nhập</div>
           <input type="text" placeholder="Enter your username" />
           <button className="btn btn-danger">Reset Password</button>
         </div>
 
         <div className="row">
           <span>
-            Already have an account <u onClick={loginHandler}>Login</u>
+            Đã có tài khoản <u onClick={loginHandler}>Đăng nhập</u>
           </span>
         </div>
         <div className="row">
           <span>
-            Don't have an account <u onClick={signUpHandler}>Sign up</u>
+            Chưa có tài khoản <u onClick={signUpHandler}>Đăng ký</u>
           </span>
         </div>
       </>
@@ -165,16 +165,16 @@ const Header = (props) => {
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav">
                 <Link to="/" class="nav-link">
-                  Home
+                  Trang chủ
                 </Link>
                 <Link to="/dogList" class="nav-link">
-                  Dog List
+                  Shop chó yêu
                 </Link>
                 <Link to="/shop" class="nav-link">
-                  Shop
+                  Sản phẩm
                 </Link>
                 <Link to="/contact" class="nav-link">
-                  Contacts
+                  Liên hệ
                 </Link>
               </div>
               <div className="header_item row ms-auto">
