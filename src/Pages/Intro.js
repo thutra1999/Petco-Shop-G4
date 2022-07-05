@@ -10,8 +10,8 @@ const Intro = () => {
       <p><a href="#">Link</a></p> --> */}
     </div>
     <div class="col-sm-8 text-left"> 
-      <div class="text-center">
-      <h4>GIỚI THIỆU</h4>
+      <div class="text-left">
+      <h5>GIỚI THIỆU</h5>
       <p>Cửa hàng Pet Shop</p>
       </div>
      
@@ -38,7 +38,7 @@ const Intro = () => {
 						<span >
             <span><b>Email:</b></span>
 						</span>
-						<a href="mailto:nguyenquoctrungk69@gmail.com"> nguyenquoctrungk69@gmail.com</a>
+						<a href="mailto:petcolu@gmail.com"> petcolu@gmail.com</a>
 					</div>
     </div>
     <div class="col-sm-2 sidenav">
