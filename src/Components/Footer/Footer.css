@@ -64,6 +64,10 @@
     display: flex;
 }
 
+.footer .contact  {
+    margin: auto 10px;
+}
+
 .footer .contact .phone-number{
     font-family: "Roboto","HelveticaNeue","Helvetica Neue",sans-serif;
     font-size: 18px;
