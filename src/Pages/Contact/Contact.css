@@ -1,0 +1,24 @@
+.contact .input-group-text:hover{
+    color: red;
+}
+.contact .col-md-6 .content{
+    text-align: left;
+}
+.contact .col-md-6 .content a:link{
+    text-decoration: none;
+}
+.contact .col-left {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.contact .btn-danger{
+    width: 10rem;
+}
+.contact iframe{
+    width: 600px;
+     height: 450px;
+     border: 0;
+}
+.contact{
+    margin-top: 100px;
+}
