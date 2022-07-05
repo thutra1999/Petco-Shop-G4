@@ -1,17 +1,17 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import { IncreaseQuantity, DecreaseQuantity, DeleteCart } from '../actions/index';
 import './Cart.css';
+import {Link} from 'react-router-dom';
 
 const Cart = (props) => {
-
+  let navigate = useNavigate();
   const [cartItems, setCartItems] = useState([]);
   useEffect(() => {
-    console.log('product list useEffect!!');
     setCartItems(props.store_state.Carts);
   }, [props.store_state]);
 
@@ -23,9 +23,11 @@ const Cart = (props) => {
       } else {
         sum += item.price * item.quantity;
       }
+
     }
     return sum;
   };
+
   var carts_jsx = '';
   if (cartItems.length > 0) {
     carts_jsx = cartItems.map((item, key) => (
@@ -56,7 +58,7 @@ const Cart = (props) => {
         </td>
         <td class="text-right">{item.price} VNĐ</td>
         <td class="text-right">{(item.discount > 0) ? item.discount : 0} VNĐ</td>
-        <td class="text-right">{item.price * item.quantity} VNĐ</td>
+        <td class="text-right">{(item.discount > 0) ? item.price * item.quantity - item.discount * item.quantity : item.price * item.quantity} VNĐ</td>
         <td>
           <div class='row'>
             <button class="btn btn-sm btn-danger"
@@ -155,9 +157,10 @@ const Cart = (props) => {
             <div class="checkout__order__subtotal">Thành tiền <span>{price_bill} VNĐ</span></div>
             <div class="text-center">
               <Link to="/shop">
-              <button class="btn btn-primary m-1">
-                Tiếp tục mua hàng
-              </button></Link>
+                <button class="btn btn-primary m-1">
+                  Tiếp tục mua hàng
+                </button>
+              </Link>
               <button class="btn btn-danger m-1" type="button">
                 Thanh toán
               </button>
