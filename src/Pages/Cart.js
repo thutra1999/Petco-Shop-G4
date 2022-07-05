@@ -6,22 +6,28 @@ import { useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { IncreaseQuantity, DecreaseQuantity, DeleteCart } from '../actions/index';
 import './Cart.css';
+import {Link} from 'react-router-dom';
 
 const Cart = (props) => {
   let navigate = useNavigate();
   const [cartItems, setCartItems] = useState([]);
   useEffect(() => {
-    console.log('product list useEffect!!');
     setCartItems(props.store_state.Carts);
   }, [props.store_state]);
 
   const getTotal = () => {
     let sum = 0;
     for (let item of cartItems) {
-      sum += item.price * item.quantity;
+      if (item.discount > 0) {
+        sum += item.price * item.quantity - item.discount * item.quantity;
+      } else {
+        sum += item.price * item.quantity;
+      }
+
     }
     return sum;
   };
+
   var carts_jsx = '';
   if (cartItems.length > 0) {
     carts_jsx = cartItems.map((item, key) => (
@@ -51,7 +57,8 @@ const Cart = (props) => {
           <div class='row'>{item.name}</div>
         </td>
         <td class="text-right">{item.price} VNĐ</td>
-        <td class="text-right">{item.price * item.quantity} VNĐ</td>
+        <td class="text-right">{(item.discount > 0) ? item.discount : 0} VNĐ</td>
+        <td class="text-right">{(item.discount > 0) ? item.price * item.quantity - item.discount * item.quantity : item.price * item.quantity} VNĐ</td>
         <td>
           <div class='row'>
             <button class="btn btn-sm btn-danger"
@@ -67,7 +74,7 @@ const Cart = (props) => {
   var product_name_bill = '';
   if (cartItems.length > 0) {
     product_name_bill = cartItems.map((item) => (
-      <li>{item.name}<span>{item.price} VNĐ</span></li>
+      <li>{item.name}<span>{(item.discount > 0) ? (item.price * item.quantity - item.discount * item.quantity) : (item.price * item.quantity)} VNĐ</span></li>
     ))
   }
 
@@ -75,7 +82,11 @@ const Cart = (props) => {
   var price_bill = 0;
   if (cartItems.length > 0) {
     cartItems.map((item) => {
-      price_bill += item.price * item.quantity;
+      if (item.discount > 0) {
+        price_bill += item.price * item.quantity - item.discount * item.quantity;
+      } else {
+        price_bill += item.price * item.quantity;
+      }
       return price_bill;
     })
   }
@@ -92,6 +103,7 @@ const Cart = (props) => {
                 <th>Số lượng</th>
                 <th>Tên sản phẩm</th>
                 <th class="text-right">Giá sản phẩm</th>
+                <th class="text-right">Giảm giá</th>
                 <th class="text-right">Thành tiền</th>
               </tr>
             </thead>
@@ -110,7 +122,7 @@ const Cart = (props) => {
             <tfoot>
               <tr>
                 <td></td>
-                <td colspan="3" class="text-right">
+                <td colspan="4" class="text-right">
                   Tổng tiền:
                 </td>
                 <td class="text-right">{getTotal()} VND</td>
@@ -124,7 +136,7 @@ const Cart = (props) => {
         <div className='col-lg-6 col-md-6 col-sm-12'>
           <div class="form-floating mb-3">
             <input type="name" class="form-control" id="" placeholder="Name..."></input>
-            <label for="floatingInput">Họ Tên</label>
+            <label for="floatingInput">Họ Và Tên</label>
           </div>
           <div class="form-floating mb-3">
             <input type="text" class="form-control" id="" placeholder="Adress..."></input>
@@ -144,9 +156,11 @@ const Cart = (props) => {
             </ul>
             <div class="checkout__order__subtotal">Thành tiền <span>{price_bill} VNĐ</span></div>
             <div class="text-center">
-              <button class="btn btn-primary m-1" onClick={() => navigate(-1)}>
-                Tiếp tục mua hàng
-              </button>
+              <Link to="/shop">
+                <button class="btn btn-primary m-1">
+                  Tiếp tục mua hàng
+                </button>
+              </Link>
               <button class="btn btn-danger m-1" type="button">
                 Thanh toán
               </button>

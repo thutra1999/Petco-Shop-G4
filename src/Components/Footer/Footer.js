@@ -68,7 +68,7 @@ function Footer() {
                                 </div>
                                 <div class="time_work">
                                     <div class="list-menu">
-                                        <div class="list-menu-item">
+                                        <div class="list-menu-item-hotline">
                                             <img src="http://bizweb.dktcdn.net/100/375/956/themes/750643/assets/icon-telephone.png?1654417427508"
                                                 alt=""></img>
                                             <div class="contact">
@@ -106,7 +106,7 @@ function Footer() {
                                 <div class="widget-ft">
                                     <h4 class="title-menu">Hệ thống cửa hàng & liên kết</h4>
                                     <div class="item">
-                                        <h4 class="item-title">Petco Shop</h4>
+                                        <h4 class="item-title">Puppy Pet Shop</h4>
                                         <div class="item-child">242 Kim Mã, Ba Đình</div>
                                         <div class="item-child">Hotline: 0971111242</div>
                                     </div>
@@ -130,7 +130,7 @@ function Footer() {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 a-center">
                         <span class="text">
                             © Bản quyền thuộc về
-                            <b>Petco Shop</b>.
+                            <b>Puppy Pet Shop</b>.
                             GPDKKD số 01A8017619 do UBND quận Ba Đình cấp ngày 19/01/2015.
                         </span>
                     </div>
