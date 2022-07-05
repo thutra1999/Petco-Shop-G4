@@ -51,8 +51,8 @@ const Contact = () => {
                 <strong>
                   Hotline:
                 </strong>
-                <a href="tel:085.949.8558">
-                   085.949.8558
+                <a href="tel:0869.125.610">
+                   0869.125.610
                 </a>
               </p>
               <p>
@@ -60,7 +60,7 @@ const Contact = () => {
                   Email:
                 </strong>
                 <a href="mailto:contact.trianh@gmail.com">
-                   contact.trianh@gmail.com
+                   petcolu@gmail.com
                 </a>
               </p>
             </div>
