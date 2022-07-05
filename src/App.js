@@ -9,6 +9,7 @@ import Admin from "./Pages/Admin";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import Cart from "./Pages/Cart";
+import Intro from "./Pages/Intro";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="admin" element={<Admin />} />
           <Route path="cart" element={<Cart />} />
           <Route path="*" element={<NoPage />} />
+          <Route path="intro" element={<Intro />} />
         </Route>
         
       </Routes>
