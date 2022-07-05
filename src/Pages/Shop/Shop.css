@@ -1,0 +1,121 @@
+.shop_section .product.spad {
+    margin-top: 50px;
+}
+ 
+.shop_section .sidebar__item {
+	margin-bottom: 35px;
+}
+
+.shop_section .sidebar__item h4 {
+	color: #1c1c1c;
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+
+.shop_section .sidebar__item ul {
+    padding: 0;
+    margin: 0;
+	list-style: none;
+}
+
+.shop_section .sidebar__item ul li a {
+	font-size: 16px;
+    text-decoration: none;
+	color: #1c1c1c;
+	line-height: 39px;
+	display: block;
+}
+
+.shop_section .sidebar__item ul li a:hover {
+    color: #bb3107;
+}
+
+
+.shop_section .filter-group ul {
+    padding: 0;
+    margin: 0;
+}
+
+.shop_section .filter-price-item .form-check {
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.shop_section .sidebar__item.sidebar__item__color--option {
+	overflow: hidden;
+}
+
+.shop_section .sidebar__item__color {
+	float: left;
+	width: 40%;
+}
+
+.shop_section .sidebar__item__color.sidebar__item__color--white label:after {
+	border: 2px solid #333333;
+	background: transparent;
+}
+
+.shop_section .sidebar__item__color.sidebar__item__color--gray label:after {
+	background: #E9A625;
+}
+
+.shop_section .sidebar__item__color.sidebar__item__color--red label:after {
+	background: #D62D2D;
+}
+
+.shop_section .sidebar__item__color.sidebar__item__color--black label:after {
+	background: #252525;
+}
+
+.shop_section .sidebar__item__color.sidebar__item__color--blue label:after {
+	background: #249BC8;
+}
+
+.shop_section .sidebar__item__color.sidebar__item__color--green label:after {
+	background: #3CC032;
+}
+
+.shop_section .sidebar__item__color label {
+	font-size: 16px;
+	color: #333333;
+	position: relative;
+	padding-left: 32px;
+	cursor: pointer;
+}
+
+.shop_section .sidebar__item__color label input {
+	position: absolute;
+	visibility: hidden;
+}
+
+.shop_section .sidebar__item__color label:after {
+	position: absolute;
+	left: 0;
+	top: 5px;
+	height: 14px;
+	width: 14px;
+	background: #222;
+	content: "";
+	border-radius: 50%;
+}
+
+.shop_section .sidebar__item__size {
+	display: inline-block;
+	margin-right: 16px;
+	margin-bottom: 10px;
+}
+
+.shop_section .sidebar__item__size label {
+	font-size: 12px;
+	color: #6f6f6f;
+	display: inline-block;
+	padding: 8px 25px 6px;
+	background: #f5f5f5;
+	cursor: pointer;
+	margin-bottom: 0;
+}
+
+.shop_section .sidebar__item__size label input {
+	position: absolute;
+	visibility: hidden;
+}
