@@ -31,21 +31,14 @@ function todoProduct(state = initProduct, action) {
           id: action.payload.id,
           quantity: 1,
           name: action.payload.name,
-          picture: action.payload.picture,
+          picture: action.payload.picture_1,
           price: action.payload.price,
           discount: action.payload.discount*action.payload.price,
         };
         state.Carts.push(cart);
       } else {
         let check = false;
-        /*
-        state.Carts.map((item, key) => {
-          if (item.id == action.payload.id) {
-            state.Carts[key].quantity++;
-            check = true;
-          }
-        });
-        */
+        
         for (var i = 0; i < state.Carts.length; i++) {
           if (state.Carts[i].id == action.payload.id) {
             state.Carts[i].quantity++;
@@ -58,7 +51,7 @@ function todoProduct(state = initProduct, action) {
             id: action.payload.id,
             quantity: 1,
             name: action.payload.name,
-            picture: action.payload.picture,
+            picture: action.payload.picture_1,
             price: action.payload.price,
             discount: action.payload.discount*action.payload.price,
           };
