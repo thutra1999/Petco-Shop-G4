@@ -1,15 +1,13 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-
 import { connect } from 'react-redux';
 import { IncreaseQuantity, DecreaseQuantity, DeleteCart } from '../actions/index';
 import './Cart.css';
 import {Link} from 'react-router-dom';
 
 const Cart = (props) => {
-  let navigate = useNavigate();
+ 
   const [cartItems, setCartItems] = useState([]);
   useEffect(() => {
     setCartItems(props.store_state.Carts);
@@ -57,7 +55,8 @@ const Cart = (props) => {
           <div class='row'>{item.name}</div>
         </td>
         <td class="text-right">{item.price} VNĐ</td>
-        <td class="text-right">{(item.discount > 0) ? item.discount : 0} VNĐ</td>
+        <td class="text-right">{item.price*item.quantity} VNĐ</td>
+        <td class="text-right">{item.discount*item.quantity} VNĐ</td>
         <td class="text-right">{(item.discount > 0) ? item.price * item.quantity - item.discount * item.quantity : item.price * item.quantity} VNĐ</td>
         <td>
           <div class='row'>
@@ -103,6 +102,7 @@ const Cart = (props) => {
                 <th>Số lượng</th>
                 <th>Tên sản phẩm</th>
                 <th class="text-right">Giá sản phẩm</th>
+                <th class="text-right">Tổng</th>
                 <th class="text-right">Giảm giá</th>
                 <th class="text-right">Thành tiền</th>
               </tr>
