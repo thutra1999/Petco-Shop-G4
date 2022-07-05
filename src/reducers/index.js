@@ -33,6 +33,7 @@ function todoProduct(state = initProduct, action) {
           name: action.payload.name,
           picture: action.payload.picture,
           price: action.payload.price,
+          discount: action.payload.discount*action.payload.price,
         };
         state.Carts.push(cart);
       } else {
@@ -59,6 +60,7 @@ function todoProduct(state = initProduct, action) {
             name: action.payload.name,
             picture: action.payload.picture,
             price: action.payload.price,
+            discount: action.payload.discount*action.payload.price,
           };
           state.Carts.push(_cart);
         }
