@@ -7,8 +7,9 @@
 #myCarosel .carousel-caption {
     text-align: left;
     position: absolute;
+	left: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-70%);
 }
 
 #myCarosel .carousel-caption h1 {

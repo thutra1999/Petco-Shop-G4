@@ -15,10 +15,15 @@
     width: 10rem;
 }
 .contact iframe{
-    width: 600px;
+    width: 100%;
      height: 450px;
      border: 0;
 }
 .contact{
     margin-top: 100px;
 }
+
+.my_iframe, iframe{
+    width: 100%;
+}
+

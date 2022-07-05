@@ -6,7 +6,7 @@ const Contact = () => {
     <>
       <div class="container contact">
         <div class="row">
-          <div class="col-md-6 col-left">
+          <div class="col-md-6 col-sm-12 col-left">
             <p class="h3 text-center">GỬI PHẢN HỒI</p>
 
             <form action="#" method="post">
@@ -38,7 +38,7 @@ const Contact = () => {
 
 
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 col-sm-12 col-right">
             <p class="h3 text-center">THÔNG TIN LIÊN HỆ</p>
             <div class="content">
               <p>
@@ -64,7 +64,7 @@ const Contact = () => {
                 </a>
               </p>
             </div>
-            <div>
+            <div className="my_iframe">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.3395744560726!2d105.82218501540221!3d21.019094593483043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab797c957f3d%3A0x80675d0ba06ea09f!2zMzYgUC4gSG_DoG5nIEPhuqd1LCBDaOG7oyBE4burYSwgxJDhu5FuZyDEkGEsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1655288712541!5m2!1svi!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
