@@ -1,14 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 
+import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import { IncreaseQuantity, DecreaseQuantity, DeleteCart } from '../actions/index';
 import './Cart.css';
 
 const Cart = (props) => {
-  let navigate = useNavigate();
+
   const [cartItems, setCartItems] = useState([]);
   useEffect(() => {
     console.log('product list useEffect!!');
@@ -144,9 +144,10 @@ const Cart = (props) => {
             </ul>
             <div class="checkout__order__subtotal">Thành tiền <span>{price_bill} VNĐ</span></div>
             <div class="text-center">
-              <button class="btn btn-primary m-1" onClick={() => navigate(-1)}>
+              <Link to="/shop">
+              <button class="btn btn-primary m-1">
                 Tiếp tục mua hàng
-              </button>
+              </button></Link>
               <button class="btn btn-danger m-1" type="button">
                 Thanh toán
               </button>
