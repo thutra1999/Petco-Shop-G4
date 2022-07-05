@@ -18,7 +18,11 @@ const Cart = (props) => {
   const getTotal = () => {
     let sum = 0;
     for (let item of cartItems) {
-      sum += item.price * item.quantity;
+      if (item.discount > 0) {
+        sum += item.price * item.quantity - item.discount * item.quantity;
+      } else {
+        sum += item.price * item.quantity;
+      }
     }
     return sum;
   };
@@ -51,6 +55,7 @@ const Cart = (props) => {
           <div class='row'>{item.name}</div>
         </td>
         <td class="text-right">{item.price} VNĐ</td>
+        <td class="text-right">{(item.discount > 0) ? item.discount : 0} VNĐ</td>
         <td class="text-right">{item.price * item.quantity} VNĐ</td>
         <td>
           <div class='row'>
@@ -67,7 +72,7 @@ const Cart = (props) => {
   var product_name_bill = '';
   if (cartItems.length > 0) {
     product_name_bill = cartItems.map((item) => (
-      <li>{item.name}<span>{item.price} VNĐ</span></li>
+      <li>{item.name}<span>{(item.discount > 0) ? (item.price * item.quantity - item.discount * item.quantity) : (item.price * item.quantity)} VNĐ</span></li>
     ))
   }
 
@@ -75,7 +80,11 @@ const Cart = (props) => {
   var price_bill = 0;
   if (cartItems.length > 0) {
     cartItems.map((item) => {
-      price_bill += item.price * item.quantity;
+      if (item.discount > 0) {
+        price_bill += item.price * item.quantity - item.discount * item.quantity;
+      } else {
+        price_bill += item.price * item.quantity;
+      }
       return price_bill;
     })
   }
@@ -92,6 +101,7 @@ const Cart = (props) => {
                 <th>Số lượng</th>
                 <th>Tên sản phẩm</th>
                 <th class="text-right">Giá sản phẩm</th>
+                <th class="text-right">Giảm giá</th>
                 <th class="text-right">Thành tiền</th>
               </tr>
             </thead>
@@ -110,7 +120,7 @@ const Cart = (props) => {
             <tfoot>
               <tr>
                 <td></td>
-                <td colspan="3" class="text-right">
+                <td colspan="4" class="text-right">
                   Tổng tiền:
                 </td>
                 <td class="text-right">{getTotal()} VND</td>
