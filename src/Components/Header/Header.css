@@ -65,9 +65,13 @@
 .header .shopping-card {
     position: relative;
     font-size: 2.2rem;
-    color: #f04336;
     margin-top: 10px;
 }
+
+.header .shopping-card i {
+    color: #f04336;
+}
+
 .header .input-search {
     margin-top: 17px;
 
@@ -81,7 +85,7 @@
     color: #000;
     background-color: yellow;
     top: 8px;
-    left: 21px;
+    left: 30px;
 }
 
  .btn-danger{
