@@ -177,7 +177,7 @@ const Header = (props) => {
                   Liên hệ
                 </Link>
                 <Link to="/intro" class="nav-link">
-                  Introdution
+                  Giới thiệu
                 </Link>
               </div>
               <div className="header_item row ms-auto">
@@ -230,7 +230,7 @@ const Header = (props) => {
             <div class="container">
               <div class="row">
                 <div class="col-12">
-                  <h2 class="title">... Search Here ...</h2>
+                  <h2 class="title">... Tìm kiếm sản phẩm ...</h2>
                   <div class="item_header-form">
                     <form action="#">
                       <input
