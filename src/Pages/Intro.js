@@ -12,13 +12,13 @@ const Intro = () => {
     <div class="col-sm-8 text-left"> 
       <div class="text-left">
       <h5>GIỚI THIỆU</h5>
-      <p>Cửa hàng Pet Shop</p>
+      <p>Cửa hàng Petco Shop</p>
       </div>
      
  
-      <p>Puppy Pet Shop được mở bởi các thành viên chung niềm đam mê nuôi dưỡng, chăm sóc thú cưng. Bán hàng với giá rẻ nhất thị trường không phải là mục tiêu của Puppy Pet Shop, chất lượng sản phẩm và dịch vụ mới là tiêu chí hàng đầu.
+      <p>Petco Shop được mở bởi các thành viên chung niềm đam mê nuôi dưỡng, chăm sóc thú cưng. Bán hàng với giá rẻ nhất thị trường không phải là mục tiêu của Petco Shop, chất lượng sản phẩm và dịch vụ mới là tiêu chí hàng đầu.
 
-        Puppy Pet Shop hướng tới lợi ích tối ưu cho khách hàng qua việc đem tới những sản phẩm có chất lượng tốt nhất với mức giá hợp lý nhất. Với phương châm tạo sự tiện lợi và thoải mái nhất cho khách hàng, từ việc tư vấn chi tiết chủng loại, giá cả cho khách hàng đến việc giao hàng và chăm sóc khách hàng, Puppy Pet Shop luôn quan tâm để ý một cách chu đáo nhất.</p>
+        Petco Shop hướng tới lợi ích tối ưu cho khách hàng qua việc đem tới những sản phẩm có chất lượng tốt nhất với mức giá hợp lý nhất. Với phương châm tạo sự tiện lợi và thoải mái nhất cho khách hàng, từ việc tư vấn chi tiết chủng loại, giá cả cho khách hàng đến việc giao hàng và chăm sóc khách hàng, Petco Shop luôn quan tâm để ý một cách chu đáo nhất.</p>
     
         <p>
             <span><b>Trụ sở chính:</b></span>
