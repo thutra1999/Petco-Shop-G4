@@ -1,0 +1,151 @@
+ 
+.header .img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.header .topbar {
+    height: 40px;
+    color: #fff;
+    background-color: #f04336;
+}
+
+.header .topbar .topbar_left li {
+    line-height: 40px;
+    list-style: none;
+    float: left;
+    font-size: 13px;
+    margin: 0;
+}
+
+.header .list-inline>li {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.header .list-inline li:first-child {
+    padding-right: 0;
+}
+
+.header .list-inline li:first-child span{
+    padding-right: 5px;
+    border-right: 1px solid #ccc;
+}
+
+.header .topbar-email a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.header .topbar_right ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header .topbar_right li {
+    margin: 0 8px;
+}
+
+.header .topbar .topbar_right {
+    font-size: 13px;
+    line-height: 40px;
+}
+
+.header .topbar .topbar_right li a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 20px 0 8px;
+} 
+
+.header .shopping-card {
+    position: relative;
+    font-size: 2.2rem;
+    color: #f04336;
+    margin-top: 10px;
+}
+.header .input-search {
+    margin-top: 17px;
+
+}
+
+.header .product-num {
+    position: absolute;
+    padding: 0 8px;
+    font-size: 0.9rem;
+    border-radius: 50%;
+    color: #000;
+    background-color: yellow;
+    top: 8px;
+    left: 21px;
+}
+
+ .btn-danger{
+    background-color: #f04336;
+}
+
+
+ .item_header-popup-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    padding: 100px 0;
+}
+ .item_header-wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+ .item_header-wrap .title {
+    margin: 0 0 20px 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: -1px;
+	color: #0a303a;
+}
+ .item_header-form {
+	position: relative;
+}
+ .item_header-form input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #f04336;
+    padding: 10px 50px 20px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+	background: transparent;
+}
+ .item_header-form input::placeholder {
+	font-size: 30px;
+	opacity: .5;
+}
+ .item_header-btn {
+    position: absolute;
+    right: 20px;
+    background: transparent;
+    border: 0;
+    font-size: 25px;
+    color: #f04336;
+    top: 50%;
+    transform: translateY(-50%);
+}
+ .item_header-close {
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	font-size: 30px;
+	color: #f04336;
+	cursor: pointer;
+}
