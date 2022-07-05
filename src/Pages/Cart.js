@@ -110,7 +110,7 @@ const Cart = (props) => {
             <tbody>
               {cartItems.length == 0 ? (
                 <tr>
-                  <td colspan="4" class="text-center">
+                  <td colspan="5" class="text-center">
                     Giỏ hàng của bạn trống
                   </td>
                 </tr>
