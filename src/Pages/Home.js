@@ -3,7 +3,7 @@ import img01 from "../img/doghome01.png"
 import img02 from "../img/doghome02.png"
 import img03 from "../img/dogfoodie.png"
 import ProductItem from "../Components/ProductItem/ProductItem";
-import Section from "../Components/Section/Section";
+
 import React, { useEffect, useState } from "react";
 
 const Home = () => {
