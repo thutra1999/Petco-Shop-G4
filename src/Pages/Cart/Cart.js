@@ -146,6 +146,10 @@ const Cart = (props) => {
             <input type="text" class="form-control" id="" placeholder="Phonenumber..."></input>
             <label for="floatingPassword">Số Điện Thoại</label>
           </div>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="" placeholder="Email..."></input>
+            <label for="floatingPassword">Email</label>
+          </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12">
           <div class="checkout__order">

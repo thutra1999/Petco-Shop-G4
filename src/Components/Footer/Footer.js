@@ -72,7 +72,7 @@ function Footer() {
                                             <img src="http://bizweb.dktcdn.net/100/375/956/themes/750643/assets/icon-telephone.png?1654417427508"
                                                 alt=""></img>
                                             <div class="contact">
-                                                <a href="" class="phone-number">091.898.5026</a>
+                                                <a href="" class="phone-number">0869.125.610</a>
                                                 <span class="hour">(Tất cả các ngày trong tuần)</span>
                                             </div>
                                         </div>
@@ -106,19 +106,19 @@ function Footer() {
                                 <div class="widget-ft">
                                     <h4 class="title-menu">Hệ thống cửa hàng & liên kết</h4>
                                     <div class="item">
-                                        <h4 class="item-title">Puppy Pet Shop</h4>
-                                        <div class="item-child">242 Kim Mã, Ba Đình</div>
-                                        <div class="item-child">Hotline: 0971111242</div>
+                                        <h4 class="item-title">Petco Shop</h4>
+                                        <div class="item-child">242 Kim Mã, Ba Đình, Hà Nội</div>
+                                        <div class="item-child">Hotline: 0971.111.242</div>
                                     </div>
 
                                     <div class="item-connect">
-                                        <h4 class="item-title">Petshop liên kết</h4>
+                                        <h4 class="item-title">Petco Shop liên kết</h4>
                                     </div>
 
                                     <div class="item-address">
-                                        <h4 class="item-title">Petshop Văn Quán</h4>
+                                        <h4 class="item-title">Petco Shop Văn Quán</h4>
                                         <div class="item-child">32BT8 KDT Văn Quán, Hà Đông (cổng trường Tiểu học Ban Mai)</div>
-                                        <div class="item-child">Hotline: 0981111328</div>
+                                        <div class="item-child">Hotline: 0981.111.328</div>
                                     </div>
                                 </div>
                             </div>
