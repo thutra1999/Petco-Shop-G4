@@ -17,27 +17,26 @@ import ProductDetail from "./Pages/Admin/ProductDetail";
 function App() {
   return (
     <React.Fragment>
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/">
-          <Route index element={<Home />} />
-          <Route path="dogList" element={<DogList />} />
-          <Route path="shop/:id" element={<Shop />} />
-          <Route path="shop" element={<Shop />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="*" element={<NoPage />} />
-          <Route path="intro" element={<Intro />} />
-          <Route path="detail/:id" element={<Detail />}/>
-          <Route path="admin" element={<Admin />} />
-          <Route path="productedit/:id" element={<ProductEdit />} />
-          <Route path="productdetail/:id" element={<ProductDetail />} />
-        </Route>
-      </Routes>
-      <Footer />
-      
-    </BrowserRouter>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="dogList" element={<DogList />} />
+            <Route path="shop/:id" element={<Shop />} />
+            <Route path="shop" element={<Shop />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="*" element={<NoPage />} />
+            <Route path="intro" element={<Intro />} />
+            <Route path="detail/:id" element={<Detail />} />
+            <Route path="admin" element={<Admin />} />
+            <Route path="productedit/:id" element={<ProductEdit />} />
+            <Route path="productdetail/:id" element={<ProductDetail />} />
+          </Route>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </React.Fragment>
   );
 }
