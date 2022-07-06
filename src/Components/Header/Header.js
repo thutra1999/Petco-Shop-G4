@@ -168,7 +168,7 @@ const Header = (props) => {
                   Trang chủ
                 </Link>
                 <Link to="/dogList" class="nav-link">
-                  Shop chó yêu
+                  Blog chó yêu
                 </Link>
                 <Link to="/shop" class="nav-link">
                   Sản phẩm
