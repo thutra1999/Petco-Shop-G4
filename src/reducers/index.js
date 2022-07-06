@@ -94,7 +94,6 @@ function todoProduct(state = initProduct, action) {
         state = {numberCart: 0,
           Carts: [],
           _products: [],};
-        console.log("state",state);
         return state
 
     default:
