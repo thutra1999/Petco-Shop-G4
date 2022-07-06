@@ -8,7 +8,6 @@ const Shop = () => {
   const [categories, setCategories] = useState(null);
   const [data, setData] = useState([]);
   const params = useParams();
-  let PageSize = 10;
   let url;
   if (
     params.id === "Thức ăn" ||
