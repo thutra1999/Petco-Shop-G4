@@ -15,6 +15,7 @@ const Cart = (props) => {
     "phone":"",
     "email": "",
     "cart":{},
+    "price": ""
   });
   const [isBuyDone, setIsBuyDone] = useState(false)
   useEffect(() => {
@@ -111,9 +112,10 @@ const Cart = (props) => {
   useEffect(() => {
     let data = { ...products };
     data.cart = cartItems
+    data.price = price_bill
     console.log(cartItems)
     setProducts(data);
-  }, [cartItems]);
+  }, [cartItems, price_bill]);
 
   const buyHandler = () => {
     const requestOptions = {
