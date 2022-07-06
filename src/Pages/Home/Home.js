@@ -7,9 +7,7 @@ import React, { useEffect, useState } from "react";
 
 const Home = () => {
   const [data, setData] = useState([]);
-  const [currentItems, setCurrentItems] = useState(null);
-  const [categories, setCategories] = useState(null);
-
+ 
   useEffect(() => {
     let url = 'https://62b421ada36f3a973d2c998f.mockapi.io/shop';
     fetch(url)
@@ -23,7 +21,7 @@ const Home = () => {
 
     <div class="container-fluid">
 
-      {/* Carousel */}
+     
 
       <div id="myCarosel" class="carousel slide" data-bs-ride="carousel">
 
