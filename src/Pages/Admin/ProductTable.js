@@ -47,15 +47,11 @@ function ProductTable(props) {
           <strong>{item.price} VND</strong>
         </td>
         <td>{item.category}</td>
-        <td>
-          <button
-            className={item.status ? 'btn btn-success' : 'btn btn-danger'}
-          >
-            {item.status ? 'Còn hàng' : 'Hết'}
-          </button>
+        <td className={item.status ? 'bg-success' : 'bg-danger'}>
+          <div class="text-light text-center">{item.status ? 'Còn hàng' : 'Hết'}</div>
         </td>
         <td>
-          <Link to={'/details/' + item.id}>Chi tiết sản phẩm</Link>
+          <Link to={'/productdetail/' + item.id}>Chi tiết sản phẩm</Link>
         </td>
         <td>
           <Link to={'/productedit/' + item.id}>
@@ -76,7 +72,8 @@ function ProductTable(props) {
   }
 
   return (
-    <table className="table">
+    <table className="table table-bordered table-striped table-hover">
+      <thead className='table table-dark'>
       <tr>
         <th onClick={() => sortColumn('id', 'number')}>Mã sản phẩm</th>
         <th onClick={() => sortColumn('name', 'string')}>Tên sản phẩm</th>
@@ -86,8 +83,12 @@ function ProductTable(props) {
         </th>
         <th>Phân loại</th>
         <th>Trạng thái</th>
+        <th colSpan={2}><br/></th>
       </tr>
+      </thead>
+      <tbody>
       {product_list}
+      </tbody>
     </table>
   );
 }
