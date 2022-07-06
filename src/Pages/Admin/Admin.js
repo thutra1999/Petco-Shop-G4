@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -11,7 +10,7 @@ function Admin() {
 
   useEffect(() => {
     console.log('app useeffect!!');
-    let url = 'https://62b421ada36f3a973d2c998f.mockapi.io/shop';
+    let url = 'https://62b421ada36f3a973d2c998f.mockapi.io/testShop';
     if (searchTerm.length > 0) {
       url = url + '?search=' + searchTerm;
     }
@@ -20,13 +19,13 @@ function Admin() {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        setProducts(data); //setStudents(data)
+        setProducts(data);
       });
   }, [searchTerm]);
 
   return (
     <div className="container">
-      <h2>Danh sách sinh viên</h2>
+      <h2>Danh sách sản phẩm</h2>
       <div class="row">
         <div class="col-sm-6">
           <div className="input-group">
@@ -40,7 +39,6 @@ function Admin() {
               <button
                 className="btn btn-secondary"
                 type="button"
-                // onClick={searchStudent}
               >
                 <i class="fa fa-search"></i>
               </button>
@@ -51,7 +49,6 @@ function Admin() {
               <button
                 className="btn btn-primary"
                 type="button"
-                // onClick={searchStudent}
               >
                 Thêm mới sản phẩm
               </button>
