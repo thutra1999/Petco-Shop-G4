@@ -3,6 +3,7 @@ import img01 from "../../img/doghome01.png"
 import img02 from "../../img/doghome02.png"
 import ProductItem from "../../Components/ProductItem/ProductItem";
 import { Link, NavLink } from 'react-router-dom';
+import Feedback from "../../Components/Feedback/Feedback";
 
 import React, { useEffect, useState } from "react";
 
@@ -79,6 +80,7 @@ const Home = () => {
             <div class="row">
               <div class="col-lg-12">
                 <div class="section-title">
+                <i class="fa fa-thin fa-award fa-3x"></i>
                   <h2>Sản phẩm bán chạy</h2>
                 </div>
               </div>
@@ -100,9 +102,10 @@ const Home = () => {
             <div class="row">
               <div class="col-lg-12">
                 <div class="section-title">
+                <i class="fa fa-thin fa-award fa-3x"></i>
                   <h2>Sản phẩm mới nhất</h2>
                 </div>
-                <div class="featured__controls">
+                {/* <div class="featured__controls">
                   <ul>
                     <li class="active" data-filter="*">All</li> 
                     <li data-filter=".food">Thức ăn</li>
@@ -110,7 +113,7 @@ const Home = () => {
                     <li data-filter=".fashion">Thời trang</li>
                     <li data-filter=".dog_bread">Giống chó</li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div>
             <div class="row featured__filter">
@@ -123,6 +126,26 @@ const Home = () => {
           </div>
         </div>
          {/* End of new product */}
+
+         {/* Feedback */}
+
+        <div className='container-fliud'>
+          <div className='container'>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-title">
+                  <i class="fa fa-thin fa-star fa-2x"></i>
+                  <h2>Đánh giá khách hàng</h2>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+            <Feedback data={data}></Feedback>
+            </div>
+          </div>
+        </div>
+
+        {/* End of feedback */}
 
       </div>
     </div>
