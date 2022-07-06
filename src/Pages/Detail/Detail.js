@@ -3,25 +3,28 @@ import { useParams } from "react-router-dom";
 import { AddCart } from '../../actions/index';
 import { connect } from 'react-redux';
 import './Detail.css';
+import Preloader from "../../Components/Preloader/Preloader";
 
 function Detail(props) {
     const params = useParams();
     const [product, setProduct] = useState(null);
+    const [preloader, setPreloader] = useState(true)
 
     useEffect(() => {
+        setPreloader(true);
         let url = 'https://62b421ada36f3a973d2c998f.mockapi.io/shop/' + params.id;
         fetch(url)
             .then((response) => response.json())
             .then((data) => {
                 setProduct(data)
-            })
+            }).then(()=> setPreloader(false))
     }, [])
 
 
     return (
         <>
             {
-                (product != null) ? (
+                (!preloader) ? (
                     <section class="product-details spad">
                         <div class="container">
                             <div class="row">
@@ -119,7 +122,7 @@ function Detail(props) {
                         </div>
                     </section>
                 ) : (
-                    <div className="loader"></div>
+                    <Preloader/>
                 )
             }
         </>

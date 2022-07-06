@@ -4,11 +4,15 @@ import ProductItem from "../../Components/ProductItem/ProductItem";
 import "./Shop.css";
 import { Link } from "react-router-dom";
 import side from '../../side.jpg';
+import Preloader from "../../Components/Preloader/Preloader";
 
 const Shop = () => {
   const [categories, setCategories] = useState(null);
   const [data, setData] = useState([]);
   const params = useParams();
+  const [preloader, setPreloader] = useState(true)
+
+
   let url;
   if (
     params.id === "Thức ăn" ||
@@ -25,9 +29,10 @@ const Shop = () => {
     url = "https://62b421ada36f3a973d2c998f.mockapi.io/shop";
   }
   useEffect(() => {
+    setPreloader(true);
     fetch(url)
       .then((response) => response.json())
-      .then((data) => setData(data));
+      .then((data) => setData(data)).then(()=>setPreloader(false))
   }, [url]);
 
 
@@ -63,6 +68,7 @@ const Shop = () => {
 
   return (
     <>
+    {!preloader ?
       <div className="product spad">
         <div className="container">
           <div className="row">
@@ -85,7 +91,7 @@ const Shop = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> : <Preloader />}
     </>
   );
 };

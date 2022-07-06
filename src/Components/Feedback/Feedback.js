@@ -13,6 +13,9 @@ import fb02 from "../../img/feedback02.jpg"
 import fb03 from "../../img/feedback03.jpg"
 import fb04 from "../../img/feedback04.jpg"
 import fb05 from "../../img/feedback05.jpg"
+import fb06 from "../../img/feedback06.jpg"
+import fb07 from "../../img/feedback07.jpg"
+import fb08 from "../../img/feedback08.jpg"
 
 // import required modules
 import { Keyboard, Scrollbar, Navigation, Pagination } from "swiper";
@@ -56,6 +59,15 @@ function Feedback() {
         </SwiperSlide>
         <SwiperSlide>
           <img src={fb05} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={fb06} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={fb07} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={fb08} />
         </SwiperSlide>
       </Swiper>
     </>

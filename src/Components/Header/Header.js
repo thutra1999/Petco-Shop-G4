@@ -53,7 +53,7 @@ const Header = (props) => {
   const signUpHandler = () => {
     setFormLogin(
       <>
-        <div class="title h1 text-center">Đăng nhập</div>
+        <div class="title h1 text-center">Đăng ký tài khoản</div>
         <div class="row item_header-form">
           <div class="title h3">Tên đăng nhập</div>
           <input type="text" placeholder="Enter your username" />
