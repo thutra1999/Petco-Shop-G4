@@ -28,13 +28,7 @@ const ProductEdit = () => {
         });
     } else {
       let initData = {};
-      //initData.firstName="";
-      //initData.lastName="";
-
-      //initData.home = {};
-      //initData.home.address="";
-      //initData.home.city="";
-      //initData.home.country="";
+   
       setProducts(initData);
     }
     let countries_url =
@@ -333,7 +327,7 @@ const ProductEdit = () => {
                     Save
                   </button>
                   <span> </span>
-                  <Link to="/">
+                  <Link to="/admin">
                     <button type="button" class="btn btn-secondary">
                       Cancel
                     </button>
