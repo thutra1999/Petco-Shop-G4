@@ -82,16 +82,16 @@ function Footer() {
                                     <h4 class="title-menu">Kết nối với chúng tôi</h4>
                                     <div class="list-socials">
                                         <div class="list-item">
-                                            <a href="" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                            <a href="https://www.facebook.com/" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
                                         </div>
                                         <div class="list-item">
-                                            <a href="" class="google-plus"><i class="fa-brands fa-google-plus-g"></i></a>
+                                            <a href="https://zalo.me/pc" class="google-plus"><i class="fa-brands fa-google-plus-g"></i></a>
                                         </div>
                                         <div class="list-item">
-                                            <a href="" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                                            <a href="https://twitter.com/?lang=vi" class="twitter"><i class="fa-brands fa-twitter"></i></a>
                                         </div>
                                         <div class="list-item">
-                                            <a href="" class="insta"><i class="fa-brands fa-instagram"></i></a>
+                                            <a href="https://www.instagram.com/" class="insta"><i class="fa-brands fa-instagram"></i></a>
                                         </div>
                                     </div>
                                 </div>
