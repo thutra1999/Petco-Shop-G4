@@ -10,9 +10,17 @@ function Admin() {
   const [page, setPage] = useState(true);
   const [filter, setFilter] = useState("");
   
+  let url = "https://62b421ada36f3a973d2c998f.mockapi.io/testShop";
 
   useEffect(() => {
-    let url = "https://62b421ada36f3a973d2c998f.mockapi.io/testShop";
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        setProducts(data)
+      });
+  }, []);
+
+  useEffect(() => {
     if (searchTerm.length > 0) {
       url = url + "?search=" + searchTerm;
     }
