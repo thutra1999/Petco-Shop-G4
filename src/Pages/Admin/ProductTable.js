@@ -8,7 +8,6 @@ function ProductTable(props) {
   const [direction, setDirection] = useState(1);
 
   useEffect(() => {
-    console.log("student table useEffect!!");
     setProducts(props.data);
   }, [props.data]);
 
