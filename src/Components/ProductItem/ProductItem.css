@@ -11,6 +11,8 @@
     text-align: center;
 	font-size: 14px;
     height: 40px;
+	color: #000;
+	text-decoration: none;
     /* font-weight: bold; */
     /* line-height: 40px; */
 }
@@ -75,4 +77,8 @@
 .product .addCart:hover{
 	background-color: #FF4545;
 	color: white;
+}
+
+a {
+	text-decoration: none;
 }
