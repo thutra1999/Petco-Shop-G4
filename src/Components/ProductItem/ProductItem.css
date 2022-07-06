@@ -11,11 +11,13 @@
     text-align: center;
 	font-size: 14px;
     height: 40px;
+    /* font-weight: bold; */
+    /* line-height: 40px; */
 }
 .product .new_price{
 	margin-top: 25px;
     color: #FF4545;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: bold;
 	margin-right: 5px;
 }
@@ -23,7 +25,7 @@
 .product .old-price{
 	margin-top: 25px;
     color: black;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: bold;
 	text-decoration: line-through;
 }

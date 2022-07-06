@@ -6,7 +6,7 @@ import {
   DECREASE_QUANTITY,
   INCREASE_QUANTITY,
   DELETE_CART, 
-  Reset_Cart
+  RESET_CART
 } from '../actions/index'
 
 const initProduct = {
@@ -90,12 +90,13 @@ function todoProduct(state = initProduct, action) {
         }),
       };
 
-      case Reset_Cart:
-        state = undefined;
-        return state
+      case RESET_CART:
+        state = initProduct;
+        console.log("state",state);
+        return {...state}
 
     default:
-      return state;
+      return {...state};
   }
 }
 const ShopApp = combineReducers({
