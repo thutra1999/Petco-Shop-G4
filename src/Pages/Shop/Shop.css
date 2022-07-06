@@ -26,6 +26,10 @@
 	display: block;
 }
 
+.shop_section .sidebar__item img {
+	width: 100%;
+}
+
 .shop_section .sidebar__item ul li a:hover {
     color: #bb3107;
 }
