@@ -91,9 +91,11 @@ function todoProduct(state = initProduct, action) {
       };
 
       case RESET_CART:
-        state = initProduct;
+        state = {numberCart: 0,
+          Carts: [],
+          _products: [],};
         console.log("state",state);
-        return {...state}
+        return state
 
     default:
       return {...state};
