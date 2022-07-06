@@ -7,7 +7,7 @@ export const UPDATE_CART = "UPDATE_CART";
 export const DELETE_CART = "DELETE_CART";
 
 export const GET_ALL_PRODUCT = "GET_ALL_PRODUCT"; 
-export const Reset_Cart = "Reset_Cart";
+export const RESET_CART = "RESET_CART";
 
 
 export function GetNumberCart() {
@@ -30,7 +30,7 @@ export function UpdateCart(payload) {
 }
 export function ResetCart() {
   return {
-    type: "Reset_Cart"
+    type: "RESET_CART"
   };
 }
 export function DeleteCart(payload) {
