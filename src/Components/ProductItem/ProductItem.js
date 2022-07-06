@@ -60,7 +60,7 @@ function ProductItem(props) {
             </ul>
           </div>
           <div class="card-body container text-center">
-            <h5 class="card-title">{item.name}</h5>
+            <Link to ={"/detail/" + item.id}><h5 class="card-title">{item.name}</h5></Link>
             <br />
             <div class="row">
               <div class="col-12">
