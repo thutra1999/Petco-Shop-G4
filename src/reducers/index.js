@@ -6,6 +6,7 @@ import {
   DECREASE_QUANTITY,
   INCREASE_QUANTITY,
   DELETE_CART, 
+  Reset_Cart
 } from '../actions/index'
 
 const initProduct = {
@@ -88,6 +89,11 @@ function todoProduct(state = initProduct, action) {
           return item.id != state.Carts[action.payload].id;
         }),
       };
+
+      case Reset_Cart:
+        state = undefined;
+        return state
+
     default:
       return state;
   }
