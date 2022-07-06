@@ -4,25 +4,28 @@ import img02 from "../../img/doghome02.png"
 import img03 from "../../img/thankyou.png"
 import img04 from "../../img/banner01.png"
 import ProductItem from "../../Components/ProductItem/ProductItem";
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Feedback from "../../Components/Feedback/Feedback";
 
 import React, { useEffect, useState } from "react";
+import Preloader from '../../Components/Preloader/Preloader';
 
 const Home = () => {
   const [data, setData] = useState([]);
+  const [preloader, setPreloader] = useState(true)
  
   useEffect(() => {
+    setPreloader(true);
     let url = 'https://62b421ada36f3a973d2c998f.mockapi.io/shop';
     fetch(url)
       .then((response) => response.json())
-      .then((data) => setData(data))
+      .then((data) => setData(data)).then(()=>setPreloader(false))
 
   }, []);
 
 
   return <>
-
+{!preloader ?
     <div class="container-fluid">
 
      
@@ -162,7 +165,7 @@ const Home = () => {
       </div>
     </div>
 
-
+              : <Preloader/>}
   </>;
 };
 export default Home;
