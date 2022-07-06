@@ -4,7 +4,7 @@ import { AddCart } from '../../actions/index';
 import { connect } from 'react-redux';
 import './Detail.css';
 
-function Detail() {
+function Detail(props) {
     const params = useParams();
     const [product, setProduct] = useState(null);
 
@@ -63,7 +63,7 @@ function Detail() {
                                         </div>
                                         <div class="product__details__price">{product.price.toLocaleString('en-US')} VNĐ</div>
                                         <p>{product.describe}</p>
-                                        <button class="btn btn-outline-danger" onClick={() => AddCart(product)}>Thêm vào giỏ hàng</button>
+                                        <button class="btn btn-outline-danger" onClick={() => props.AddCart(product)}>Thêm vào giỏ hàng</button>
                                         <a href="#" class="heart-icon btn btn-outline-secondary"><i class="fas fa-heart"></i></a>
                                         <ul>
                                             <li><b>Origin</b> <span>{product.origin}</span></li>
