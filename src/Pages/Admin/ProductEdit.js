@@ -111,17 +111,18 @@ const ProductEdit = () => {
         >
           <div class="panel-body inf-content">
             <div class="row">
-              <strong>Chỉnh sửa thông tin sản phẩm</strong>
+              <strong class="h3">{products.id ? "Chỉnh sửa thông tin" : "Thêm mới"} sản phẩm</strong>
               <br />
               <div class="table-responsive">
                 <table class="table table-user-information">
                   <tbody>
-                    <tr>
+                    {products.id ? <tr>
                       <td>
-                        <strong>STT</strong>
+                        <strong>Mã sản phẩm</strong>
                       </td>
                       <td class="text-primary">{products.id}</td>
-                    </tr>
+                    </tr> : ''}
+                    
                     <tr>
                       <td>
                         <strong>Tên sản phẩm</strong>
@@ -188,12 +189,16 @@ const ProductEdit = () => {
                         <strong>Ảnh minh họa sản phẩm</strong>
                       </td>
                       <td class="text-primary">
-                        <img
-                          src={products.picture_1}
-                          className="img-square"
-                          width="300px"
-                          height="300px"
-                        />
+                        <input type="url"
+                          className="form-control"
+                          value={products.picture_1}
+                          name="picture_1"
+                          onChange={(e) => handleChange(e)}/>
+                          <input type="url"
+                          className="form-control"
+                          value={products.picture_2}
+                          name="picture_2"
+                          onChange={(e) => handleChange(e)}/>
                       </td>
                     </tr>
                     <tr>
@@ -222,28 +227,44 @@ const ProductEdit = () => {
                       </td>
                       <td>
                         <div className="select-container">
-                          {categories != null ? (
-                            <select
-                              name="origin"
-                              value={products.category}
-                              onChange={(e) => {
-                                handleChange(e);
-                              }}
-                            >
-                              {categories != null
-                                ? categories.map((item) => (
-                                    <option
-                                      key={item.id}
-                                      value={item.category_name}
-                                    >
-                                      {item.category_name}
-                                    </option>
-                                  ))
-                                : "loading"}
-                            </select>
-                          ) : (
-                            ""
-                          )}
+                          <select
+                            name="origin"
+                            value={products.origin}
+                            onChange={(e) => {
+                              handleChange(e);
+                            }}
+                          >
+                            <option key={1} value="Mỹ (US)">
+                              Mỹ (US)
+                            </option>
+                            <option key={2} value="Pháp (France)">
+                            Pháp (France)
+                            </option>
+                            <option key={3} value="Trung Quốc">
+                            Trung Quốc (China)
+                            </option>
+                            <option key={4} value="Nhật Bản (Japan)">
+                            Nhật Bản (Japan)
+                            </option>
+                            <option key={5} value="Thái Lan (Thailand)">
+                            Thái Lan (Thailand)
+                            </option>
+                            <option key={6} value="Anh (UK)">
+                            Anh (UK)
+                            </option>
+                            <option key={7} value="Hàn Quốc (Korea)">
+                            Hàn Quốc (Korea)
+                            </option>
+                            <option key={8} value="Đài Loan (Taiwan)">
+                            Đài Loan (Taiwan)
+                            </option>
+                            <option key={9} value="Việt Nam">
+                            Việt Nam
+                            </option>
+                            <option key={10} value="New Zealand">
+                            New Zealand
+                            </option>
+                          </select>
                         </div>
                       </td>
                     </tr>
