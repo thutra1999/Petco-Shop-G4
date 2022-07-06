@@ -52,13 +52,20 @@
 	margin-bottom: 50px;
 	text-align: center;
 }
+.section-title i {
+	color: #fa9f25;
+}
 
 .section-title h2 {
 	color: #1c1c1c;
 	font-weight: 700;
 	position: relative;
 }
-
+.col-lg-12 {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-top: 30px;
+}
 .section-title h2:after {
 	position: absolute;
 	left: 0;
