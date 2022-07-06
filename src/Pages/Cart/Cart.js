@@ -1,16 +1,22 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-
 import { connect } from 'react-redux';
-import { IncreaseQuantity, DecreaseQuantity, DeleteCart } from '../../actions/index';
+import { IncreaseQuantity, DecreaseQuantity, DeleteCart,ResetCart } from '../../actions/index';
 import './Cart.css';
 import {Link} from 'react-router-dom';
+import success from '../../img/XliJ.gif'
 
 const Cart = (props) => {
-  let navigate = useNavigate();
   const [cartItems, setCartItems] = useState([]);
+  const [products, setProducts] = useState({
+    "useName": "",
+    "address": "",
+    "phone":"",
+    "email": "",
+    "cart":{},
+  });
+  const [isBuyDone, setIsBuyDone] = useState(false)
   useEffect(() => {
     setCartItems(props.store_state.Carts);
   }, [props.store_state]);
@@ -91,6 +97,36 @@ const Cart = (props) => {
     })
   }
 
+  const handleChange = (event) => {
+    
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+    let data = { ...products };
+    console.log(value)
+    data[name] = value;
+    setProducts(data);
+  };
+
+  useEffect(() => {
+    let data = { ...products };
+    data.cart = cartItems
+    console.log(cartItems)
+    setProducts(data);
+  }, [cartItems]);
+
+  const buyHandler = () => {
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(products),
+    };
+    fetch("https://62b04ad2e460b79df0424941.mockapi.io/id", requestOptions)
+      .then((response) => response.json())
+      setIsBuyDone(true);
+  };
+
+
   return (
     <div class="container-fluid">
       <div class="row">
@@ -161,14 +197,17 @@ const Cart = (props) => {
                   Tiếp tục mua hàng
                 </button>
               </Link>
-              <button class="btn btn-danger m-1" type="button">
+              <button
+                class="btn btn-danger m-1"
+                type="button"
+                onClick={buyHandler}
+              >
                 Thanh toán
               </button>
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       {isBuyDone && (
         <div class="item_cart-popup-wrap">
           <div class="item_cart-wrap text-center">
@@ -178,8 +217,6 @@ const Cart = (props) => {
           </div>
         </div>
       )}
-=======
->>>>>>> caa948981af3963620bb760868236092a311089d
     </div>
   );
 };
@@ -194,4 +231,5 @@ export default connect(mapStateToProps, {
   IncreaseQuantity,
   DecreaseQuantity,
   DeleteCart,
+  ResetCart,
 })(Cart);
