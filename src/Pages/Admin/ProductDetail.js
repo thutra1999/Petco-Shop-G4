@@ -17,8 +17,6 @@ const ProductDetail = () => {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        data.dob = new Date(data.dob);
-        console.log('dob', data.dob);
         setProducts(data);
       });
   }, []);
