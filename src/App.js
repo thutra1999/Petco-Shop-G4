@@ -13,6 +13,8 @@ import Detail from "./Pages/Detail/Detail";
 import Admin from "./Pages/Admin/Admin";
 import ProductEdit from "./Pages/Admin/ProductEdit";
 import ProductDetail from "./Pages/Admin/ProductDetail";
+import OrderDetail from "./Pages/Admin/OrderDetail";
+import OrderTable from "./Pages/Admin/OrderTable";
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
           <Route path="admin" element={<Admin />} />
           <Route path="productedit/:id" element={<ProductEdit />} />
           <Route path="productdetail/:id" element={<ProductDetail />} />
+          <Route path="ordertable" element={<OrderTable />} />
+          <Route path="orderdetail/:id" element={<OrderDetail />} />
         </Route>
       </Routes>
       <Footer />
