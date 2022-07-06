@@ -1,44 +1,42 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const ProductEdit = () => {
   const params = useParams();
   const [products, setProducts] = useState(null);
-  const [countries, setCountries] = useState(null);
+  const [categories, setcategories] = useState(null);
 
   let navigate = useNavigate();
   useEffect(() => {
-    console.log('user use effect!!');
+    console.log("user use effect!!");
 
-    if (params.id != 'new') {
+    if (params.id != "new") {
       let products_url =
-        'https://62b421ada36f3a973d2c998f.mockapi.io/testShop/' + params.id;
+        "https://62b421ada36f3a973d2c998f.mockapi.io/testShop/" + params.id;
 
       console.log(products_url);
       fetch(products_url)
         .then((response) => response.json())
         .then((data) => {
-          //change date
-
           setProducts(data);
         });
     } else {
       let initData = {};
-   
+
       setProducts(initData);
     }
-    let countries_url =
-      'https://62b0495de460b79df0422035.mockapi.io/countries/';
+    let categories_url =
+      "https://62b421ada36f3a973d2c998f.mockapi.io/category/";
 
-    fetch(countries_url)
+    fetch(categories_url)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        setCountries(data);
+        setcategories(data);
       });
   }, []);
 
@@ -52,9 +50,9 @@ const ProductEdit = () => {
     let data = { ...products };
     data[name] = value;
 
-    if (name == 'status') {
+    if (name == "status") {
       data[name] = str2bool(value);
-      console.log('status');
+      console.log("status");
       console.log(data[name]);
     }
 
@@ -62,36 +60,22 @@ const ProductEdit = () => {
     setProducts(data);
   };
 
-  // const handleChangeHome = (event) => {
-  //   //console.log(event);
-  //   const target = event.target;
-  //   const value = target.value;
-  //   const name = target.name;
-  //   console.log(name);
-  //   console.log(value);
-  //   let data = { ...product };
-  //   data.home[name] = value;
-
-  //   console.log(data);
-  //   setProducts(data);
-  // };
-
   const saveUser = () => {
-    console.log('save data', products);
-    let method = 'POST';
-    let id = '';
+    console.log("save data", products);
+    let method = "POST";
+    let id = "";
     if (products.id) {
-      method = 'PUT';
+      method = "PUT";
       id = products.id;
     }
 
     const requestOptions = {
       method: method,
-      headers: { 'Content-Type': 'application/json' },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(products),
     };
     fetch(
-      'https://62b421ada36f3a973d2c998f.mockapi.io/testShop/' + id,
+      "https://62b421ada36f3a973d2c998f.mockapi.io/testShop/" + id,
       requestOptions
     )
       .then((response) => response.json())
@@ -102,19 +86,28 @@ const ProductEdit = () => {
   };
 
   var str2bool = (value) => {
-    if (value && typeof value === 'string') {
-      if (value.toLowerCase() === 'true') return true;
-      if (value.toLowerCase() === 'false') return false;
+    if (value && typeof value === "string") {
+      if (value.toLowerCase() === "true") return true;
+      if (value.toLowerCase() === "false") return false;
     }
     return value;
   };
+
+  var discountList = [];
+  for (let i = 0; i <= 0.9; i += 0.05) {
+    discountList.push(
+      <option key={i} value={i.toFixed(2)}>
+        {(i * 100).toFixed() + " %"}
+      </option>
+    );
+  }
 
   return (
     <>
       {products != null ? (
         <div
           class="container bootstrap snippets bootdey "
-          style={{ padding: '100px 25px' }}
+          style={{ padding: "100px 25px" }}
         >
           <div class="panel-body inf-content">
             <div class="row">
@@ -163,13 +156,30 @@ const ProductEdit = () => {
                         <strong>Loại sản phẩm</strong>
                       </td>
                       <td>
-                        <input
-                          type="text"
-                          className="form-control"
-                          value={products.category}
-                          name="category"
-                          onChange={(e) => handleChange(e)}
-                        ></input>
+                        <div className="select-container">
+                          {categories != null ? (
+                            <select
+                              name="category"
+                              value={products.category}
+                              onChange={(e) => {
+                                handleChange(e);
+                              }}
+                            >
+                              {categories != null
+                                ? categories.map((item) => (
+                                    <option
+                                      key={item.id}
+                                      value={item.category_name}
+                                    >
+                                      {item.category_name}
+                                    </option>
+                                  ))
+                                : "loading"}
+                            </select>
+                          ) : (
+                            ""
+                          )}
+                        </div>
                       </td>
                     </tr>
 
@@ -191,14 +201,18 @@ const ProductEdit = () => {
                         <strong>Giảm giá</strong>
                       </td>
 
-                      <td class="text-primary">
-                        <input
-                          type="text"
-                          className="form-control"
-                          value={products.discount}
-                          name="discount"
-                          onChange={(e) => handleChange(e)}
-                        ></input>
+                      <td>
+                        <div className="select-container">
+                          <select
+                            name="discount"
+                            value={products.discount}
+                            onChange={(e) => {
+                              handleChange(e);
+                            }}
+                          >
+                            {discountList}
+                          </select>
+                        </div>
                       </td>
                     </tr>
 
@@ -208,24 +222,27 @@ const ProductEdit = () => {
                       </td>
                       <td>
                         <div className="select-container">
-                          {countries != null ? (
+                          {categories != null ? (
                             <select
                               name="origin"
-                              value={products.origin}
+                              value={products.category}
                               onChange={(e) => {
                                 handleChange(e);
                               }}
                             >
-                              {countries != null
-                                ? countries.map((item) => (
-                                    <option key={item.id} value={item.country}>
-                                      {item.country}
+                              {categories != null
+                                ? categories.map((item) => (
+                                    <option
+                                      key={item.id}
+                                      value={item.category_name}
+                                    >
+                                      {item.category_name}
                                     </option>
                                   ))
-                                : 'loading'}
+                                : "loading"}
                             </select>
                           ) : (
-                            ''
+                            ""
                           )}
                         </div>
                       </td>
@@ -329,7 +346,7 @@ const ProductEdit = () => {
                   <span> </span>
                   <Link to="/admin">
                     <button type="button" class="btn btn-secondary">
-                      Cancel
+                      Trở lại
                     </button>
                   </Link>
                 </div>
@@ -338,7 +355,7 @@ const ProductEdit = () => {
           </div>
         </div>
       ) : (
-        'loading'
+        "loading"
       )}
     </>
   );
