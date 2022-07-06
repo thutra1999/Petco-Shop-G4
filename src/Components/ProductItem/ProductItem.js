@@ -82,8 +82,8 @@ function ProductItem(props) {
      
       <div class="row">{list_product}</div>
       <ReactPaginate
-        previousLabel="Previous"
-        nextLabel="Next"
+        previousLabel="<<"
+        nextLabel=">>"
         pageClassName="page-item"
         pageLinkClassName="page-link"
         previousClassName="page-item"
