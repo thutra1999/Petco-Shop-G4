@@ -7,12 +7,14 @@ import {
   IncreaseQuantity,
   DecreaseQuantity,
   DeleteCart,
+  ResetCart,
 } from "../../actions/index";
 import "./Cart.css";
 import { Link } from "react-router-dom";
+import success from '../../img/XliJ.gif'
 
 const Cart = (props) => {
-  
+  const [isBuyDone, setIsBuyDone] = useState(false)
   const [cartItems, setCartItems] = useState([]);
   const [products, setProducts] = useState({
     useName: "",
@@ -139,13 +141,10 @@ const Cart = (props) => {
       body: JSON.stringify(products),
     };
     fetch("https://62b04ad2e460b79df0424941.mockapi.io/id", requestOptions)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        
-      });
-      props.ResetCart();
+      .then((response) => response.json());
+    setIsBuyDone(true);
   };
+
 
 
 
@@ -254,7 +253,6 @@ const Cart = (props) => {
               <Link to="/shop">
                 <button class="btn btn-primary m-1">Tiếp tục mua hàng</button>
               </Link>
-              <Link to="/">
               <button
                 class="btn btn-danger m-1"
                 type="button"
@@ -262,11 +260,19 @@ const Cart = (props) => {
               >
                 Thanh toán
               </button>
-              </Link>
             </div>
           </div>
         </div>
       </div>
+      {isBuyDone && (
+        <div class="item_header-popup-wrap">
+          <div class="item_header-wrap text-center">
+          <div class="title h1">Mua thành công</div>
+          <div><img src={success} alt="..."/></div>
+          <Link to="/"><button class="btn btn-danger" onClick={() => props.ResetCart()}>Tro ve trang chu</button></Link>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
@@ -281,4 +287,5 @@ export default connect(mapStateToProps, {
   IncreaseQuantity,
   DecreaseQuantity,
   DeleteCart,
+  ResetCart
 })(Cart);
