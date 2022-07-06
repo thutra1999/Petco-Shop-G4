@@ -53,3 +53,28 @@
 .checkout__order .checkout__order__subtotal span {
 	float: right;
 }
+.item_cart-popup-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    padding: 100px 0;
+}
+.item_cart-wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+ .item_cart-wrap .title {
+    margin: 0 0 20px 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: -1px;
+	color: #0a303a;
+}
