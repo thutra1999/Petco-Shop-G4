@@ -7,12 +7,9 @@ import ProductTable from "./ProductTable";
 function Admin() {
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [filter, setFilter] = useState("");
   const [page, setPage] = useState(true);
-
-  const categoryFilterHandler = (props) => {
-    setFilter(props);
-  };
+  const [filter, setFilter] = useState("");
+  
 
   useEffect(() => {
     let url = "https://62b421ada36f3a973d2c998f.mockapi.io/testShop";
@@ -25,7 +22,8 @@ function Admin() {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        setProducts(data);
+        setProducts(data)
+        console.log(data);
       });
   }, [searchTerm, filter]);
 
@@ -41,6 +39,11 @@ function Admin() {
         setProducts(data);
       });
   }, [searchTerm]);
+
+ 
+  const categoryFilterHandler = (props) => {
+    setFilter(props);
+  };
 
   return (
     <>
@@ -61,6 +64,7 @@ function Admin() {
         Quản lý đơn hàng
       </button>
       {page ? (
+       
         <div className="container">
           <h2>Danh sách sản phẩm</h2>
           <div class="row">
@@ -89,7 +93,7 @@ function Admin() {
           </div>
           <ProductTable data={products} filter={categoryFilterHandler} />
         </div>
-      ) : (
+     ) : (
         <div className="container">
           <h2>Danh sách đơn hàng</h2>
           <div class="row">
