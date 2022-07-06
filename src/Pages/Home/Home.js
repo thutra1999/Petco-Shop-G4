@@ -2,6 +2,7 @@ import './Home.css';
 import img01 from "../../img/doghome01.png"
 import img02 from "../../img/doghome02.png"
 import ProductItem from "../../Components/ProductItem/ProductItem";
+import { Link, NavLink } from 'react-router-dom';
 
 import React, { useEffect, useState } from "react";
 
