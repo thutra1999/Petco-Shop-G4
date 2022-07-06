@@ -30,7 +30,7 @@ const ProductDetail = () => {
           <div class="panel-body inf-content">
             <div class="row">
               <div class="col">
-                <strong>Thông tin sản phẩm </strong>
+                <strong class="h3">Thông tin sản phẩm </strong>
                 <br />
                 <div class="table-responsive">
                   <table class="table table-user-information">
