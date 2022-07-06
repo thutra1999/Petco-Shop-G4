@@ -72,7 +72,7 @@ function Footer() {
                                             <img src="http://bizweb.dktcdn.net/100/375/956/themes/750643/assets/icon-telephone.png?1654417427508"
                                                 alt=""></img>
                                             <div class="contact">
-                                                <a href="" class="phone-number">0869.125.610</a>
+                                                <a href="tel:0869.125.610" class="phone-number">0869.125.610</a>
                                                 <span class="hour">(Tất cả các ngày trong tuần)</span>
                                             </div>
                                         </div>
