@@ -61,7 +61,7 @@ function Detail() {
                                             <i class="fa fa-star"></i>
                                             <i class="fa fa-star-half-o"></i>
                                         </div>
-                                        <div class="product__details__price">{product.price} VNĐ</div>
+                                        <div class="product__details__price">{product.price.toLocaleString('en-US')} VNĐ</div>
                                         <p>{product.describe}</p>
                                         <button class="btn btn-outline-danger" onClick={() => AddCart(product)}>Thêm vào giỏ hàng</button>
                                         <a href="#" class="heart-icon btn btn-outline-secondary"><i class="fas fa-heart"></i></a>
