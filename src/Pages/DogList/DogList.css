@@ -1,0 +1,251 @@
+body {
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12;
+}
+
+.demo {
+    width: 990px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+}
+
+.post-slide {
+    margin: 0 10px;
+    background: #fff;
+}
+
+.post-slide .post-img {
+    overflow: hidden;
+    position: relative;
+}
+
+.post-slide .post-img img {
+    width: 100%;
+    height: auto;
+    transform: scale(1, 1);
+    transition: all 0.30s ease 0s;
+}
+
+.post-slide:hover .post-img img {
+    transform: scale(1.2, 1.2);
+}
+
+.post-slide .over-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    text-align: center;
+    background: rgba(68, 67, 64, 0.9);
+    transition: all 0.50s linear;
+}
+
+.post-slide:hover .over-layer {
+    opacity: 1;
+}
+
+.post-slide .post-link {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    top: 45%;
+}
+
+.post-slide .post-link li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.post-slide .post-link li a {
+    width: 60px;
+    height: 60px;
+    line-height: 59px;
+    border-radius: 50%;
+    color: #fff;
+    background: #333;
+    font-size: 20px;
+    transform: scale(1, 1);
+    transition: all 0.20s linear;
+    text-decoration: none;
+}
+
+.post-slide .post-link li a:hover {
+    text-decoration: none;
+    transform: scale(1.1, 1.1);
+}
+
+.post-slide .post-review {
+    padding: 15px 0;
+    overflow: hidden;
+}
+
+.post-slide .post-title {
+    margin-top: 0;
+}
+
+.post-slide .post-title a {
+    display: block;
+    color: #333;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.50s ease 0s;
+    text-decoration: none;
+}
+
+.post-slide .post-title a:hover {
+    text-decoration: none;
+    color: #1f80bb;
+}
+
+.post-slide .post-info {
+    list-style: none;
+    padding: 10px 0 0 0;
+    margin: 0 0 7px 0;
+    text-align: center;
+    border-top: 1px solid #d3d3d3;
+    font-size: 14px;
+}
+
+.post-slide .post-info li {
+    display: inline-block;
+    margin-right: 13px;
+}
+
+.post-slide .tag-info {
+    margin: 0;
+    padding: 0 0 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #d3d3d3;
+    font-size: 14px;
+}
+
+.post-slide .tag-info li {
+    list-style: none;
+    display: inline-block;
+}
+
+.post-slide .tag-info li a {
+    color: #808080;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.post-slide .tag-info li a:hover {
+    color: #1f80bb;
+    text-decoration: none;
+}
+
+.post-slide .post-description {
+    color: #828282;
+    font-size: 12px;
+    padding: 5px 25px;
+    line-height: 25px;
+}
+
+.post-slide .read-more {
+    color: #333;
+    float: right;
+    font-weight: bold;
+    margin-right: 25px;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.post-slide .read-more:hover {
+    color: #1f80bb;
+    text-decoration: none;
+}
+
+.owl-theme .owl-buttons div {
+    position: relative;
+    border-radius: 0;
+    background: #807b87;
+    padding: 7px 15px;
+    transition: all 0.5s ease 0s;
+}
+
+.owl-theme .owl-buttons .owl-prev {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    opacity: 0;
+    transition: all 0.50s linear;
+}
+
+.owl-carousel:hover .owl-buttons .owl-prev {
+    opacity: 1;
+    left: -30px;
+}
+
+.owl-theme .owl-buttons .owl-next {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    opacity: 0;
+    transition: all 0.50s linear;
+}
+
+.owl-carousel:hover .owl-buttons .owl-next {
+    opacity: 1;
+    right: -30px;
+}
+
+.owl-prev:before,
+.owl-next:before {
+    content: "\f053";
+    font-family: 'FontAwesome';
+    color: #fff;
+}
+
+.owl-next:before {
+    content: "\f054";
+}
+
+@media only screen and (max-width: 990px) {
+    .post-slide .post-info li {
+        margin-right: 5px;
+    }
+
+    .owl-theme .owl-buttons div {
+        display: none;
+    }
+
+    .demo {
+        width: auto;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-left: auto;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .post-slide .post-link li a {
+        width: 40px;
+        height: 40px;
+        line-height: 39px;
+        font-size: 13px;
+    }
+
+    .post-slide .post-title a {
+        font-size: 14px;
+    }
+
+    .demo {
+        width: auto;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-left: auto;
+    }
+}
