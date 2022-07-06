@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { connect } from "react-redux";
-import { useNavigate } from "react-router-dom";
+
 import {
   IncreaseQuantity,
   DecreaseQuantity,
@@ -12,7 +12,7 @@ import "./Cart.css";
 import { Link } from "react-router-dom";
 
 const Cart = (props) => {
-  let navigate = useNavigate();
+  
   const [cartItems, setCartItems] = useState([]);
   const [products, setProducts] = useState({
     useName: "",
@@ -115,10 +115,12 @@ const Cart = (props) => {
     });
   }
   const handleChange = (event) => {
+    
     const target = event.target;
     const value = target.value;
     const name = target.name;
     let data = { ...products };
+    console.log(value)
     data[name] = value;
     setProducts(data);
   };
@@ -126,6 +128,7 @@ const Cart = (props) => {
   useEffect(() => {
     let data = { ...products };
     data.cart = cartItems
+    console.log(cartItems)
     setProducts(data);
   }, [cartItems]);
 
@@ -139,8 +142,9 @@ const Cart = (props) => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        navigate(-1);
+        
       });
+      props.ResetCart();
   };
 
 
@@ -250,6 +254,7 @@ const Cart = (props) => {
               <Link to="/shop">
                 <button class="btn btn-primary m-1">Tiếp tục mua hàng</button>
               </Link>
+              <Link to="/">
               <button
                 class="btn btn-danger m-1"
                 type="button"
@@ -257,6 +262,7 @@ const Cart = (props) => {
               >
                 Thanh toán
               </button>
+              </Link>
             </div>
           </div>
         </div>
