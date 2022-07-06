@@ -2,6 +2,7 @@ import './Home.css';
 import img01 from "../../img/doghome01.png"
 import img02 from "../../img/doghome02.png"
 import ProductItem from "../../Components/ProductItem/ProductItem";
+import { Link, NavLink } from 'react-router-dom';
 
 import React, { useEffect, useState } from "react";
 
@@ -38,7 +39,11 @@ const Home = () => {
               <h2>Welcome to</h2>
               <h1>Petco Shop</h1>
               <h5>Selecting only the best Puppies! </h5>
-              <button class="myButton">Shop Now</button>
+              <div>
+                <Link to="/shop">
+                  <button class="myButton">Shop now</button>
+                </Link>
+              </div>
             </div>
           </div>
           <div class="carousel-item">
@@ -46,7 +51,11 @@ const Home = () => {
             <div class="carousel-caption d-none d-md-block">
               <h5>The best for their well-being</h5>
               <h5>and find your perfect product today!</h5>
-              <button class="myButton">Shop Now</button>
+              <div>
+                <Link to="/shop">
+                  <button class="myButton">Shop now</button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

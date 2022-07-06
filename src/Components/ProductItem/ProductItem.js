@@ -3,6 +3,7 @@ import "./ProductItem.css";
 import { AddCart } from "../../actions/index";
 import { connect } from "react-redux";
 import ReactPaginate from "react-paginate";
+import { Link } from 'react-router-dom'
 
 function ProductItem(props) {
   const [products, setProducts] = useState(null);
@@ -40,7 +41,9 @@ function ProductItem(props) {
       <div class="col-lg-4 col-md-6">
         <div class="card">
           <div class="img_frame">
-            <img src={item.picture_1} class="card-img-top" alt="..." />
+            <Link to={"/detail/" + item.id}>
+              <img src={item.picture_1} class="card-img-top" alt="..." />
+            </Link>
             <ul class="side-icons">
               <span>
                 <i
@@ -58,7 +61,7 @@ function ProductItem(props) {
           </div>
           <div class="card-body container text-center">
             <h5 class="card-title">{item.name}</h5>
-            <br/>
+            <br />
             <div class="row">
               <div class="col-12">
                 <span class="new_price">
@@ -68,7 +71,7 @@ function ProductItem(props) {
               <div class="col-12">
                 {item.discount > 0 ? (
                   <span class="old-price">{item.price} VND</span>
-                ) : <br/>}
+                ) : <br />}
               </div>
             </div>
           </div>
@@ -79,11 +82,11 @@ function ProductItem(props) {
 
   return (
     <>
-     
+
       <div class="row">{list_product}</div>
       <ReactPaginate
-        previousLabel="Previous"
-        nextLabel="Next"
+        previousLabel="<<"
+        nextLabel=">>"
         pageClassName="page-item"
         pageLinkClassName="page-link"
         previousClassName="page-item"
@@ -101,7 +104,7 @@ function ProductItem(props) {
         activeClassName="active"
         forcePage={page}
       />
-      
+
     </>
   );
 }
