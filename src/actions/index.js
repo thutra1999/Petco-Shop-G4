@@ -6,8 +6,8 @@ export const ADD_CART = "ADD_CART";
 export const UPDATE_CART = "UPDATE_CART";
 export const DELETE_CART = "DELETE_CART";
 
-export const GET_ALL_PRODUCT = "GET_ALL_PRODUCT"; //Còn thiếu
-
+export const GET_ALL_PRODUCT = "GET_ALL_PRODUCT"; 
+export const Reset_Cart = "Reset_Cart";
 
 
 export function GetNumberCart() {
@@ -26,6 +26,11 @@ export function UpdateCart(payload) {
   return {
     type: "UPDATE_CART",
     payload
+  };
+}
+export function ResetCart() {
+  return {
+    type: "Reset_Cart"
   };
 }
 export function DeleteCart(payload) {
