@@ -130,7 +130,7 @@ function Footer() {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 a-center">
                         <span class="text">
                             © Bản quyền thuộc về
-                            <b>Petco Shop</b>.
+                            <b> Petco Shop</b>.
                             GPDKKD số 01A8017619 do UBND quận Ba Đình cấp ngày 19/01/2015.
                         </span>
                     </div>
