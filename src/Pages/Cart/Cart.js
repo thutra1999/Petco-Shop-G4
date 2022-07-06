@@ -62,7 +62,7 @@ const Cart = (props) => {
         <td>
           <div class='row'>{item.name}</div>
         </td>
-        <td class="text-right">{item.price} VNĐ</td>
+        <td class="text-right">{item.price.toLocaleString('en-US')} VNĐ</td>
         <td class="text-right">{(item.discount > 0) ? item.discount.toLocaleString('en-US') : 0} VNĐ</td>
         <td class="text-right">{(item.discount > 0) ? (item.price * item.quantity - item.discount * item.quantity).toLocaleString('en-US') : (item.price * item.quantity).toLocaleString('en-US')} VNĐ</td>
         <td>
