@@ -211,9 +211,9 @@ const Cart = (props) => {
       {isBuyDone && (
         <div class="item_cart-popup-wrap">
           <div class="item_cart-wrap text-center">
-          <div class="title h1">Mua thành công</div>
+          <div class="title h1">Thanh toán thành công</div>
           <div><img src={success} alt="..."/></div>
-          <Link to="/"><button class="btn btn-danger" onClick={() => props.ResetCart()}>Tro ve trang chu</button></Link>
+          <Link to="/"><button class="btn btn-danger" onClick={() => props.ResetCart()}>Trở về trang chủ</button></Link>
           </div>
         </div>
       )}
