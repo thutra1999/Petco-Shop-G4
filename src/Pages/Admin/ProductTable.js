@@ -40,11 +40,11 @@ function ProductTable(props) {
   var product_list = [];
   if (products != null) {
     product_list = products.map((item) => (
-      <tr key={item.id} className="bg-success">
+      <tr key={item.id} >
         <td>{item.id}</td>
         <td>{item.name}</td>
         <td>
-          <strong>${item.price}</strong>
+          <strong>{item.price} VND</strong>
         </td>
         <td>{item.category}</td>
         <td>
@@ -78,13 +78,13 @@ function ProductTable(props) {
   return (
     <table className="table">
       <tr>
-        <th>STT</th>
-        <th onClick={() => sortColumn('firstName', 'string')}>Tên sản phẩm</th>
+        <th onClick={() => sortColumn('id', 'number')}>Mã sản phẩm</th>
+        <th onClick={() => sortColumn('name', 'string')}>Tên sản phẩm</th>
 
-        <th onClick={() => sortColumn('lastName', 'string')}>
+        <th onClick={() => sortColumn('price', 'number')}>
           Đơn giá<span> </span>
         </th>
-        <th>Sản phẩm khác</th>
+        <th>Phân loại</th>
         <th>Trạng thái</th>
       </tr>
       {product_list}
