@@ -16,20 +16,18 @@
     font-size: 3rem;
     color: #fff;
     text-shadow: 0 0 20px rgb(131, 127, 127);
-    font-family: cursive;
+    font-family: arial;
 }
 
 #myCarosel .carousel-caption h5 {
     font-size: 1.5rem;
     color: #fff;
-    text-shadow: 0 0 10px rgb(131, 127, 127);
-    font-family: cursive;
+    font-family: arial;
 }
 #myCarosel .carousel-caption h2 {
     font-size: 1.5rem;
     color: #fff;
-    text-shadow: 0 0 10px rgb(131, 127, 127);
-    font-family: cursive;
+    font-family: arial;
 }
 
 #myCarosel .carousel-caption .myButton {
@@ -39,7 +37,7 @@
     border-radius: 4px;
     color: #fff;
     text-shadow: 0 0 10px rgb(131, 127, 127);
-    font-family: cursive;
+    font-family: arial;
 }
 
 #myCarosel .carousel-caption .myButton:hover {
