@@ -265,8 +265,8 @@ const Cart = (props) => {
         </div>
       </div>
       {isBuyDone && (
-        <div class="item_header-popup-wrap">
-          <div class="item_header-wrap text-center">
+        <div class="item_cart-popup-wrap">
+          <div class="item_cart-wrap text-center">
           <div class="title h1">Mua thành công</div>
           <div><img src={success} alt="..."/></div>
           <Link to="/"><button class="btn btn-danger" onClick={() => props.ResetCart()}>Tro ve trang chu</button></Link>
