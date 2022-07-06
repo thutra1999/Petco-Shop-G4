@@ -1,6 +1,8 @@
 import './Home.css';
 import img01 from "../../img/doghome01.png"
 import img02 from "../../img/doghome02.png"
+import img03 from "../../img/thankyou.png"
+import img04 from "../../img/banner01.png"
 import ProductItem from "../../Components/ProductItem/ProductItem";
 import { Link, NavLink } from 'react-router-dom';
 import Feedback from "../../Components/Feedback/Feedback";
@@ -72,10 +74,10 @@ const Home = () => {
 
       {/* End of Carousel */}
 
-      <div class="container">
+      <div class="container-fluid">
         {/* Best seller */}
 
-        <div className='container-fliud'>
+        <div className='container-fluid'>
           <div className='container'>
             <div class="row">
               <div class="col-lg-12">
@@ -96,8 +98,12 @@ const Home = () => {
         </div>
         {/* End of best seller */}
 
+        <div className='container-fluid'>
+          <img className='banner' src={img04}/>
+        </div>
+
         {/* New product */}
-        <div className='container-fliud'>
+        <div className='container-fluid'>
           <div className='container'>
             <div class="row">
               <div class="col-lg-12">
@@ -127,9 +133,13 @@ const Home = () => {
         </div>
          {/* End of new product */}
 
+         <div className='container-fluid'>
+          <img className='banner' src={img03}/>
+        </div>
+
          {/* Feedback */}
 
-        <div className='container-fliud'>
+        <div className='container-fluid'>
           <div className='container'>
             <div class="row">
               <div class="col-lg-12">
