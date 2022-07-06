@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import OrderTable from "./OrderTable";
 import ProductTable from "./ProductTable";
 
 function Admin() {
@@ -9,18 +10,14 @@ function Admin() {
   const [searchTerm, setSearchTerm] = useState("");
   const [page, setPage] = useState(true);
   const [filter, setFilter] = useState("");
+  const [orders, setOrders] = useState([]);
   
-  let url = "https://62b421ada36f3a973d2c998f.mockapi.io/testShop";
+  
+
+ 
 
   useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        setProducts(data)
-      });
-  }, []);
-
-  useEffect(() => {
+    let url = "https://62b421ada36f3a973d2c998f.mockapi.io/testShop";
     if (searchTerm.length > 0) {
       url = url + "?search=" + searchTerm;
     }
@@ -36,15 +33,15 @@ function Admin() {
   }, [searchTerm, filter]);
 
   useEffect(() => {
-    let url = "https://62b04ad2e460b79df0424941.mockapi.io/id";
+    let url_oder = "https://62b04ad2e460b79df0424941.mockapi.io/id/";
     if (searchTerm.length > 0) {
-      url = url + "?phone=" + searchTerm;
+      url_oder = url_oder + "?phone=" + searchTerm;
     }
 
-    fetch(url)
+    fetch(url_oder)
       .then((response) => response.json())
       .then((data) => {
-        setProducts(data);
+        setOrders(data);
       });
   }, [searchTerm]);
 
@@ -120,6 +117,7 @@ function Admin() {
                 </div>
               </div>
             </div>
+            <OrderTable data={orders}  />
           </div>
         </div>
       )}
