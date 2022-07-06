@@ -81,7 +81,18 @@ function ProductTable(props) {
         <th onClick={() => sortColumn('price', 'number')}>
           Đơn giá<span> </span>
         </th>
-        <th>Phân loại</th>
+        <th class="nav-item dropdown">
+        <a class="text-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Phân loại
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="text-light ">Thức ăn</a></li>
+            <li><a class="text-light">Thuốc</a></li>
+            <li><a class="text-light">Đồ dùng</a></li>
+            <li><a class="text-light">Quần áo</a></li>
+            <li><a class="text-light">Khác</a></li>
+          </ul>
+          </th>
         <th>Trạng thái</th>
         <th colSpan={2}><br/></th>
       </tr>
