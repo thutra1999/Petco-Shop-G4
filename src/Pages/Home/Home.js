@@ -102,7 +102,7 @@ const Home = () => {
             <div class="row">
               <div class="col-lg-12">
                 <div class="section-title">
-                <i class="fa fa-thin fa-award fa-3x"></i>
+                <i class="fa fa-thin fa-star fa-2x"></i>
                   <h2>Sản phẩm mới nhất</h2>
                 </div>
                 {/* <div class="featured__controls">
@@ -134,6 +134,8 @@ const Home = () => {
             <div class="row">
               <div class="col-lg-12">
                 <div class="section-title">
+                  <i class="fa fa-thin fa-star fa-2x"></i>
+                  <i class="fa fa-thin fa-star fa-2x"></i>
                   <i class="fa fa-thin fa-star fa-2x"></i>
                   <h2>Đánh giá khách hàng</h2>
                 </div>
