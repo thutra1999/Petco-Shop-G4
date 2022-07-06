@@ -60,17 +60,17 @@ function ProductItem(props) {
             </ul>
           </div>
           <div class="card-body container text-center">
-            <h5 class="card-title">{item.name}</h5>
+            <Link to ={"/detail/" + item.id}><h5 class="card-title">{item.name}</h5></Link>
             <br />
             <div class="row">
               <div class="col-12">
                 <span class="new_price">
-                  {item.price * (1 - item.discount)} VND
+                  {(item.price * (1 - item.discount)).toLocaleString('en-US')} VND
                 </span>
               </div>
               <div class="col-12">
                 {item.discount > 0 ? (
-                  <span class="old-price">{item.price} VND</span>
+                  <span class="old-price">{item.price.toLocaleString('en-US')} VND</span>
                 ) : <br />}
               </div>
             </div>
