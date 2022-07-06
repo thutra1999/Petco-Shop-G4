@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import ProductTable from "./ProductTable";
 
 function Admin() {
-  const [searchTerm, setSearchTerm] = useState("");
   const [products, setProducts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
   const [filter, setFilter] = useState("");
   const [page, setPage] = useState(true);
 
@@ -40,7 +40,7 @@ function Admin() {
       .then((data) => {
         setProducts(data);
       });
-  }, [searchTerm, filter]);
+  }, [searchTerm]);
 
   return (
     <>
