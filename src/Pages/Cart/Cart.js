@@ -171,16 +171,20 @@ const Cart = (props) => {
         <h3>Thông tin khách hàng</h3>
         <div className='col-lg-6 col-md-6 col-sm-12'>
           <div class="form-floating mb-3">
-            <input type="name" class="form-control" id="" placeholder="Name..."></input>
+            <input type="name" class="form-control" name="useName" placeholder="Name..." onChange={(e)=> handleChange(e)}></input>
             <label for="floatingInput">Họ Tên</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="" placeholder="Adress..."></input>
+            <input type="text" class="form-control" name="address" placeholder="Address..." onChange={(e)=> handleChange(e)}></input>
             <label for="floatingPassword">Địa Chỉ</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="" placeholder="Phonenumber..."></input>
+            <input type="text" class="form-control" name="phone" placeholder="Phonenumber..." onChange={(e)=> handleChange(e)}></input>
             <label for="floatingPassword">Số Điện Thoại</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="email" placeholder="Email..." onChange={(e)=> handleChange(e)}></input>
+            <label for="floatingPassword">Email</label>
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12">
