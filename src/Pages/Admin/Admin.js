@@ -88,7 +88,7 @@ function Admin() {
                 </div>
               </div>
               <p>
-                <Link to={"/productedit/new"}>
+                <Link to={"/admin/productedit/new"}>
                   <button className="btn btn-primary" type="button">
                     Thêm mới sản phẩm
                   </button>
