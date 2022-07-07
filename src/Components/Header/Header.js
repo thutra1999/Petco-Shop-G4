@@ -82,7 +82,7 @@ const Header = (props) => {
   const resetPasswordHandler = () => {
     setFormLogin(
       <>
-        <div className="title h1 text-center">Đăng ký</div>
+        <div className="title h1 text-center">Lấy lại mật khẩu</div>
         <div className="row item_header-form">
           <div className="title h3">Tên đăng nhập</div>
           <input type="text" placeholder="Enter your username" />
