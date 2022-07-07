@@ -25,7 +25,7 @@ const DogList = () => {
                   <li>Khẩu phần ăn: 1-2 con</li>
                 </ul>
                 <ul class="tag-info">
-                  <li>Nguyên liệu làm pate cho chó: 400g thịt heo và gan heo xay nhuyễn</li>
+                  <li>Nguyên liệu làm pate cho chó: 400g thịt heo và gan heo xay nhuyễn</li><br></br>
                   <li> Dụng cụ: Máy xay sinh tố </li>
                 </ul>
                 <p class="post-description">
@@ -109,7 +109,7 @@ const DogList = () => {
                   <li>Chó chăn cừu Đức </li>
                 </ul>
                 <ul class="tag-info">
-                  <li>Chó Samoyed</li>
+                  <li>Chó Samoyed</li><br></br>
                   <li>Chó chăn cừu Úc </li>
                 </ul>
                 <p class="post-description">
