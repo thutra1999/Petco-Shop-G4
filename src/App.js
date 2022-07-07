@@ -5,8 +5,6 @@ import DogList from "./Pages/DogList/DogList";
 import Shop from "./Pages/Shop/Shop";
 import Contact from "./Pages/Contact/Contact";
 import NoPage from "./Pages/NoPage";
-import Footer from "./Components/Footer/Footer";
-import Header from "./Components/Header/Header";
 import Cart from "./Pages/Cart/Cart";
 import Intro from "./Pages/Intro";
 import Detail from "./Pages/Detail/Detail";
@@ -15,15 +13,16 @@ import ProductEdit from "./Pages/Admin/ProductEdit";
 import ProductDetail from "./Pages/Admin/ProductDetail";
 import OrderDetail from "./Pages/Admin/OrderDetail";
 import OrderTable from "./Pages/Admin/OrderTable";
+import UserLayout from "./Pages/UserLayout";
+import AdminLayout from "./Pages/AdminLayout";
 
 function App() {
   return (
     <React.Fragment>
     <BrowserRouter>
-      <Header />
       <Routes>
         <Route path="/">
-          <Route index element={<Home />} />
+          <Route index element={<UserLayout />} />
           <Route path="dogList" element={<DogList />} />
           <Route path="shop/:id" element={<Shop />} />
           <Route path="shop" element={<Shop />} />
@@ -32,14 +31,15 @@ function App() {
           <Route path="*" element={<NoPage />} />
           <Route path="intro" element={<Intro />} />
           <Route path="detail/:id" element={<Detail />}/>
-          <Route path="admin" element={<Admin />} />
+        </Route>
+        <Route path="/admin" element={<AdminLayout/>}>
+          <Route index element={<Admin />} />
           <Route path="productedit/:id" element={<ProductEdit />} />
           <Route path="productdetail/:id" element={<ProductDetail />} />
           <Route path="ordertable" element={<OrderTable />} />
           <Route path="orderdetail/:id" element={<OrderDetail />} />
         </Route>
       </Routes>
-      <Footer />
       
     </BrowserRouter>
     </React.Fragment>
