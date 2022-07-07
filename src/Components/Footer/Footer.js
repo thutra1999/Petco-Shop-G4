@@ -78,7 +78,7 @@ function Footer() {
                                             <img src="http://bizweb.dktcdn.net/100/375/956/themes/750643/assets/icon-telephone.png?1654417427508"
                                                 alt=""></img>
                                             <div className="contact">
-                                                <a href="tel:0869.125.610" className="phone-number">0869.125.610</a>
+                                                <a href="tel:0869.125.610" className="phone-number">123.467.789</a>
                                                 <span className="hour">(Tất cả các ngày trong tuần)</span>
                                             </div>
                                         </div>
@@ -102,11 +102,6 @@ function Footer() {
                                     </div>
                                 </div>
 
-                                {/* <div className="guarantee">
-                                    <h4 className="title-menu">CHỨNG NHẬN</h4>
-                                    <img src="http://bizweb.dktcdn.net/100/375/956/themes/750643/assets/guarantee_img.png?1656547719204"
-                                        alt=""></img>
-                                </div> */}
 
                             </div>
                             <div className="col-xs-12 col-sm-12 col-md-4 no-padding">
@@ -114,8 +109,8 @@ function Footer() {
                                     <h4 className="title-menu">Hệ thống cửa hàng & liên kết</h4>
                                     <div className="item">
                                         <h4 className="item-title">Petco Shop</h4>
-                                        <div className="item-child">242 Kim Mã, Ba Đình, Hà Nội</div>
-                                        <div className="item-child">Hotline: 0971.111.242</div>
+                                        <div className="item-child">36 Hoàng Cầu, Chợ Dừa, Đống Đa, Hà Nội</div>
+                                        <div className="item-child">Hotline: 123.467.789</div>
                                     </div>
 
                                     <div className="item-connect">
