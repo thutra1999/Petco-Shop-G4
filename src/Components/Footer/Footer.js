@@ -60,6 +60,12 @@ function Footer() {
                                                 alt=""></img>
                                         </div>
                                     </div>
+
+                                    <div class="guarantee">
+                                    <h4 class="title-menu">CHỨNG NHẬN</h4>
+                                    <img src="http://bizweb.dktcdn.net/100/375/956/themes/750643/assets/guarantee_img.png?1656547719204"
+                                        alt=""></img>
+                                </div>
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-4">
@@ -96,11 +102,11 @@ function Footer() {
                                     </div>
                                 </div>
 
-                                <div class="guarantee">
+                                {/* <div class="guarantee">
                                     <h4 class="title-menu">CHỨNG NHẬN</h4>
                                     <img src="http://bizweb.dktcdn.net/100/375/956/themes/750643/assets/guarantee_img.png?1656547719204"
                                         alt=""></img>
-                                </div>
+                                </div> */}
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-4 no-padding">
                                 <div class="widget-ft">
