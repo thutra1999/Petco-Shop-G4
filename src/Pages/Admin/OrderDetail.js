@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Loader } from "../../Components/Loader/Loader";
 
 const OrderDetail = () => {
   let navigate = useNavigate();
@@ -108,7 +109,7 @@ const OrderDetail = () => {
           </button>
         </div>
       ) : (
-        "loading"
+        <Loader/>
       )}
     </>
   );
