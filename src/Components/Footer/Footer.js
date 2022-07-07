@@ -91,7 +91,7 @@ function Footer() {
                                             <a href="https://www.facebook.com/" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
                                         </div>
                                         <div class="list-item">
-                                            <a href="https://zalo.me/pc" class="google-plus"><i class="fa-brands fa-google-plus-g"></i></a>
+                                            <a href="https://www.google.com.vn/?hl=vi" class="google-plus"><i class="fa-brands fa-google-plus-g"></i></a>
                                         </div>
                                         <div class="list-item">
                                             <a href="https://twitter.com/?lang=vi" class="twitter"><i class="fa-brands fa-twitter"></i></a>
@@ -136,8 +136,8 @@ function Footer() {
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 a-center">
                         <span class="text">
                             © Bản quyền thuộc về
-                            <b> Petco Shop</b>.
-                            GPDKKD số 01A8017619 do UBND quận Ba Đình cấp ngày 19/01/2015.
+                            <b> Group 4</b>.
+                            GPDKKD số 01A8017619 do MultiCampus cấp ngày 09/07/2022.
                         </span>
                     </div>
                 </div>
