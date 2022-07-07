@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { Loader } from '../../Components/Loader/Loader';
 
 const ProductDetail = () => {
   const params = useParams();
@@ -136,7 +137,7 @@ const ProductDetail = () => {
           <button type="button" class="btn btn-secondary">Trở lại</button></Link>
         </div>
       ) : (
-        'loading'
+        <Loader/>
       )}
     </>
   );

@@ -3,15 +3,16 @@ import { useParams } from "react-router-dom";
 import ProductItem from "../../Components/ProductItem/ProductItem";
 import "./Shop.css";
 import { Link } from "react-router-dom";
-import side from '../../side.jpg';
+import side from "../../side.jpg";
 import Preloader from "../../Components/Preloader/Preloader";
+import { Loader } from "../../Components/Loader/Loader";
 
 const Shop = () => {
   const [categories, setCategories] = useState(null);
   const [data, setData] = useState([]);
   const params = useParams();
-  const [preloader, setPreloader] = useState(true)
-
+  const [preloader, setPreloader] = useState(true);
+  const [loadItem, setLoadItem] = useState(true);
 
   let url;
   if (
@@ -29,24 +30,23 @@ const Shop = () => {
     url = "https://62b421ada36f3a973d2c998f.mockapi.io/shop";
   }
   useEffect(() => {
-    setPreloader(true);
+    setLoadItem(true);
     fetch(url)
       .then((response) => response.json())
-      .then((data) => setData(data)).then(()=>setPreloader(false))
+      .then((data) => setData(data))
+      .then(() => setLoadItem(false));
   }, [url]);
 
-
-
   useEffect(() => {
+    setPreloader(true);
     let url_category = "https://62b421ada36f3a973d2c998f.mockapi.io/category";
-
     fetch(url_category)
       .then((response) => response.json())
       .then((data) => {
         setCategories(data);
-      });
+      })
+      .then(() => setPreloader(false));
   }, []);
-
 
   var category_jsx = [];
   if (categories != null) {
@@ -65,33 +65,37 @@ const Shop = () => {
     );
   }
 
-
   return (
     <>
-    {!preloader ?
-      <div className="product spad">
-        <div className="container">
-          <div className="row">
-            <div class="col-lg-3 col-md-4 col-sm-12 shop_section">
-              <div class="sidebar">
-                <div class="sidebar__item">
-                  <h4>Danh mục sản phẩm</h4>
-                  {category_jsx}
-                </div>
+      {!preloader ? (
+        <div className="product spad">
+          <div className="container">
+            <div className="row">
+              <div class="col-lg-3 col-md-4 col-sm-12 shop_section">
+                <div class="sidebar">
+                  <div class="sidebar__item">
+                    <h4>Danh mục sản phẩm</h4>
+                    {category_jsx}
+                  </div>
 
-                <div class="sidebar__item">
-                  <img src={side} className="d-sm-none d-md-block"></img>
+                  <div class="sidebar__item">
+                    <img src={side} className="d-sm-none d-md-block"></img>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-9 col-md-8 col-sm-12 product">
-
-              <ProductItem data={data}></ProductItem>
-
+              <div className="col-lg-9 col-md-8 col-sm-12 product">
+                {!loadItem ? (
+                  <ProductItem data={data}></ProductItem>
+                ) : (
+                  <Loader/>
+                )}
+              </div>
             </div>
           </div>
         </div>
-      </div> : <Preloader />}
+      ) : (
+        <Preloader />
+      )}
     </>
   );
 };

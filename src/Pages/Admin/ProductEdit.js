@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Loader } from "../../Components/Loader/Loader";
 
 const ProductEdit = () => {
   const params = useParams();
@@ -376,7 +377,7 @@ const ProductEdit = () => {
           </div>
         </div>
       ) : (
-        "loading"
+        <Loader/>
       )}
     </>
   );
