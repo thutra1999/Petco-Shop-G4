@@ -2,15 +2,15 @@
 const Intro = () => {
     return (
       <>
-      <div class="container-fluid ">    
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
+      <div className="container-fluid ">    
+  <div className="row content">
+    <div className="col-sm-2 sidenav">
       {/* <!-- <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p> --> */}
     </div>
-    <div class="col-sm-8 text-left"> 
-      <div class="text-left">
+    <div className="col-sm-8 text-left"> 
+      <div className="text-left">
       <h5>GIỚI THIỆU</h5>
       <p>Cửa hàng Petco Shop</p>
       </div>
@@ -41,11 +41,11 @@ const Intro = () => {
 						<a href="mailto:petcolu@gmail.com"> petcolu@gmail.com</a>
 					</div>
     </div>
-    <div class="col-sm-2 sidenav">
-      {/* <!-- <div class="well">
+    <div className="col-sm-2 sidenav">
+      {/* <!-- <div className="well">
         <p></p>
       </div>
-      <div class="well">
+      <div className="well">
         <p></p>
       </div> --> */}
     </div>
