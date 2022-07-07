@@ -4,43 +4,43 @@ import './Footer.css';
 function Footer() {
     return (
         <>
-            <div class="contianer-fluide footer">
-                <div class="section_service">
-                    <div class="container">
-                        <div class="row row-noGutter-2">
-                            <div class="col-item-srv col-md-4 col-sm-12 col-xs-12">
-                                <div class="service_item">
-                                    <span class="icon"><img src="http://bizweb.dktcdn.net/100/375/956/themes/750643/assets/srv_1.png?16"
+            <div className="contianer-fluide footer">
+                <div className="section_service">
+                    <div className="container">
+                        <div className="row row-noGutter-2">
+                            <div className="col-item-srv col-md-4 col-sm-12 col-xs-12">
+                                <div className="service_item">
+                                    <span className="icon"><img src="http://bizweb.dktcdn.net/100/375/956/themes/750643/assets/srv_1.png?16"
                                         alt=""></img>
                                     </span>
-                                    <div class="content_srv">
-                                        <div class="title_service">Giao hàng cực nhanh</div>
-                                        <div class="content_service">Miễn phí với đơn hàng trị giá trên 800.000đ</div>
+                                    <div className="content_srv">
+                                        <div className="title_service">Giao hàng cực nhanh</div>
+                                        <div className="content_service">Miễn phí với đơn hàng trị giá trên 800.000đ</div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-item-srv col-md-4 col-sm-12 col-xs-12">
-                                <div class="service_item">
-                                    <span class="icon"><img src="http://bizweb.dktcdn.net/100/375/956/themes/750643/assets/srv_2.png?1656547719204"
+                            <div className="col-item-srv col-md-4 col-sm-12 col-xs-12">
+                                <div className="service_item">
+                                    <span className="icon"><img src="http://bizweb.dktcdn.net/100/375/956/themes/750643/assets/srv_2.png?1656547719204"
                                         alt=""></img>
                                     </span>
-                                    <div class="content_srv">
-                                        <div class="title_service">Mua hàng siêu tiết kiệm</div>
-                                        <div class="content_service">Tiết kiệm hơn từ 10% - 30% so với giá thị trường</div>
+                                    <div className="content_srv">
+                                        <div className="title_service">Mua hàng siêu tiết kiệm</div>
+                                        <div className="content_service">Tiết kiệm hơn từ 10% - 30% so với giá thị trường</div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-item-srv col-md-4 col-sm-12 col-xs-12">
-                                <div class="service_item">
-                                    <span class="icon">
+                            <div className="col-item-srv col-md-4 col-sm-12 col-xs-12">
+                                <div className="service_item">
+                                    <span className="icon">
                                         <img src="http://bizweb.dktcdn.net/100/375/956/themes/750643/assets/srv_3.png?1656547719204"
                                             alt=""></img>
                                     </span>
-                                    <div class="content_srv">
-                                        <div class="title_service">Sản phẩm chính hãng 100%</div>
-                                        <div class="content_service">Sản phẩm được nhập khẩu chính hãng</div>
+                                    <div className="content_srv">
+                                        <div className="title_service">Sản phẩm chính hãng 100%</div>
+                                        <div className="content_service">Sản phẩm được nhập khẩu chính hãng</div>
                                     </div>
                                 </div>
                             </div>
@@ -48,83 +48,83 @@ function Footer() {
                     </div>
                 </div>
 
-                <div class="top-footer mid-footer">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-4">
-                                <div class="col-md-12 no-padding">
-                                    <h4 class="title-menu title-payment">Chấp nhận thanh toán</h4>
-                                    <div class="footer-widget">
-                                        <div class="payment">
+                <div className="top-footer mid-footer">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-xs-12 col-sm-12 col-md-4">
+                                <div className="col-md-12 no-padding">
+                                    <h4 className="title-menu title-payment">Chấp nhận thanh toán</h4>
+                                    <div className="footer-widget">
+                                        <div className="payment">
                                             <img src="http://bizweb.dktcdn.net/100/375/956/themes/750643/assets/payment.png?1656547719204"
                                                 alt=""></img>
                                         </div>
                                     </div>
 
-                                    <div class="guarantee">
-                                    <h4 class="title-menu">CHỨNG NHẬN</h4>
+                                    <div className="guarantee">
+                                    <h4 className="title-menu">CHỨNG NHẬN</h4>
                                     <img src="http://bizweb.dktcdn.net/100/375/956/themes/750643/assets/guarantee_img.png?1656547719204"
                                         alt=""></img>
                                 </div>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-4">
-                                <div class="widget-ft">
-                                    <h4 class="title-menu tittle_time">Hotline liên hệ:</h4>
+                            <div className="col-xs-12 col-sm-12 col-md-4">
+                                <div className="widget-ft">
+                                    <h4 className="title-menu tittle_time">Hotline liên hệ:</h4>
                                 </div>
-                                <div class="time_work">
-                                    <div class="list-menu">
-                                        <div class="list-menu-item-hotline">
+                                <div className="time_work">
+                                    <div className="list-menu">
+                                        <div className="list-menu-item-hotline">
                                             <img src="http://bizweb.dktcdn.net/100/375/956/themes/750643/assets/icon-telephone.png?1654417427508"
                                                 alt=""></img>
-                                            <div class="contact">
-                                                <a href="tel:0869.125.610" class="phone-number">0869.125.610</a>
-                                                <span class="hour">(Tất cả các ngày trong tuần)</span>
+                                            <div className="contact">
+                                                <a href="tel:0869.125.610" className="phone-number">0869.125.610</a>
+                                                <span className="hour">(Tất cả các ngày trong tuần)</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="socials-footer">
-                                    <h4 class="title-menu">Kết nối với chúng tôi</h4>
-                                    <div class="list-socials">
-                                        <div class="list-item">
-                                            <a href="https://www.facebook.com/" class="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                <div className="socials-footer">
+                                    <h4 className="title-menu">Kết nối với chúng tôi</h4>
+                                    <div className="list-socials">
+                                        <div className="list-item">
+                                            <a href="https://www.facebook.com/" className="facebook"><i className="fa-brands fa-facebook-f"></i></a>
                                         </div>
-                                        <div class="list-item">
-                                            <a href="https://www.google.com.vn/?hl=vi" class="google-plus"><i class="fa-brands fa-google-plus-g"></i></a>
+                                        <div className="list-item">
+                                            <a href="https://www.google.com.vn/?hl=vi" className="google-plus"><i className="fa-brands fa-google-plus-g"></i></a>
                                         </div>
-                                        <div class="list-item">
-                                            <a href="https://twitter.com/?lang=vi" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+                                        <div className="list-item">
+                                            <a href="https://twitter.com/?lang=vi" className="twitter"><i className="fa-brands fa-twitter"></i></a>
                                         </div>
-                                        <div class="list-item">
-                                            <a href="https://www.instagram.com/" class="insta"><i class="fa-brands fa-instagram"></i></a>
+                                        <div className="list-item">
+                                            <a href="https://www.instagram.com/" className="insta"><i className="fa-brands fa-instagram"></i></a>
                                         </div>
                                     </div>
                                 </div>
 
-                                {/* <div class="guarantee">
-                                    <h4 class="title-menu">CHỨNG NHẬN</h4>
+                                {/* <div className="guarantee">
+                                    <h4 className="title-menu">CHỨNG NHẬN</h4>
                                     <img src="http://bizweb.dktcdn.net/100/375/956/themes/750643/assets/guarantee_img.png?1656547719204"
                                         alt=""></img>
                                 </div> */}
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-4 no-padding">
-                                <div class="widget-ft">
-                                    <h4 class="title-menu">Hệ thống cửa hàng & liên kết</h4>
-                                    <div class="item">
-                                        <h4 class="item-title">Petco Shop</h4>
-                                        <div class="item-child">242 Kim Mã, Ba Đình, Hà Nội</div>
-                                        <div class="item-child">Hotline: 0971.111.242</div>
+                            <div className="col-xs-12 col-sm-12 col-md-4 no-padding">
+                                <div className="widget-ft">
+                                    <h4 className="title-menu">Hệ thống cửa hàng & liên kết</h4>
+                                    <div className="item">
+                                        <h4 className="item-title">Petco Shop</h4>
+                                        <div className="item-child">242 Kim Mã, Ba Đình, Hà Nội</div>
+                                        <div className="item-child">Hotline: 0971.111.242</div>
                                     </div>
 
-                                    <div class="item-connect">
-                                        <h4 class="item-title">Petco Shop liên kết</h4>
+                                    <div className="item-connect">
+                                        <h4 className="item-title">Petco Shop liên kết</h4>
                                     </div>
 
-                                    <div class="item-address">
-                                        <h4 class="item-title">Petco Shop Văn Quán</h4>
-                                        <div class="item-child">32BT8 KDT Văn Quán, Hà Đông (cổng trường Tiểu học Ban Mai)</div>
-                                        <div class="item-child">Hotline: 0981.111.328</div>
+                                    <div className="item-address">
+                                        <h4 className="item-title">Petco Shop Văn Quán</h4>
+                                        <div className="item-child">32BT8 KDT Văn Quán, Hà Đông (cổng trường Tiểu học Ban Mai)</div>
+                                        <div className="item-child">Hotline: 0981.111.328</div>
                                     </div>
                                 </div>
                             </div>
@@ -132,9 +132,9 @@ function Footer() {
                     </div>
                 </div>
 
-                <div class="copyright">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 a-center">
-                        <span class="text">
+                <div className="copyright">
+                    <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 a-center">
+                        <span className="text">
                             © Bản quyền thuộc về
                             <b> Group 4</b>.
                         </span>
