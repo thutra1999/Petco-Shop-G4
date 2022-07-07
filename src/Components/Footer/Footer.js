@@ -137,7 +137,6 @@ function Footer() {
                         <span class="text">
                             © Bản quyền thuộc về
                             <b> Group 4</b>.
-                            GPDKKD số 01A8017619 do MultiCampus cấp ngày 09/07/2022.
                         </span>
                     </div>
                 </div>
