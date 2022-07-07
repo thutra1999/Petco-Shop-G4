@@ -78,3 +78,10 @@
     letter-spacing: -1px;
 	color: #0a303a;
 }
+
+.form-floating span {
+	background-color: #dd2222;
+	color: yellow;
+	position: relative;
+	top: 3%;
+}
