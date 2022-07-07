@@ -7,9 +7,9 @@
 #myCarosel .carousel-caption {
     text-align: left;
     position: absolute;
-	left: 50%;
-    top: 50%;
-    transform: translateY(-70%);
+	left: 44%;
+    top: 54%;
+    transform: translateY(-50%);
 }
 
 #myCarosel .carousel-caption h1 {
@@ -32,8 +32,6 @@
 
 #myCarosel .carousel-caption .myButton {
     padding: 11px 16px;
-    margin-top: 100px;
-    margin-left: -180px;
     border: 2px solid #fff;
     background: unset;
     border-radius: 5px;
@@ -228,6 +226,20 @@ img.banner {
 	color: #252525;
 	font-weight: 700;
 }
+
+.justify {
+	justify-content: center;
+}
+
+/* @media screen and (max-width: 439px) {
+	.product .new_price {
+		font-size: 1rem;
+	}
+
+	.product .old-price {
+		font-size: 0.8rem;
+	}
+} */
 
 /* End of feature */
 
