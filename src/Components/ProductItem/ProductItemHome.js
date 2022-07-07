@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { AddCart } from "../../actions/index";
 import { connect } from "react-redux";
-import './ProductItem.css';
+import './ProductItemHome.css';
 
 function ProductItemHome(props) {
     const [products, setProducts] = useState(null);
@@ -42,13 +42,13 @@ function ProductItemHome(props) {
                             <div class="card-body container text-center">
                                 <Link to={"/detail/" + item.id}><h5 class="card-title">{item.name}</h5></Link>
                                 <br />
-                                <div class="row">
-                                    <div class="col-12">
+                                <div class="flex">
+                                    <div class="">
                                         <span class="new_price">
                                             {(item.price * (1 - item.discount)).toLocaleString('en-US')} VND
                                         </span>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="">
                                         {item.discount > 0 ? (
                                             <span class="old-price">{item.price.toLocaleString('en-US')} VND</span>
                                         ) : <br />}
