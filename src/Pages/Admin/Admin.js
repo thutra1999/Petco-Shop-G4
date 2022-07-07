@@ -11,10 +11,10 @@ function Admin() {
   const [page, setPage] = useState(true);
   const [filter, setFilter] = useState("");
   const [orders, setOrders] = useState([]);
-  
-  
 
- 
+
+
+
 
   useEffect(() => {
     let url = "https://62b421ada36f3a973d2c998f.mockapi.io/testShop";
@@ -45,31 +45,63 @@ function Admin() {
       });
   }, [searchTerm]);
 
- 
+
   const categoryFilterHandler = (props) => {
     setFilter(props);
   };
 
   return (
     <>
-      <button
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Admin</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"><button
+                  onClick={() => {
+                    setPage(true);
+                    setSearchTerm("");
+                  }}
+                >
+                  Quản lý sản phẩm
+                </button></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><button
+                  onClick={() => {
+                    setPage(false);
+                    setSearchTerm("");
+                  }}
+                >
+                  Quản lý đơn hàng
+                </button></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      {/* <button
         onClick={() => {
           setPage(true);
           setSearchTerm("");
         }}
       >
         Quản lý sản phẩm
-      </button>
-      <button
+      </button> */}
+      {/* <button
         onClick={() => {
           setPage(false);
           setSearchTerm("");
         }}
       >
         Quản lý đơn hàng
-      </button>
+      </button> */}
       {page ? (
-       
+
         <div className="container">
           <h2>Danh sách sản phẩm</h2>
           <div class="row">
@@ -98,7 +130,7 @@ function Admin() {
           </div>
           <ProductTable data={products} filter={categoryFilterHandler} />
         </div>
-     ) : (
+      ) : (
         <div className="container">
           <h2>Danh sách đơn hàng</h2>
           <div class="row">
@@ -117,7 +149,7 @@ function Admin() {
                 </div>
               </div>
             </div>
-            <OrderTable data={orders}  />
+            <OrderTable data={orders} />
           </div>
         </div>
       )}
