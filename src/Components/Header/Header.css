@@ -153,3 +153,8 @@
 	color: #f04336;
 	cursor: pointer;
 }
+
+.header .navbar-nav {
+    flex: 1;
+    justify-content: center;
+}
