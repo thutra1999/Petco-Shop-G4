@@ -127,7 +127,7 @@ const ProductDetail = () => {
               </div>
             </div>
           </div>
-          <Link to={'/productedit/' + params.id}>
+          <Link to={'/admin/productedit/' + params.id}>
             <button type="button" className="btn btn-primary">
               Chỉnh sửa
             </button>
