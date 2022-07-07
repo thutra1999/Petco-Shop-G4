@@ -3,6 +3,8 @@ import img01 from "../../img/doghome01.png"
 import img02 from "../../img/doghome02.png"
 import img03 from "../../img/thankyou.png"
 import img04 from "../../img/banner01.png"
+import img05 from "../../img/carousel01.jpg"
+import img06 from "../../img/carousel02.jpg"
 import ProductItem from "../../Components/ProductItem/ProductItem";
 import { Link } from 'react-router-dom';
 import Feedback from "../../Components/Feedback/Feedback";
@@ -41,11 +43,11 @@ const Home = () => {
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src={img01} class="d-block w-50" alt="..." />
+            <img src={img05} class="d-block w-50" alt="..." />
             <div class="carousel-caption d-none d-md-block">
-              <h2>Welcome to</h2>
+              {/* <h2>Welcome to</h2>
               <h1>Petco Shop</h1>
-              <h5>Selecting only the best Puppies! </h5>
+              <h5>Selecting only the best Puppies! </h5> */}
               <div>
                 <Link to="/shop">
                   <button class="myButton">Shop now</button>
@@ -54,10 +56,10 @@ const Home = () => {
             </div>
           </div>
           <div class="carousel-item">
-            <img src={img02} class="d-block w-50" alt="..." />
+            <img src={img06} class="d-block w-50" alt="..." />
             <div class="carousel-caption d-none d-md-block">
-              <h5>The best for their well-being</h5>
-              <h5>and find your perfect product today!</h5>
+              {/* <h5>The best for their well-being</h5>
+              <h5>and find your perfect product today!</h5> */}
               <div>
                 <Link to="/shop">
                   <button class="myButton">Shop now</button>
