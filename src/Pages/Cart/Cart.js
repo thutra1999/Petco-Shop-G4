@@ -47,7 +47,7 @@ const Cart = (props) => {
         <td>{key + 1}</td>
         <td>
           <button
-            class="btn btn-sm"
+            className="btn btn-sm"
             onClick={() => props.DecreaseQuantity(key)}
           >
             -
@@ -55,24 +55,24 @@ const Cart = (props) => {
           <input
             type="number"
             value={item.quantity}
-            class="form-control-sm"
+            className="form-control-sm"
             style={{ width: "5em", min: "0" }}
           />
           <button
-            class="btn btn-sm"
+            className="btn btn-sm"
             onClick={() => props.IncreaseQuantity(key)}
           >
             +
           </button>
         </td>
         <td>
-          <div class="row">{item.name}</div>
+          <div className="row">{item.name}</div>
         </td>
-        <td class="text-right">{item.price.toLocaleString("en-US")} VNĐ</td>
-        <td class="text-right">
+        <td className="text-right">{item.price.toLocaleString("en-US")} VNĐ</td>
+        <td className="text-right">
           {item.discount > 0 ? item.discount.toLocaleString("en-US") : 0} VNĐ
         </td>
-        <td class="text-right">
+        <td className="text-right">
           {item.discount > 0
             ? (
                 item.price * item.quantity -
@@ -82,12 +82,12 @@ const Cart = (props) => {
           VNĐ
         </td>
         <td>
-          <div class="row">
+          <div className="row">
             <button
-              class="btn btn-sm btn-danger"
+              className="btn btn-sm btn-danger"
               onClick={() => props.DeleteCart(key)}
             >
-              <i class="fas fa-times"></i>
+              <i className="fas fa-times"></i>
             </button>
           </div>
         </td>
@@ -131,9 +131,9 @@ const Cart = (props) => {
     const value = target.value;
     const name = target.name;
     let data = { ...products };
-    console.log(value)
+    
     data[name] = value;
-    console.log(data)
+   
     setProducts(data);
   };
 
@@ -141,7 +141,7 @@ const Cart = (props) => {
     let data = { ...products };
     data.cart = cartItems;
     data.price = price_bill;
-    console.log(cartItems);
+   
     setProducts(data);
   }, [cartItems, price_bill]);
 
@@ -166,32 +166,32 @@ const Cart = (props) => {
 
   const onSubmit = (data) => {
     if(data != null && price_bill > 0){
-      console.log(products)
+     
       buyHandler();
     }
   };
 
 
   return (
-    <form class="container-fluid" onSubmit={handleSubmit(onSubmit)}>
-      <div class="row">
-        <div class="col mt-2">
-          <h2 class="text-center">Giỏ hàng của bạn</h2>
-          <table class="table table-striped">
+    <form className="container-fluid" onSubmit={handleSubmit(onSubmit)}>
+      <div className="row">
+        <div className="col mt-2">
+          <h2 className="text-center">Giỏ hàng của bạn</h2>
+          <table className="table table-striped">
             <thead>
               <tr>
                 <th>STT</th>
                 <th>Số lượng</th>
                 <th>Tên sản phẩm</th>
-                <th class="text-right">Giá sản phẩm</th>
-                <th class="text-right">Giảm giá</th>
-                <th class="text-right">Thành tiền</th>
+                <th className="text-right">Giá sản phẩm</th>
+                <th className="text-right">Giảm giá</th>
+                <th className="text-right">Thành tiền</th>
               </tr>
             </thead>
             <tbody>
               {cartItems.length == 0 ? (
                 <tr>
-                  <td colspan="4" class="text-center">
+                  <td colSpan="4" className="text-center">
                     Giỏ hàng của bạn trống
                   </td>
                 </tr>
@@ -203,10 +203,10 @@ const Cart = (props) => {
             <tfoot>
               <tr>
                 <td></td>
-                <td colspan="4" class="text-right">
+                <td colSpan="4" className="text-right">
                   Tổng tiền:
                 </td>
-                <td class="text-right">
+                <td className="text-right">
                   {getTotal().toLocaleString("en-US")} VND
                 </td>
               </tr>
@@ -216,14 +216,14 @@ const Cart = (props) => {
       </div>
       <br></br>
       <br></br>
-      <div class="row">
+      <div className="row">
         <h3>Thông tin khách hàng</h3>
 
         <div className="col-lg-6 col-md-6 col-sm-12">
-          <div class="form-floating mb-3">
+          <div className="form-floating mb-3">
             <input
               type="name"
-              class="form-control"
+              className="form-control"
               name="useName"
               placeholder="Name..."
               {...register("useName", { required: true })}
@@ -232,12 +232,12 @@ const Cart = (props) => {
             {errors.useName?.type === "required" && (
               <span>Họ Tên không được bỏ trống!</span>
             )}
-            <label for="floatingInput">Họ Tên</label>
+            <label htmlFor="floatingInput">Họ Tên</label>
           </div>
-          <div class="form-floating mb-3">
+          <div className="form-floating mb-3">
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               name="address"
               placeholder="Address..."
               {...register("address", { required: true })}
@@ -246,12 +246,12 @@ const Cart = (props) => {
             {errors.address?.type === "required" && (
               <span>Địa Chỉ không được bỏ trống!</span>
             )}
-            <label for="floatingPassword">Địa Chỉ</label>
+            <label htmlFor="floatingPassword">Địa Chỉ</label>
           </div>
-          <div class="form-floating mb-3">
+          <div className="form-floating mb-3">
             <input
               type="number"
-              class="form-control"
+              className="form-control"
               name="phone"
               placeholder="PhoneNumber..."
               
@@ -272,12 +272,12 @@ const Cart = (props) => {
             {errors.phone?.type === "maxLength" && (
               <span>Số điện thoại chỉ gồm 10 chữ số!</span>
             )}
-            <label for="floatingPassword">Số Điện Thoại</label>
+            <label htmlFor="floatingPassword">Số Điện Thoại</label>
           </div>
-          <div class="form-floating mb-3">
+          <div className="form-floating mb-3">
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               name="email"
               placeholder="Email..."
               
@@ -293,25 +293,25 @@ const Cart = (props) => {
             {errors.email?.type === "pattern" && (
               <span>Email chưa chính xác!</span>
             )}
-            <label for="floatingPassword">Email</label>
+            <label htmlFor="floatingPassword">Email</label>
           </div>
         </div>
 
-        <div class="col-lg-6 col-md-6 col-sm-12">
-          <div class="checkout__order">
+        <div className="col-lg-6 col-md-6 col-sm-12">
+          <div className="checkout__order">
             <h4>Đơn hàng của bạn</h4>
-            <div class="checkout__order__products">
+            <div className="checkout__order__products">
               Sản phẩm <span>Tổng</span>
             </div>
             <ul>{product_name_bill}</ul>
-            <div class="checkout__order__subtotal">
+            <div className="checkout__order__subtotal">
               Thành tiền <span>{price_bill.toLocaleString("en-US")} VNĐ</span>
             </div>
-            <div class="text-center">
+            <div className="text-center">
               <Link to="/shop">
-                <button class="btn btn-primary m-1">Tiếp tục mua hàng</button>
+                <button className="btn btn-primary m-1">Tiếp tục mua hàng</button>
               </Link>
-              <button class="btn btn-danger m-1" type="submit">
+              <button className="btn btn-danger m-1" type="submit">
                 Thanh toán
               </button>
             </div>
@@ -319,14 +319,14 @@ const Cart = (props) => {
         </div>
       </div>
       {isBuyDone && (
-        <div class="item_cart-popup-wrap">
-          <div class="item_cart-wrap text-center">
-            <div class="title h1">Thanh toán thành công</div>
+        <div className="item_cart-popup-wrap">
+          <div className="item_cart-wrap text-center">
+            <div className="title h1">Thanh toán thành công</div>
             <div>
               <img src={success} alt="..." />
             </div>
             <Link to="/">
-              <button class="btn btn-danger" onClick={() => props.ResetCart()}>
+              <button className="btn btn-danger" onClick={() => props.ResetCart()}>
                 Trở về trang chủ
               </button>
             </Link>
