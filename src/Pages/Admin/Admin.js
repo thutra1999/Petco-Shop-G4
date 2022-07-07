@@ -28,7 +28,6 @@ function Admin() {
       .then((response) => response.json())
       .then((data) => {
         setProducts(data)
-        console.log(data);
       });
   }, [searchTerm, filter]);
 
@@ -52,16 +51,16 @@ function Admin() {
 
   return (
     <>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Admin</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">Admin</a>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"><button
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#"><button
                   onClick={() => {
                     setPage(true);
                     setSearchTerm("");
@@ -70,8 +69,8 @@ function Admin() {
                   Quản lý sản phẩm
                 </button></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><button
+              <li className="nav-item">
+                <a className="nav-link" href="#"><button
                   onClick={() => {
                     setPage(false);
                     setSearchTerm("");
@@ -84,28 +83,12 @@ function Admin() {
           </div>
         </div>
       </nav>
-      {/* <button
-        onClick={() => {
-          setPage(true);
-          setSearchTerm("");
-        }}
-      >
-        Quản lý sản phẩm
-      </button> */}
-      {/* <button
-        onClick={() => {
-          setPage(false);
-          setSearchTerm("");
-        }}
-      >
-        Quản lý đơn hàng
-      </button> */}
       {page ? (
 
         <div className="container">
           <h2>Danh sách sản phẩm</h2>
-          <div class="row">
-            <div class="col-sm-6">
+          <div className="row">
+            <div className="col-sm-6">
               <div className="input-group">
                 <input
                   type="text"
@@ -115,7 +98,7 @@ function Admin() {
                 ></input>
                 <div className="input-group-append">
                   <button className="btn btn-secondary" type="button">
-                    <i class="fa fa-search"></i>
+                    <i className="fa fa-search"></i>
                   </button>
                 </div>
               </div>
@@ -133,8 +116,8 @@ function Admin() {
       ) : (
         <div className="container">
           <h2>Danh sách đơn hàng</h2>
-          <div class="row">
-            <div class="col-sm-6">
+          <div className="row">
+            <div className="col-sm-6">
               <div className="input-group">
                 <input
                   type="text"
@@ -144,7 +127,7 @@ function Admin() {
                 ></input>
                 <div className="input-group-append">
                   <button className="btn btn-secondary" type="button">
-                    <i class="fa fa-search"></i>
+                    <i className="fa fa-search"></i>
                   </button>
                 </div>
               </div>
