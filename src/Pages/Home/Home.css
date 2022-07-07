@@ -1,5 +1,5 @@
 #myCarosel {
-    background-color: #fa6a6a;
+    background-color: #FFA6A6;
     position: relative;
     width: 100%;
 }
@@ -31,12 +31,15 @@
 }
 
 #myCarosel .carousel-caption .myButton {
-    padding: 6px 8px;
+    padding: 11px 16px;
+    margin-top: 100px;
+    margin-left: -180px;
     border: 2px solid #fff;
     background: unset;
-    border-radius: 4px;
+    border-radius: 5px;
     color: #fff;
-    text-shadow: 0 0 10px rgb(131, 127, 127);
+	font-size: 18px;
+    text-shadow: 0 0 10px rgb(131 127 127);
     font-family: arial;
 }
 
