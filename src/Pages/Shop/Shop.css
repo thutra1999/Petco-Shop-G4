@@ -123,3 +123,28 @@
 	position: absolute;
 	visibility: hidden;
 }
+
+@media screen and (max-width: 439px) {
+	.sidebar__item img {
+		display: none;
+	}
+	
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+	.product .card-title {
+		font-size:  15px;
+	}
+
+	.product .new_price {
+		font-size: 1rem;
+	}
+
+	.product .old-price {
+		font-size: 0.8rem;
+	}
+
+	.shop_section .sidebar__item h4 {
+		font-size: 22px;
+	}
+}
