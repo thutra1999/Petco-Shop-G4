@@ -18,7 +18,7 @@
 }
 .product .new_price{
 	margin-top: 25px;
-    color: #FF4545;
+    color: #f04336;
     font-size: 1.2rem;
     font-weight: bold;
 	margin-right: 5px;
@@ -34,6 +34,7 @@
 /*  */
 .product .side-icons{
 	position: absolute;
+	color: #f04336;
 	right: 0;
 	top: 15%;
 	display: flex;
@@ -48,7 +49,7 @@
 	margin: 0.4rem;
 }
 .product .side-icons span:hover{
-	background-color: #FF4545;
+	background-color: #f04336;
 	color: white;
 	transition: all 500ms ease-in-out;
 }
