@@ -107,6 +107,7 @@ function Footer() {
                                     <img src="http://bizweb.dktcdn.net/100/375/956/themes/750643/assets/guarantee_img.png?1656547719204"
                                         alt=""></img>
                                 </div> */}
+
                             </div>
                             <div className="col-xs-12 col-sm-12 col-md-4 no-padding">
                                 <div className="widget-ft">
@@ -136,7 +137,7 @@ function Footer() {
                     <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 a-center">
                         <span className="text">
                             © Bản quyền thuộc về
-                            <b> Group 4</b>.
+                            <b> Group 4 - KITS Hanoi 2022</b>.
                         </span>
                     </div>
                 </div>
