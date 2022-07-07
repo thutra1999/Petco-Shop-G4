@@ -41,29 +41,17 @@ const Home = () => {
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src={img05} class="d-block w-50" alt="..." />
-              <div class="carousel-caption d-none d-md-block">
-                {/* <h2>Welcome to</h2>
-              <h1>Petco Shop</h1>
-              <h5>Selecting only the best Puppies! </h5> */}
-                <div>
-                  <Link to="/shop">
-                    <button class="myButton">Shop now</button>
-                  </Link>
-                </div>
-              </div>
+              
             </div>
             <div class="carousel-item">
-              <img src={img06} class="d-block w-50" alt="..." />
-              <div class="carousel-caption d-none d-md-block">
-                {/* <h5>The best for their well-being</h5>
-              <h5>and find your perfect product today!</h5> */}
-                <div>
+              <img src={img06} class="d-block w-50 ms-auto" alt="..." />
+              
+            </div>
+            <div class='carouse-btn'>
                   <Link to="/shop">
                     <button class="myButton">Shop now</button>
                   </Link>
                 </div>
-              </div>
-            </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#myCarosel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
