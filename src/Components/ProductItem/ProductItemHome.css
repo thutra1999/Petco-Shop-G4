@@ -9,7 +9,7 @@
 }
 .product .card-title{
     text-align: center;
-	font-size: 14px;
+	font-size: 18px;
     height: 40px;
 	color: #000;
 	text-decoration: none;
@@ -81,12 +81,6 @@
 
 a {
 	text-decoration: none;
-}
-
-.pagination {
-	margin-top: 20px;
-    width: 100%;
-    justify-content: end;
 }
 
 .flex {

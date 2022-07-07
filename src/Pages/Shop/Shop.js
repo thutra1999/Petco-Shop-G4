@@ -72,7 +72,7 @@ const Shop = () => {
       <div className="product spad">
         <div className="container">
           <div className="row">
-            <div class="col-lg-3 col-md-5 col-sm-12 shop_section">
+            <div class="col-lg-3 col-md-4 col-sm-12 shop_section">
               <div class="sidebar">
                 <div class="sidebar__item">
                   <h4>Danh mục sản phẩm</h4>
@@ -80,11 +80,11 @@ const Shop = () => {
                 </div>
 
                 <div class="sidebar__item">
-                  <img src={side}></img>
+                  <img src={side} className="d-sm-none d-md-block"></img>
                 </div>
               </div>
             </div>
-            <div className="col-lg-9 col-md-7 col-sm-12 product">
+            <div className="col-lg-9 col-md-8 col-sm-12 product">
 
               <ProductItem data={data}></ProductItem>
 
