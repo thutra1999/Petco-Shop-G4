@@ -26,59 +26,59 @@ const Home = () => {
 
   return <>
     {!preloader ?
-      <div class="container-fluide">
+      <div className="container-fluide">
 
 
 
-        <div id="myCarosel" class="carousel slide d-sm-none d-md-block d-none d-sm-block" data-bs-ride="carousel">
+        <div id="myCarosel" className="carousel slide d-sm-none d-md-block d-none d-sm-block" data-bs-ride="carousel">
 
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarosel" data-bs-slide-to="0" class="active"
+          <div className="carousel-indicators">
+            <button type="button" data-bs-target="#myCarosel" data-bs-slide-to="0" className="active"
               aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#myCarosel" data-bs-slide-to="1"
               aria-label="Slide 2"></button>
           </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src={img05} class="d-block w-50" alt="..." />
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img src={img05} className="d-block w-50" alt="..." />
               
             </div>
-            <div class="carousel-item">
-              <img src={img06} class="d-block w-50 ms-auto" alt="..." />
+            <div className="carousel-item">
+              <img src={img06} className="d-block w-50 ms-auto" alt="..." />
               
             </div>
-            <div class='carouse-btn'>
+            <div className='carouse-btn'>
                   <Link to="/shop">
-                    <button class="myButton">Shop now</button>
+                    <button className="myButton">Shop now</button>
                   </Link>
                 </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#myCarosel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+          <button className="carousel-control-prev" type="button" data-bs-target="#myCarosel" data-bs-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#myCarosel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+          <button className="carousel-control-next" type="button" data-bs-target="#myCarosel" data-bs-slide="next">
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
           </button>
         </div>
 
         {/* End of Carousel */}
 
-        <div class="container-fluide">
+        <div className="container-fluide">
           {/* Best seller */}
 
           <div className='container-fluide'>
             <div className='container'>
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="section-title">
-                    <i class="fa fa-thin fa-award fa-3x"></i>
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="section-title">
+                    <i className="fa fa-thin fa-award fa-3x"></i>
                     <h2>Sản phẩm bán chạy</h2>
                   </div>
                 </div>
               </div>
-              <div class="row featured__filter">
+              <div className="row featured__filter">
                 <div className="col-lg-12 col-md-7 col-sm-12 product">
                   <div className="row justify">
                     <ProductItemHome data={data}></ProductItemHome>
@@ -96,15 +96,15 @@ const Home = () => {
           {/* New product */}
           <div className='container-fluide'>
             <div className='container'>
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="section-title">
-                    <i class="fa fa-thin fa-star fa-2x"></i>
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="section-title">
+                    <i className="fa fa-thin fa-star fa-2x"></i>
                     <h2>Sản phẩm mới nhất</h2>
                   </div>
-                  {/* <div class="featured__controls">
+                  {/* <div className="featured__controls">
                   <ul>
-                    <li class="active" data-filter="*">All</li> 
+                    <li className="active" data-filter="*">All</li> 
                     <li data-filter=".food">Thức ăn</li>
                     <li data-filter=".toy">Đồ chơi</li>
                     <li data-filter=".fashion">Thời trang</li>
@@ -113,7 +113,7 @@ const Home = () => {
                 </div> */}
                 </div>
               </div>
-              <div class="row featured__filter">
+              <div className="row featured__filter">
                 <div className="col-lg-12 col-md-7 col-sm-12 product">
                   <div className="row justify">
                     <ProductItemHome data={data}></ProductItemHome>
@@ -132,12 +132,12 @@ const Home = () => {
 
           <div className='container-fluide'>
             <div className='container'>
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="section-title">
-                    <i class="fa fa-thin fa-star fa-2x"></i>
-                    <i class="fa fa-thin fa-star fa-2x"></i>
-                    <i class="fa fa-thin fa-star fa-2x"></i>
+              <div className="row">
+                <div className="col-lg-12">
+                  <div className="section-title">
+                    <i className="fa fa-thin fa-star fa-2x"></i>
+                    <i className="fa fa-thin fa-star fa-2x"></i>
+                    <i className="fa fa-thin fa-star fa-2x"></i>
                     <h2>Đánh giá khách hàng</h2>
                   </div>
                 </div>
