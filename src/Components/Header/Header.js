@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import logo from "../../img/logo/logo.png";
 import { connect } from 'react-redux';
 
+
 const Header = (props) => {
+ 
   const [login, setLogin] = useState(false);
   const [formLogin, setFormLogin] = useState();
   const [searchIsHandler, setSearchIsHandler] = useState(false);
@@ -100,6 +102,8 @@ const Header = (props) => {
       </>
     );
   };
+
+ 
   return (
     <>
       <div class="header container-fluide">

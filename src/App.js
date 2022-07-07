@@ -15,6 +15,7 @@ import OrderDetail from "./Pages/Admin/OrderDetail";
 import OrderTable from "./Pages/Admin/OrderTable";
 import UserLayout from "./Pages/UserLayout";
 import AdminLayout from "./Pages/AdminLayout";
+import ScrollToTop from "./Components/ButtonScrollTop/ScrollToTop";
 
 function App() {
   return (
@@ -40,7 +41,7 @@ function App() {
           <Route path="orderdetail/:id" element={<OrderDetail />} />
         </Route>
       </Routes>
-      
+      <ScrollToTop/>
     </BrowserRouter>
     </React.Fragment>
   );

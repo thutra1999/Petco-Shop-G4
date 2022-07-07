@@ -33,6 +33,10 @@ function ProductItem(props) {
 
   const handlePageClick = (event) => {
     setPage(event.selected);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
   var list_product = [];
