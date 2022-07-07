@@ -25,92 +25,92 @@ function Detail(props) {
         <>
             {
                 (!preloader) ? (
-                    <section class="product-details spad">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="product__details__pic">
-                                        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                                            <div class="carousel-indicators">
-                                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <section className="product-details spad">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-lg-6 col-md-6">
+                                    <div className="product__details__pic">
+                                        <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+                                            <div className="carousel-indicators">
+                                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                                                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                             </div>
-                                            <div class="carousel-inner">
-                                                <div class="carousel-item active">
-                                                    <img src={product.picture_1} class="d-block w-100" alt="..."></img>
+                                            <div className="carousel-inner">
+                                                <div className="carousel-item active">
+                                                    <img src={product.picture_1} className="d-block w-100" alt="..."></img>
                                                 </div>
-                                                <div class="carousel-item">
-                                                    <img src={product.picture_2} class="d-block w-100" alt="..."></img>
+                                                <div className="carousel-item">
+                                                    <img src={product.picture_2} className="d-block w-100" alt="..."></img>
                                                 </div>
                                             </div>
-                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="visually-hidden">Previous</span>
+                                            <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span className="visually-hidden">Previous</span>
                                             </button>
-                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                <span class="visually-hidden">Next</span>
+                                            <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span className="visually-hidden">Next</span>
                                             </button>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="product__details__text">
+                                <div className="col-lg-6 col-md-6">
+                                    <div className="product__details__text">
                                         <h3>{product.name}</h3>
-                                        <div class="product__details__rating">
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star"></i>
-                                            <i class="fa fa-star-half-o"></i>
+                                        <div className="product__details__rating">
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star"></i>
+                                            <i className="fa fa-star-half-o"></i>
                                         </div>
-                                        <div class="product__details__price">{product.price.toLocaleString('en-US')} VNĐ</div>
+                                        <div className="product__details__price">{product.price.toLocaleString('en-US')} VNĐ</div>
                                         <p>{product.describe}</p>
-                                        <button class="btn btn-outline-danger" onClick={() => props.AddCart(product)}>Thêm vào giỏ hàng</button>
-                                        <a href="#" class="heart-icon btn btn-outline-secondary"><i class="fas fa-heart"></i></a>
+                                        <button className="btn btn-outline-danger" onClick={() => props.AddCart(product)}>Thêm vào giỏ hàng</button>
+                                        <a href="#" className="heart-icon btn btn-outline-secondary"><i className="fas fa-heart"></i></a>
                                         <ul>
                                             <li><b>Origin</b> <span>{product.origin}</span></li>
                                             <li><b>Weight</b> <span>{product.weight}</span></li>
                                             <li><b>Share on</b>
-                                                <div class="share">
-                                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                                                <div className="share">
+                                                    <a href="#"><i className="fab fa-facebook-f"></i></a>
+                                                    <a href="#"><i className="fab fa-twitter"></i></a>
+                                                    <a href="#"><i className="fab fa-instagram"></i></a>
+                                                    <a href="#"><i className="fab fa-pinterest"></i></a>
                                                 </div>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-lg-12">
-                                    <div class="accordion" id="accordionExample">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingOne">
-                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                <div className="col-lg-12">
+                                    <div className="accordion" id="accordionExample">
+                                        <div className="accordion-item">
+                                            <h2 className="accordion-header" id="headingOne">
+                                                <button className="accordion-button" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                     Benefits
                                                 </button>
                                             </h2>
-                                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                            <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne"
                                                 data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <div class="product__details__tab__desc">
+                                                <div className="accordion-body">
+                                                    <div className="product__details__tab__desc">
                                                         <p>{product.benefits}</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingTwo">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        <div className="accordion-item">
+                                            <h2 className="accordion-header" id="headingTwo">
+                                                <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                     Guide
                                                 </button>
                                             </h2>
-                                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                            <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo"
                                                 data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <div class="product__details__tab__desc">
+                                                <div className="accordion-body">
+                                                    <div className="product__details__tab__desc">
                                                         <p>{product.guide}</p>
                                                     </div>
                                                 </div>

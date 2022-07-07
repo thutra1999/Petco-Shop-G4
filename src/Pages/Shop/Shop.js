@@ -54,9 +54,9 @@ const Shop = () => {
       <ul className="nav navbar-nav">
         {
           (category_jsx = categories.map((item) => (
-            <li>
+            <li key={item.id}>
               <Link to={"/shop/" + item.category_name}>
-                <a>{item.category_name}</a>
+                <span>{item.category_name}</span>
               </Link>
             </li>
           )))
@@ -71,14 +71,14 @@ const Shop = () => {
         <div className="product spad">
           <div className="container">
             <div className="row">
-              <div class="col-lg-3 col-md-4 col-sm-12 shop_section">
-                <div class="sidebar">
-                  <div class="sidebar__item">
+              <div className="col-lg-3 col-md-4 col-sm-12 shop_section">
+                <div className="sidebar">
+                  <div className="sidebar__item">
                     <h4>Danh mục sản phẩm</h4>
                     {category_jsx}
                   </div>
 
-                  <div class="sidebar__item">
+                  <div className="sidebar__item">
                     <img src={side} className="d-sm-none d-md-block"></img>
                   </div>
                 </div>

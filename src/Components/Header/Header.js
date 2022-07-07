@@ -29,11 +29,11 @@ const Header = (props) => {
   const loginHandler = () => {
     setFormLogin(
       <>
-        <div class="title h1 text-center">Đăng nhập</div>
-        <div class="row item_header-form">
-          <div class="title h3">Tên đăng nhập</div>
+        <div className="title h1 text-center">Đăng nhập</div>
+        <div className="row item_header-form">
+          <div className="title h3">Tên đăng nhập</div>
           <input type="text" placeholder="Enter your username" />
-          <div class="title h3">Mật khẩu</div>
+          <div className="title h3">Mật khẩu</div>
           <input type="password" placeholder="Enter your password" />
           <button className="btn btn-danger">Login</button>
         </div>
@@ -55,13 +55,13 @@ const Header = (props) => {
   const signUpHandler = () => {
     setFormLogin(
       <>
-        <div class="title h1 text-center">Đăng ký tài khoản</div>
-        <div class="row item_header-form">
-          <div class="title h3">Tên đăng nhập</div>
+        <div className="title h1 text-center">Đăng ký tài khoản</div>
+        <div className="row item_header-form">
+          <div className="title h3">Tên đăng nhập</div>
           <input type="text" placeholder="Enter your username" />
-          <div class="title h3">Mật khẩu</div>
+          <div className="title h3">Mật khẩu</div>
           <input type="password" placeholder="Enter your password" />
-          <div class="title h3">Xác nhận mật khẩu</div>
+          <div className="title h3">Xác nhận mật khẩu</div>
           <input type="password" placeholder="Repeat your password" />
           <button className="btn btn-danger">Tạo tài khoản</button>
         </div>
@@ -82,9 +82,9 @@ const Header = (props) => {
   const resetPasswordHandler = () => {
     setFormLogin(
       <>
-        <div class="title h1 text-center">Đăng ký</div>
-        <div class="row item_header-form">
-          <div class="title h3">Tên đăng nhập</div>
+        <div className="title h1 text-center">Đăng ký</div>
+        <div className="row item_header-form">
+          <div className="title h3">Tên đăng nhập</div>
           <input type="text" placeholder="Enter your username" />
           <button className="btn btn-danger">Reset Password</button>
         </div>
@@ -106,31 +106,31 @@ const Header = (props) => {
  
   return (
     <>
-      <div class="header container-fluide">
-        <div class="topbar">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6 col-sm-6 col-xs-12">
-                <ul class="list-inline topbar_left d-sm-none d-md-block d-none d-sm-block d-md-none d-lg-block">
+      <div className="header container-fluide">
+        <div className="topbar">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6 col-sm-6 col-xs-12">
+                <ul className="list-inline topbar_left d-sm-none d-md-block d-none d-sm-block d-md-none d-lg-block">
                   <li>
-                    <span class="welcome_text">
+                    <span className="welcome_text">
                       Chào mừng bạn đến với petco.com.vn
                     </span>
                   </li>
-                  <li class="topbar-email">
+                  <li className="topbar-email">
                     <a href="">Email: petcolu@gmail.com</a>
                   </li>
                 </ul>
               </div>
-              <div class="col-md-6 col-sm-12 col-sm-12 topbar_right">
-                <div class="list-inline">
+              <div className="col-md-6 col-sm-12 col-sm-12 topbar_right">
+                <div className="list-inline">
                   <ul>
                     <li>
-                      <i class="fas fa-lock"></i>
+                      <i className="fas fa-lock"></i>
                       <a onClick={choseLogin}>Đăng nhập</a>
                     </li>
                     <li>
-                      <i class="fas fa-map-marker-alt"></i>
+                      <i className="fas fa-map-marker-alt"></i>
                       <a href="">Hệ thống cửa hàng</a>
                     </li>
                   </ul>
@@ -140,23 +140,23 @@ const Header = (props) => {
           </div>
         </div>
 
-        <div class="top-banner d-sm-none d-md-block d-none d-sm-block d-md-none d-lg-block">
+        <div className="top-banner d-sm-none d-md-block d-none d-sm-block d-md-none d-lg-block">
           <img
-            class="img-responsive"
+            className="img-responsive"
             src="http://bizweb.dktcdn.net/100/375/956/themes/750643/assets/img_top_banner.jpg?1656547719204"
             alt=""
           ></img>
         </div>
 
-        <nav class="navbar navbar-expand-lg ">
-          <div class="container">
-            <div class="logo">
+        <nav className="navbar navbar-expand-lg ">
+          <div className="container">
+            <div className="logo">
               <Link to="/">
                 <img src={logo} alt="image logo" />
               </Link>
             </div>
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarNavAltMarkup"
@@ -164,42 +164,42 @@ const Header = (props) => {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav">
-                <Link to="/" class="nav-link">
+            <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div className="navbar-nav">
+                <Link to="/" className="nav-link">
                   Trang chủ
                 </Link>
-                <Link to="/dogList" class="nav-link">
+                <Link to="/dogList" className="nav-link">
                   Blog chó yêu
                 </Link>
-                <Link to="/shop" class="nav-link">
+                <Link to="/shop" className="nav-link">
                   Sản phẩm
                 </Link>
-                <Link to="/contact" class="nav-link">
+                <Link to="/contact" className="nav-link">
                   Liên hệ
                 </Link>
-                <Link to="/intro" class="nav-link">
+                <Link to="/intro" className="nav-link">
                   Giới thiệu
                 </Link>
               </div>
               <div className="header_item row ms-auto">
                 <div className="input-search col">
                   <button
-                    class="btn btn-outline-danger"
+                    className="btn btn-outline-danger"
                     type="button"
                     id="button-addon2"
                     onClick={searchHandler}
                   >
-                    <i class="fas fa-search"></i>
+                    <i className="fas fa-search"></i>
                   </button>
                 </div>
 
-                <div class="shopping-card col">
+                <div className="shopping-card col">
                   <Link to="cart">
-                  <i class="fas fa-shopping-bag"></i>
-                  <div class="product-num">{numberCart}</div>
+                  <i className="fas fa-shopping-bag"></i>
+                  <div className="product-num">{numberCart}</div>
                   </Link>
                 </div>
               </div>
@@ -208,34 +208,34 @@ const Header = (props) => {
         </nav>
       </div>
       {login && (
-        <div class="item_header-popup-wrap">
-          <div class="item_header-close">
+        <div className="item_header-popup-wrap">
+          <div className="item_header-close">
             <span>
-              <i class="fas fa-times" onClick={choseLogin}></i>
+              <i className="fas fa-times" onClick={choseLogin}></i>
             </span>
           </div>
-          <div class="item_header-wrap ">
-            <div class="container">
-              <div class="row">
-                <div class="col-12">{formLogin}</div>
+          <div className="item_header-wrap ">
+            <div className="container">
+              <div className="row">
+                <div className="col-12">{formLogin}</div>
               </div>
             </div>
           </div>
         </div>
       )}
       {searchIsHandler && (
-        <div class="item_header-popup-wrap">
-          <div class="item_header-close">
+        <div className="item_header-popup-wrap">
+          <div className="item_header-close">
             <span>
-              <i class="fas fa-times" onClick={searchHandler}></i>
+              <i className="fas fa-times" onClick={searchHandler}></i>
             </span>
           </div>
-          <div class="item_header-wrap text-center">
-            <div class="container">
-              <div class="row">
-                <div class="col-12">
-                  <h2 class="title">... Tìm kiếm sản phẩm ...</h2>
-                  <div class="item_header-form">
+          <div className="item_header-wrap text-center">
+            <div className="container">
+              <div className="row">
+                <div className="col-12">
+                  <h2 className="title">... Tìm kiếm sản phẩm ...</h2>
+                  <div className="item_header-form">
                     <form action="#">
                       <input
                         type="text"
@@ -244,8 +244,8 @@ const Header = (props) => {
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                       />
-                      <Link to={"/shop/"+ searchTerm} onClick={searchHandler}><button class="item_header-btn">
-                        <i class="fas fa-search"></i>
+                      <Link to={"/shop/"+ searchTerm} onClick={searchHandler}><button className="item_header-btn">
+                        <i className="fas fa-search"></i>
                       </button></Link>
                       
                     </form>

@@ -20,18 +20,15 @@ const OrderDetail = () => {
       });
   }, []);
 
-  console.log(orders);
-  console.log(orders.id);
-  console.log(orders.useName);
-  console.log(orders.cart);
+
 
   var cartList = [];
   if (orders.cart != null) {
     cartList = orders.cart.map((item) => (
       <ul className="nav navbar-nav">
-        <li class="row">
-          <div class="col-6">{item.name}</div>
-          <div class="col-1">x{item.quantity}</div>
+        <li className="row">
+          <div className="col-6">{item.name}</div>
+          <div className="col-1">x{item.quantity}</div>
         </li>
       </ul>
     ));
@@ -40,45 +37,45 @@ const OrderDetail = () => {
   return (
     <>
       {orders != null ? (
-        <div class="container">
-          <div class="panel-body inf-content">
-            <div class="row">
-              <div class="col">
-                <strong class="h3">Thông tin đơn hàng</strong>
+        <div className="container">
+          <div className="panel-body inf-content">
+            <div className="row">
+              <div className="col">
+                <strong className="h3">Thông tin đơn hàng</strong>
                 <br />
-                <div class="table-responsive">
-                  <table class="table table-user-information">
+                <div className="table-responsive">
+                  <table className="table table-user-information">
                     <tbody>
                       <tr>
                         <td>
                           <strong>Mã đơn hàng</strong>
                         </td>
-                        <td class="text-primary">{orders.id}</td>
+                        <td className="text-primary">{orders.id}</td>
                       </tr>
                       <tr>
                         <td>
                           <strong>Tên khách hàng</strong>
                         </td>
-                        <td class="text-primary">{orders.useName}</td>
+                        <td className="text-primary">{orders.useName}</td>
                       </tr>
                       <tr>
                         <td>
                           <strong>Số điện thoại</strong>
                         </td>
-                        <td class="text-primary">{orders.phone}</td>
+                        <td className="text-primary">{orders.phone}</td>
                       </tr>
                       <tr>
                         <td>
                           <strong>Địa chỉ</strong>
                         </td>
-                        <td class="text-primary">{orders.address}</td>
+                        <td className="text-primary">{orders.address}</td>
                       </tr>
 
                       <tr>
                         <td>
                           <strong>Email</strong>
                         </td>
-                        <td class="text-primary">{orders.email}</td>
+                        <td className="text-primary">{orders.email}</td>
                       </tr>
                       <tr>
                         <td>
@@ -90,7 +87,7 @@ const OrderDetail = () => {
                       <td>
                           <strong>Tổng giá trị đơn hàng</strong>
                         </td>
-                        <td class="text-primary">
+                        <td className="text-primary">
                             {orders.price}
                         </td>
                       </tr>
@@ -102,7 +99,7 @@ const OrderDetail = () => {
           </div>
           <button
             type="button"
-            class="btn btn-secondary"
+            className="btn btn-secondary"
             onClick={() => navigate(-1)}
           >
             Trở lại

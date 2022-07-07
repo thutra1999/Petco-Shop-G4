@@ -13,13 +13,11 @@ const ProductEdit = () => {
 
   let navigate = useNavigate();
   useEffect(() => {
-    console.log("user use effect!!");
 
     if (params.id != "new") {
       let products_url =
         "https://62b421ada36f3a973d2c998f.mockapi.io/testShop/" + params.id;
 
-      console.log(products_url);
       fetch(products_url)
         .then((response) => response.json())
         .then((data) => {
@@ -36,33 +34,26 @@ const ProductEdit = () => {
     fetch(categories_url)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setcategories(data);
       });
   }, []);
 
   const handleChange = (event) => {
-    console.log(event);
     const target = event.target;
     const value = target.value;
     const name = target.name;
 
-    console.log(name);
     let data = { ...products };
     data[name] = value;
 
     if (name == "status") {
       data[name] = str2bool(value);
-      console.log("status");
-      console.log(data[name]);
     }
 
-    console.log(data);
     setProducts(data);
   };
 
   const saveUser = () => {
-    console.log("save data", products);
     let method = "POST";
     let id = "";
     if (products.id) {
@@ -107,21 +98,21 @@ const ProductEdit = () => {
     <>
       {products != null ? (
         <div
-          class="container bootstrap snippets bootdey "
+          className="container bootstrap snippets bootdey "
           style={{ padding: "100px 25px" }}
         >
-          <div class="panel-body inf-content">
-            <div class="row">
-              <strong class="h3">{products.id ? "Chỉnh sửa thông tin" : "Thêm mới"} sản phẩm</strong>
+          <div className="panel-body inf-content">
+            <div className="row">
+              <strong className="h3">{products.id ? "Chỉnh sửa thông tin" : "Thêm mới"} sản phẩm</strong>
               <br />
-              <div class="table-responsive">
-                <table class="table table-user-information">
+              <div className="table-responsive">
+                <table className="table table-user-information">
                   <tbody>
                     {products.id ? <tr>
                       <td>
                         <strong>Mã sản phẩm</strong>
                       </td>
-                      <td class="text-primary">{products.id}</td>
+                      <td className="text-primary">{products.id}</td>
                     </tr> : ''}
                     
                     <tr>
@@ -189,7 +180,7 @@ const ProductEdit = () => {
                       <td>
                         <strong>Ảnh minh họa sản phẩm</strong>
                       </td>
-                      <td class="text-primary">
+                      <td className="text-primary">
                         <input type="url"
                           className="form-control"
                           value={products.picture_1}
@@ -273,7 +264,7 @@ const ProductEdit = () => {
                       <td>
                         <strong>Trọng lượng</strong>
                       </td>
-                      <td class="text-primary">
+                      <td className="text-primary">
                         <input
                           type="text"
                           className="form-control"
@@ -287,7 +278,7 @@ const ProductEdit = () => {
                       <td>
                         <strong>Mô tả</strong>
                       </td>
-                      <td class="text-primary">
+                      <td className="text-primary">
                         <input
                           type="text"
                           className="form-control"
@@ -301,7 +292,7 @@ const ProductEdit = () => {
                       <td>
                         <strong>Công dụng</strong>
                       </td>
-                      <td class="text-primary">
+                      <td className="text-primary">
                         <input
                           type="text"
                           className="form-control"
@@ -315,7 +306,7 @@ const ProductEdit = () => {
                       <td>
                         <strong>Hướng dẫn sử dụng</strong>
                       </td>
-                      <td class="text-primary">
+                      <td className="text-primary">
                         <input
                           type="text"
                           className="form-control"
@@ -360,14 +351,14 @@ const ProductEdit = () => {
                 <div>
                   <button
                     type="button"
-                    class="btn btn-primary"
+                    className="btn btn-primary"
                     onClick={() => saveUser()}
                   >
                     Save
                   </button>
                   <span> </span>
                   <Link to="/admin">
-                    <button type="button" class="btn btn-secondary">
+                    <button type="button" className="btn btn-secondary">
                       Trở lại
                     </button>
                   </Link>

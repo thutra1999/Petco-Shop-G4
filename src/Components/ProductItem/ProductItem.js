@@ -42,39 +42,39 @@ function ProductItem(props) {
   var list_product = [];
   if (currentItems != null) {
     list_product = currentItems.map((item) => (
-      <div class="col-lg-4 col-md-6">
-        <div class="card">
-          <div class="img_frame">
+      <div className="col-lg-4 col-md-6" key={item.id}>
+        <div className="card">
+          <div className="img_frame">
             <Link to={"/detail/" + item.id}>
-              <img src={item.picture_1} class="card-img-top" alt="..." />
+              <img src={item.picture_1} className="card-img-top" alt="..." />
             </Link>
-            <ul class="side-icons">
+            <ul className="side-icons">
               <span>
                 <i
-                  class="fa fa-solid fa-shopping-cart"
+                  className="fa fa-solid fa-shopping-cart"
                   onClick={() => props.AddCart(item)}
                 ></i>
               </span>
               <span>
-                <i class="fa fa-share"></i>
+                <i className="fa fa-share"></i>
               </span>
               <span>
-                <i class="fa fa-heart"></i>
+                <i className="fa fa-heart"></i>
               </span>
             </ul>
           </div>
-          <div class="card-body container text-center">
-            <Link to={"/detail/" + item.id}><h5 class="card-title">{item.name}</h5></Link>
+          <div className="card-body container text-center">
+            <Link to={"/detail/" + item.id}><h5 className="card-title">{item.name}</h5></Link>
             <br />
-            <div class="flex">
-              <div class="">
-                <span class="new_price">
+            <div className="flex">
+              <div className="">
+                <span className="new_price">
                   {(item.price * (1 - item.discount)).toLocaleString('en-US')} VND
                 </span>
               </div>
-              <div class="">
+              <div className="">
                 {item.discount > 0 ? (
-                  <span class="old-price">{item.price.toLocaleString('en-US')} VND</span>
+                  <span className="old-price">{item.price.toLocaleString('en-US')} VND</span>
                 ) : <br />}
               </div>
             </div>
@@ -87,25 +87,25 @@ function ProductItem(props) {
   return (
     <>
 
-      <div class="row">{list_product}</div>
+      <div className="row">{list_product}</div>
       <ReactPaginate
         previousLabel="<<"
         nextLabel=">>"
-        pageClassName="page-item"
-        pageLinkClassName="page-link"
-        previousClassName="page-item"
-        previousLinkClassName="page-link"
-        nextClassName="page-item"
-        nextLinkClassName="page-link"
+        pageclassName="page-item"
+        pageLinkclassName="page-link"
+        previousclassName="page-item"
+        previousLinkclassName="page-link"
+        nextclassName="page-item"
+        nextLinkclassName="page-link"
         breakLabel="..."
-        breakClassName="page-item"
-        breakLinkClassName="page-link"
+        breakclassName="page-item"
+        breakLinkclassName="page-link"
         pageCount={pageCount}
         marginPagesDisplayed={2}
         pageRangeDisplayed={5}
         onPageChange={handlePageClick}
-        containerClassName="pagination"
-        activeClassName="active"
+        containerclassName="pagination"
+        activeclassName="active"
         forcePage={page}
       />
 

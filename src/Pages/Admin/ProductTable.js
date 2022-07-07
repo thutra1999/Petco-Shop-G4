@@ -26,7 +26,6 @@ function ProductTable(props) {
     fetch("https://62b421ada36f3a973d2c998f.mockapi.io/testShop/" + id, {
       method: "DELETE",
     }).then(() => {
-      console.log("delete successful!!");
       let result = [...products];
       result = result.filter((item) => {
         return item.id != id;
@@ -35,7 +34,6 @@ function ProductTable(props) {
     });
   };
 
-  console.log("product table main");
   var product_list = [];
   if (products != null) {
     product_list = products.map((item) => (
@@ -47,7 +45,7 @@ function ProductTable(props) {
         </td>
         <td>{item.category}</td>
         <td className={item.status ? "bg-success" : "bg-danger"}>
-          <div class="text-light text-center">
+          <div className="text-light text-center">
             {item.status ? "Còn hàng" : "Hết"}
           </div>
         </td>
@@ -82,9 +80,9 @@ function ProductTable(props) {
           <th onClick={() => sortColumn("price", "number")}>
             Đơn giá<span> </span>
           </th>
-          <th class="nav-item dropdown">
+          <th className="nav-item dropdown">
             <a
-              class="text-light dropdown-toggle"
+              className="text-light dropdown-toggle"
               href="#"
               id="navbarDropdown"
               role="button"
@@ -93,24 +91,24 @@ function ProductTable(props) {
             >
               Phân loại
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
               <li>
-                <a class="text-light " onClick={() => props.filter('')}>Tất cả</a>
+                <a className="text-light " onClick={() => props.filter('')}>Tất cả</a>
               </li>
               <li>
-                <a class="text-light " onClick={() => props.filter('Thức ăn')}>Thức ăn</a>
+                <a className="text-light " onClick={() => props.filter('Thức ăn')}>Thức ăn</a>
               </li>
               <li>
-                <a class="text-light" onClick={() => props.filter('Thuốc')}>Thuốc</a>
+                <a className="text-light" onClick={() => props.filter('Thuốc')}>Thuốc</a>
               </li>
               <li>
-                <a class="text-light" onClick={() => props.filter('Đồ dùng')}>Đồ dùng</a>
+                <a className="text-light" onClick={() => props.filter('Đồ dùng')}>Đồ dùng</a>
               </li>
               <li>
-                <a class="text-light" onClick={() => props.filter('Quần áo')}>Quần áo</a>
+                <a className="text-light" onClick={() => props.filter('Quần áo')}>Quần áo</a>
               </li>
               <li>
-                <a class="text-light"onClick={() => props.filter('Khác')}>Khác</a>
+                <a className="text-light"onClick={() => props.filter('Khác')}>Khác</a>
               </li>
             </ul>
           </th>
