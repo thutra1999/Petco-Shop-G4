@@ -6,7 +6,7 @@ import Shop from "./Pages/Shop/Shop";
 import Contact from "./Pages/Contact/Contact";
 import NoPage from "./Pages/NoPage";
 import Cart from "./Pages/Cart/Cart";
-import Intro from "./Pages/Intro";
+import Intro from "./Pages/Intro/Intro";
 import Detail from "./Pages/Detail/Detail";
 import Admin from "./Pages/Admin/Admin";
 import ProductEdit from "./Pages/Admin/ProductEdit";

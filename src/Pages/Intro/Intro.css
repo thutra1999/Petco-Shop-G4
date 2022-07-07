@@ -1,0 +1,16 @@
+
+.col-sm-8 {
+    flex: 0 0 auto;
+    width: 66.66666667%;
+    margin-top: 35px;
+    margin-bottom: -30px;
+}
+img.picintro {
+    width: 45%;
+    height: 50%;
+    padding-top: 20px;
+    margin-bottom: 33px;
+}
+.bottom {
+    margin-top: 40px;
+}
