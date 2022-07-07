@@ -35,7 +35,7 @@ function OrderTable(props) {
         <td>{item.cart.length}</td>
         
         <td>
-          <Link to={"/admin/orderdetail/" + item.id}>Chi tiết đơn hàng</Link>
+          <Link to={"/orderdetail/" + item.id}>Chi tiết đơn hàng</Link>
         </td>
       </tr>
     ));
