@@ -88,3 +88,9 @@ a {
     width: 100%;
     justify-content: end;
 }
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
