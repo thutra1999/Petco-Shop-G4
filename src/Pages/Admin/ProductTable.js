@@ -52,10 +52,10 @@ function ProductTable(props) {
           </div>
         </td>
         <td>
-          <Link to={"/productdetail/" + item.id}>Chi tiết sản phẩm</Link>
+          <Link to={"/admin/productdetail/" + item.id}>Chi tiết sản phẩm</Link>
         </td>
         <td>
-          <Link to={"/productedit/" + item.id}>
+          <Link to={"/admin/productedit/" + item.id}>
             <button type="button" className="btn btn-primary">
               Sửa
             </button>

@@ -3,7 +3,8 @@ import img01 from "../../img/doghome01.png"
 import img02 from "../../img/doghome02.png"
 import img03 from "../../img/thankyou.png"
 import img04 from "../../img/banner01.png"
-import ProductItem from "../../Components/ProductItem/ProductItem";
+import img05 from "../../img/carousel01.jpg"
+import img06 from "../../img/carousel02.jpg"
 import { Link } from 'react-router-dom';
 import Feedback from "../../Components/Feedback/Feedback";
 
@@ -41,11 +42,8 @@ const Home = () => {
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src={img01} class="d-block w-50" alt="..." />
+            <img src={img05} class="d-block w-50" alt="..." />
             <div class="carousel-caption d-none d-md-block">
-              <h2>Welcome to</h2>
-              <h1>Petco Shop</h1>
-              <h5>Selecting only the best Puppies! </h5>
               <div>
                 <Link to="/shop">
                   <button class="myButton">Shop now</button>
@@ -54,10 +52,8 @@ const Home = () => {
             </div>
           </div>
           <div class="carousel-item">
-            <img src={img02} class="d-block w-50" alt="..." />
+            <img src={img06} class="d-block w-50" alt="..." />
             <div class="carousel-caption d-none d-md-block">
-              <h5>The best for their well-being</h5>
-              <h5>and find your perfect product today!</h5>
               <div>
                 <Link to="/shop">
                   <button class="myButton">Shop now</button>
@@ -76,10 +72,8 @@ const Home = () => {
         </button>
       </div>
 
-      {/* End of Carousel */}
 
       <div class="container-fluid">
-        {/* Best seller */}
 
         <div className='container-fluid'>
           <div className='container'>
@@ -100,13 +94,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* End of best seller */}
 
         <div className='container-fluid'>
           <img className='banner' src={img04}/>
         </div>
-
-        {/* New product */}
         <div className='container-fluid'>
           <div className='container'>
             <div class="row">
@@ -115,15 +106,6 @@ const Home = () => {
                 <i class="fa fa-thin fa-star fa-2x"></i>
                   <h2>Sản phẩm mới nhất</h2>
                 </div>
-                {/* <div class="featured__controls">
-                  <ul>
-                    <li class="active" data-filter="*">All</li> 
-                    <li data-filter=".food">Thức ăn</li>
-                    <li data-filter=".toy">Đồ chơi</li>
-                    <li data-filter=".fashion">Thời trang</li>
-                    <li data-filter=".dog_bread">Giống chó</li>
-                  </ul>
-                </div> */}
               </div>
             </div>
             <div class="row featured__filter">
@@ -135,13 +117,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-         {/* End of new product */}
 
          <div className='container-fluid'>
           <img className='banner' src={img03}/>
         </div>
-
-         {/* Feedback */}
 
         <div className='container-fluid'>
           <div className='container'>

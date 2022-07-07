@@ -11,12 +11,13 @@ function Admin() {
   const [page, setPage] = useState(true);
   const [filter, setFilter] = useState("");
   const [orders, setOrders] = useState([]);
-  
+  const [loading, setLoading] = useState(false)
   
 
  
 
   useEffect(() => {
+    setLoading(false)
     let url = "https://62b421ada36f3a973d2c998f.mockapi.io/testShop";
     if (searchTerm.length > 0) {
       url = url + "?search=" + searchTerm;
@@ -28,11 +29,11 @@ function Admin() {
       .then((response) => response.json())
       .then((data) => {
         setProducts(data)
-        console.log(data);
-      });
+      }).then(()=> setLoading(true));
   }, [searchTerm, filter]);
 
   useEffect(() => {
+    setLoading(false)
     let url_oder = "https://62b04ad2e460b79df0424941.mockapi.io/id/";
     if (searchTerm.length > 0) {
       url_oder = url_oder + "?phone=" + searchTerm;
@@ -42,7 +43,7 @@ function Admin() {
       .then((response) => response.json())
       .then((data) => {
         setOrders(data);
-      });
+      }).then(()=> setLoading(true));
   }, [searchTerm]);
 
  
@@ -52,6 +53,7 @@ function Admin() {
 
   return (
     <>
+    
       <button
         onClick={() => {
           setPage(true);
@@ -88,7 +90,7 @@ function Admin() {
                 </div>
               </div>
               <p>
-                <Link to={"/productedit/new"}>
+                <Link to={"/admin/productedit/new"}>
                   <button className="btn btn-primary" type="button">
                     Thêm mới sản phẩm
                   </button>
@@ -121,6 +123,7 @@ function Admin() {
           </div>
         </div>
       )}
+      
     </>
   );
 }
