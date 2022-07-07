@@ -9,6 +9,7 @@ import Feedback from "../../Components/Feedback/Feedback";
 
 import React, { useEffect, useState } from "react";
 import Preloader from '../../Components/Preloader/Preloader';
+import ProductItemHome from '../../Components/ProductItem/ProductItemHome';
 
 const Home = () => {
   const [data, setData] = useState([]);
@@ -93,7 +94,7 @@ const Home = () => {
             <div class="row featured__filter">
               <div className="col-lg-12 col-md-7 col-sm-12 product">
                 <div className="row">
-                  <ProductItem data={data}></ProductItem>
+                  <ProductItemHome data={data}></ProductItemHome>
                 </div>
               </div>
             </div>
@@ -128,7 +129,7 @@ const Home = () => {
             <div class="row featured__filter">
               <div className="col-lg-12 col-md-7 col-sm-12 product">
                 <div className="row">
-                  <ProductItem data={data}></ProductItem>
+                  <ProductItemHome data={data}></ProductItemHome>
                 </div>
               </div>
             </div>
