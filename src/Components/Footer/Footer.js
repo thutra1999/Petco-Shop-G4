@@ -4,7 +4,7 @@ import './Footer.css';
 function Footer() {
     return (
         <>
-            <div className="contianer-fluide footer">
+            <div className="footer">
                 <div className="section_service">
                     <div className="container">
                         <div className="row row-noGutter-2">
