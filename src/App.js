@@ -21,8 +21,8 @@ function App() {
     <React.Fragment>
     <BrowserRouter>
       <Routes>
-        <Route path="/">
-          <Route index element={<UserLayout />} />
+        <Route path="/" element={<UserLayout />}>
+          <Route index element={<Home />} />
           <Route path="dogList" element={<DogList />} />
           <Route path="shop/:id" element={<Shop />} />
           <Route path="shop" element={<Shop />} />
