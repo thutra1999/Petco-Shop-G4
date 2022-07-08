@@ -11,7 +11,7 @@ const ProductDetail = () => {
   
   useEffect(() => {
     let url =
-      'https://62b421ada36f3a973d2c998f.mockapi.io/testShop/' + params.id;
+      'https://62b421ada36f3a973d2c998f.mockapi.io/shop/' + params.id;
 
     fetch(url)
       .then((response) => response.json())
