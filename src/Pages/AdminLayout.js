@@ -11,7 +11,7 @@ const AdminLayout = () => {
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <Link class="nav-link" aria-current="page" to="/admin/productmanager">Quản lý sản phẩm</Link>
+              <Link class="nav-link" aria-current="page" to="/admin">Quản lý sản phẩm</Link>
               <Link class="nav-link" to="/admin/ordermanager">Quản lý đơn hàng</Link>
             </div>
           </div>
