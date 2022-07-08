@@ -1,184 +1,142 @@
-import React from "react";
-import './DogList.css';
+import img01 from "../../img/2.png"
+import img02 from "../../img/3.png"
+import img03 from "../../img/4.png"
+import "./DogList.css"
 
-const DogList = () => {
-  return <>
-    <div className="container demo">
-      <div className="row">
-        <div className="col-md-12">
-          <div id="news-slider" className="owl-carousel">
 
-            <div className="post-slide">
-              <div className="post-img">
-                <img src="https://chiaki.vn/upload/news/content/2020/11/pate-pedigree-cho-cho-con-vi-ga-nau-xot-png-1605839228-20112020092708.png" alt="Hướng dẫn cách làm pate cho chó thơm ngon, chó biếng ăn cũng phải thèm"></img>
-                <div className="over-layer">
-                  <ul className="post-link">
-                    <li><a href="https://www.bachhoaxanh.com/kinh-nghiem-hay/huong-dan-cach-lam-pate-cho-cho-thom-ngon-cho-bieng-an-cung-phai-them-1343514" className="fa fa-search"></a></li>
-                    <li><a href="https://www.bachhoaxanh.com/kinh-nghiem-hay/huong-dan-cach-lam-pate-cho-cho-thom-ngon-cho-bieng-an-cung-phai-them-1343514" className="fa fa-link"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div className="post-review">
-                <h3 className="post-title"><a href="https://www.bachhoaxanh.com/kinh-nghiem-hay/huong-dan-cach-lam-pate-cho-cho-thom-ngon-cho-bieng-an-cung-phai-them-1343514">Hướng dẫn cách làm pate cho chó thơm ngon, chó biếng ăn cũng phải thèm</a></h3>
-                <ul className="post-info">
-                  <li>Thời gian chế biến: 30 phút</li>
-                  <li>Khẩu phần ăn: 1-2 con</li>
-                </ul>
-                <ul className="tag-info">
-                  <li>Nguyên liệu làm pate cho chó: 400g thịt heo và gan heo xay nhuyễn</li><br></br>
-                  <li> Dụng cụ: Máy xay sinh tố </li>
-                </ul>
-                <p className="post-description">
-                  Lưu ý: Rửa sạch gan heo, sau đó cắt thành từng miếng nhỏ vào xay chung với thịt heo
-                </p>
-                <a href="https://www.bachhoaxanh.com/kinh-nghiem-hay/huong-dan-cach-lam-pate-cho-cho-thom-ngon-cho-bieng-an-cung-phai-them-1343514" className="read-more">Xem chi tiết</a>
+const DogList = (props) => {
+
+  return (
+    <>
+      <div className="container-fluide">
+        {/* Carousel */}
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src={img02} class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>We Offer Quality Pet Services </h5>
+                <p className="title_item">We make your pets happy</p>
               </div>
             </div>
-
-            <div className="post-slide">
-              <div className="post-img">
-                <img src="https://www.petcity.vn/media/news/2605_thu-cung-1556560640-3471-1556587028_680x0.png" alt="Lợi ích của việc cho trẻ nuôi thú cưng"></img>
-                <div className="over-layer">
-                  <ul className="post-link">
-                    <li><a href="https://www.petcity.vn/loi-ich-cua-viec-cho-tre-nuoi-thu-cung.html-1" className="fa fa-search"></a></li>
-                    <li><a href="https://www.petcity.vn/loi-ich-cua-viec-cho-tre-nuoi-thu-cung.html-1" className="fa fa-link"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div className="post-review">
-                <h3 className="post-title"><a href="https://www.petcity.vn/loi-ich-cua-viec-cho-tre-nuoi-thu-cung.html-1">Lợi ích của việc cho trẻ nuôi thú cưng</a></h3>
-                <ul className="post-info">
-                  <li>Sống có trách nhiệm hơn</li>
-                  <li>Kỷ luật tốt hơn</li>
-                </ul>
-                <ul className="tag-info">
-                  <li>Cải thiện kỹ năng đọc - nói</li><br />
-                  <li>Giảm căng thẳng, mệt mỏi </li><br />
-                  <li>Biết cách yêu thương và chăm sóc người khác</li>
-                </ul>
-                <p className="post-description">
-                  Lưu ý: Gia đình có trẻ nhỏ mắc các bệnh về dị ứng và hen suyễn thì không nên cho bé tiếp xúc gần với thú cưng
-                </p>
-                <a href="https://www.petcity.vn/loi-ich-cua-viec-cho-tre-nuoi-thu-cung.html-1" className="read-more">Xem chi tiết</a>
+            <div class="carousel-item">
+              <img src={img01} class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Taking Care Of Your Furry Friends</h5>
+                <p className="title_item">We make your pets happy</p>
               </div>
             </div>
-
-            <div className="post-slide">
-              <div className="post-img">
-                <img src="https://belppet.com/image/catalog/su-that-bat-ngo-ve-giac-ngu-cua-cho.jpg" alt="Sự thật bất ngờ về giấc ngủ của chó"></img>
-                <div className="over-layer">
-                  <ul className="post-link">
-                    <li><a href="https://belppet.com/su-that-bat-ngo-ve-giac-ngu-cua-cho-belp-pets" className="fa fa-search"></a></li>
-                    <li><a href="https://belppet.com/su-that-bat-ngo-ve-giac-ngu-cua-cho-belp-pets" className="fa fa-link"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div className="post-review">
-                <h3 className="post-title"><a href="https://belppet.com/su-that-bat-ngo-ve-giac-ngu-cua-cho-belp-pets">Sự thật bất ngờ về giấc ngủ của chó</a></h3>
-                <ul className="post-info">
-                  <li>Thời gian ngủ: 12 - 14h một ngày</li>
-                  <li>Chó con và những giống chó lớn hơn có thể ngủ đến 18h một ngày.</li>
-                </ul>
-                <ul className="tag-info">
-
-                  <li>Chó cần phải ngủ ban đêm để lấy sức hoạt động cả ngày</li>
-                </ul>
-                <p className="post-description">
-                  Lưu ý: Nếu phát hiện chó của bạn bị thiếu ngủ hay mất ngủ đột ngột, hãy mang cún yêu đến bác sĩ thú y để kiểm tra ngay nhé !
-                </p>
-                <a href="https://belppet.com/su-that-bat-ngo-ve-giac-ngu-cua-cho-belp-pets" className="read-more">Xem chi tiết</a>
+            <div class="carousel-item">
+              <img src={img03} class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>All Kind Of Services For Dogs</h5>
+                <p className="title_item">We make your pets happy</p>
               </div>
             </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        {/* End of Carousel */}
 
-            <div className="post-slide">
-              <div className="post-img">
-                <img src="https://methucung.com/wp-content/uploads/2022/04/pexels-barnabas-davoti-11049360_edited.jpg" alt="Top 8 giống chó đẹp nhất mà bạn nên sở hữu cho mình"></img>
-                <div className="over-layer">
-                  <ul className="post-link">
-                    <li><a href="https://methucung.com/top-10-giong-cho-dep/" className="fa fa-search"></a></li>
-                    <li><a href="https://methucung.com/top-10-giong-cho-dep/" className="fa fa-link"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div className="post-review">
-                <h3 className="post-title"><a href="https://methucung.com/top-10-giong-cho-dep/">Top 8 giống chó đẹp nhất mà bạn nên sở hữu</a></h3>
-                <ul className="post-info">
-                  <li>Golden Retriever</li>
-                  <li>Chó Siberian Huskies </li>
-                  <li>Chó Labrador Retrievers. </li>
-                  <li>Chó chăn cừu Đức </li>
-                </ul>
-                <ul className="tag-info">
-                  <li>Chó Samoyed</li><br></br>
-                  <li>Chó chăn cừu Úc </li>
-                </ul>
-                <p className="post-description">
-                  Trên đây là top 8 giống chó đẹp mà bạn nên biết để chọn cho mình một chú chó thật xinh đẹp
+        {/* Line 1 */}
+        <div className="container-fluide">
+          <div className="container pic_item">
+            <div className="row">
+              <div className="col-lg-4">
+                <img className="picture_item" src="https://petclub.themerex.net/wp-content/uploads/2021/12/image-2.jpg" />
+                <h3 className="title_item">Hướng dẫn cách làm pate cho chó thơm ngon, chó biếng ăn cũng phải thèm</h3>
+                <p>Lưu ý: Rửa sạch gan heo, sau đó cắt thành từng miếng nhỏ vào xay chung với thịt heo</p>
+                <p>
+                  <a href="https://www.bachhoaxanh.com/kinh-nghiem-hay/huong-dan-cach-lam-pate-cho-cho-thom-ngon-cho-bieng-an-cung-phai-them-1343514">
+                    <button type="button" class="btn btn-danger" >Xem chi tiết</button>
+                  </a>
                 </p>
-                <a href="https://methucung.com/top-10-giong-cho-dep/" className="read-more">Xem chi tiết</a>
               </div>
-            </div>
 
-            <div className="post-slide">
-              <div className="post-img">
-                <img src="https://kimipet.vn/wp-content/uploads/2019/01/3005_training-768x511.jpg" alt="HUẤN LUYỆN CHO CHÓ MỘT SỐ ĐỘNG TÁC CƠ BẢN, DỄ THỰC HIỆN TẠI NHÀ."></img>
-                <div className="over-layer">
-                  <ul className="post-link">
-                    <li><a href="https://methucung.com/huan-luyen-cho-cho-mot-so-dong-tac-co-ban-de-thuc-hien-tai-nha/" className="fa fa-search"></a></li>
-                    <li><a href="https://methucung.com/huan-luyen-cho-cho-mot-so-dong-tac-co-ban-de-thuc-hien-tai-nha/" className="fa fa-link"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div className="post-review">
-                <h3 className="post-title"><a href="https://methucung.com/huan-luyen-cho-cho-mot-so-dong-tac-co-ban-de-thuc-hien-tai-nha/">HUẤN LUYỆN CHO CHÓ MỘT SỐ ĐỘNG TÁC CƠ BẢN, DỄ THỰC HIỆN TẠI NHÀ.</a></h3>
-                <ul className="post-info">
-                  <li>Tư thế ngồi</li>
-                  <li>Tư thế nằm</li>
-                  <li>Tư thế đứng </li>
-                  <li>Giơ chân </li>
-                </ul>
-                <ul className="tag-info">
-                  <li>Vẫy đuôi</li><br />
-                  <li>Đi bằng chân sau </li>
-                </ul>
-                <p className="post-description">
-                  Những động tác trên khá dễ để bạn thực hiện đối với bạn và chó cưng. Nhưng việc huấn luyện những động tác này cần thực hiện thường xuyên, giúp cho chó hình thành thói quen với cúng, Hy vọng bạn sẽ thành công trong việc rèn luyện chó cưng nhé !
+              <div className="col-lg-4">
+                <img className="picture_item" src="https://petclub.themerex.net/wp-content/uploads/2021/12/image-5-840x473.jpg" />
+                <h3 className="title_item">Lợi ích của việc cho trẻ nuôi thú cưng</h3>
+                <p>Lưu ý: Gia đình có trẻ nhỏ mắc các bệnh về dị ứng và hen suyễn thì không nên cho bé tiếp xúc gần với thú cưng</p>
+                <p>
+                  <a href="https://www.petcity.vn/loi-ich-cua-viec-cho-tre-nuoi-thu-cung.html-1" alt="Lợi ích của việc cho trẻ nuôi thú cưng">
+                    <button type="button" class="btn btn-danger" >Xem chi tiết</button>
+                  </a>
                 </p>
-                <a href="https://methucung.com/huan-luyen-cho-cho-mot-so-dong-tac-co-ban-de-thuc-hien-tai-nha/" className="read-more">Xem chi tiết</a>
-              </div>
-            </div>
 
-            <div className="post-slide">
-              <div className="post-img">
-                <img src="https://www.thedogclinic.com/wp-content/uploads/2018/09/comfortable-pup-768x384.jpg" alt="BÍ QUYẾT CHĂM SÓC CHÓ MANG THAI HIỆU QUẢ KHÔNG PHẢI AI CŨNG BIẾT."></img>
-                <div className="over-layer">
-                  <ul className="post-link">
-                    <li><a href="https://methucung.com/bi-quyet-cham-soc-cho-mang-thai-hieu-qua-khong-phai-ai-cung-biet/" className="fa fa-search"></a></li>
-                    <li><a href="https://methucung.com/bi-quyet-cham-soc-cho-mang-thai-hieu-qua-khong-phai-ai-cung-biet/" className="fa fa-link"></a></li>
-                  </ul>
-                </div>
               </div>
-              <div className="post-review">
-                <h3 className="post-title"><a href="https://methucung.com/bi-quyet-cham-soc-cho-mang-thai-hieu-qua-khong-phai-ai-cung-biet/">BÍ QUYẾT CHĂM SÓC CHÓ MANG THAI HIỆU QUẢ KHÔNG PHẢI AI CŨNG BIẾT.</a></h3>
-                <ul className="post-info">
-                  <li>Hiện tượng chó mang thai giả</li>
-                  <li>Cách chăm sóc chó mang thai</li>
-                </ul>
-                <ul className="tag-info">
-                  <li>Chế độ ăn uống</li><br />
-                  <li>Chế độ ngủ nghỉ </li>
-                </ul>
-                <p className="post-description">
-                  Chăm sóc chó mang thai bằng những cách đúng đắn sẽ giúp chó phát triển toàn diện. Đảm bảo sức khỏe cho cả chó mẹ và bào thai.
+
+              <div className="col-lg-4">
+                <img className="picture_item" src="https://petclub.themerex.net/wp-content/uploads/2021/07/image-10.jpg" />
+                <h3 className="title_item">Sự thật bất ngờ về giấc ngủ của chó</h3>
+                <p>Lưu ý: Nếu phát hiện chó của bạn bị thiếu ngủ hay mất ngủ đột ngột, hãy mang cún yêu đến bác sĩ thú y để kiểm tra ngay nhé !</p>
+                <p>
+                  <a href="https://belppet.com/su-that-bat-ngo-ve-giac-ngu-cua-cho-belp-pets" alt="Lợi ích của việc cho trẻ nuôi thú cưng">
+                    <button type="button" class="btn btn-danger" >Xem chi tiết</button>
+                  </a>
                 </p>
-                <a href="https://methucung.com/bi-quyet-cham-soc-cho-mang-thai-hieu-qua-khong-phai-ai-cung-biet/" className="read-more">Xem chi tiết</a>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+        {/* End of line 1 */}
+        <hr class="featurette-divider"></hr>
 
-  </>;
-};
-export default DogList;
+        {/* Line 2 */}
+        <div className="row feturette">
+          <div className="col-md-7">
+            <h1 className="title_left">
+              Bật mí kinh nghiệm chọn nhà cho chó<br></br>
+              phù hợp với tính cách của bé</h1>
+            <p>
+              <a href="https://noithatthucung.com/2020/05/04/bat-mi-kinh-nghiem-chon-nha-cho-cho-phu-hop-voi-tinh-cach-cua-be/">
+                <button type="button" class="btn btn-danger left" >Xem chi tiết</button>
+              </a>
+            </p>
+          </div>
+
+          <div className="col-md-5">
+            <img className="pic_left" src="https://petclub.themerex.net/wp-content/uploads/2021/07/image-12.jpg" />
+          </div>
+        </div>
+        {/* End of line 2 */}
+
+        <hr class="featurette-divider"></hr>
+
+        {/* Line 3 */}
+        <div className="row feturette">
+          <div className="col-md-7 order-md-2 ">
+            <h1 className="title_left">
+              Tuổi thọ trung bình của chó mèo là bao nhiêu?<br></br>
+              Cách quy đổi tuổi chó mèo sang tuổi người</h1>
+            <p>
+              <a href="https://noithatthucung.com/2020/04/26/tuoi-tho-trung-binh-cua-cho-meo-la-bao-nhieu-cach-quy-doi-tuoi-meo-sang-tuoi-nguoi/">
+                <button type="button" class="btn btn-danger left" >Xem chi tiết</button>
+              </a>
+            </p>
+          </div>
+
+          <div className="col-md-5 order-md-1">
+            <img className="pic_left" src="https://petclub.themerex.net/wp-content/uploads/2021/08/image-9-1-1024x683.jpg" />
+          </div>
+        </div>
+        {/* End of line 3 */}
+
+      </div>
+
+    </>
+  )
+}
+export default DogList
