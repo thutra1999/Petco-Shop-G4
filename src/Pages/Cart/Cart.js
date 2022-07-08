@@ -23,6 +23,7 @@ const Cart = (props) => {
     email: "",
     cart: {},
     price: "",
+    date: '',
   });
   const [isBuyDone, setIsBuyDone] = useState(false);
   const [storeIsEmpty, setStoreIsEmpty] = useState(false)
@@ -133,9 +134,7 @@ const Cart = (props) => {
     const value = target.value;
     const name = target.name;
     let data = { ...products };
-    
     data[name] = value;
-   
     setProducts(data);
   };
 
@@ -166,7 +165,13 @@ const Cart = (props) => {
     formState: { errors },
   } = useForm();
 
+  const setDate = () => {
+    let a = { ...products };
+    a.date = new Date();
+    setProducts(a)
+  }
   const onSubmit = (data) => {
+
     if(data != null && price_bill > 0){
       buyHandler();
     }
@@ -177,7 +182,7 @@ const Cart = (props) => {
 
 
   return (
-    <form className="container-fluid" onSubmit={handleSubmit(onSubmit)}>
+    <form className="container-fluid" onSubmit={handleSubmit(onSubmit,setDate)}>
       <div className="row">
         <div className="col mt-2">
           <h2 className="text-center">Giỏ hàng của bạn</h2>
