@@ -23,9 +23,9 @@ const NoPage = () => {
           <span class="o"></span>
           <span class="u"></span>
           <span class="n"></span>
-          <span class="d"></span><br/>
-          <Link to="/"><button className="btn btn-light" >Trở về trang chủ</button></Link>
+          <span class="d"></span>
         </figcaption>
+        <div className="container-fluide text-center"><Link to="/"><button className="btn btn-light" >Trở về trang chủ</button></Link></div>
       </figure>
   
     </div>
