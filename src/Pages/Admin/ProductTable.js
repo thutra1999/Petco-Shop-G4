@@ -23,7 +23,7 @@ function ProductTable(props) {
   };
 
   const deleteUser = (id) => {
-    fetch("https://62b421ada36f3a973d2c998f.mockapi.io/testShop/" + id, {
+    fetch("https://62b421ada36f3a973d2c998f.mockapi.io/shop/" + id, {
       method: "DELETE",
     }).then(() => {
       let result = [...products];
