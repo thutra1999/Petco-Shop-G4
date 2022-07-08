@@ -123,6 +123,7 @@ const OrderDetail = () => {
                         {editStatusOrder ? (
                           <td className="select-container">
                             <select
+                            className="form-select form-select-sm"
                               name="status"
                               value={orders.status}
                               onChange={(e) => {
@@ -156,7 +157,7 @@ const OrderDetail = () => {
                           <td className="text-primary">{orders.status}</td>
                         )}
                         <td>
-                          <button onClick={() => setEditStatusOrder(true)}>
+                          <button className="btn btn-outline-primary" onClick={() => setEditStatusOrder(true)}>
                             Chỉnh sửa
                           </button>
                         </td>
