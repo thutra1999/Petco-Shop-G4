@@ -8,7 +8,7 @@ const DogList = (props) => {
 
   return (
     <>
-      <div className="container-fluide">
+      <div className="container-fluide doglist">
         {/* Carousel */}
 
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -59,7 +59,7 @@ const DogList = (props) => {
                 <img className="picture_item" src="https://petclub.themerex.net/wp-content/uploads/2021/12/image-2.jpg" />
                 <h3 className="title_item">Hướng dẫn cách làm pate cho chó thơm ngon, chó biếng ăn cũng phải thèm</h3>
                 <p>Lưu ý: Rửa sạch gan heo, sau đó cắt thành từng miếng nhỏ vào xay chung với thịt heo</p>
-                <p>
+                <p className="text-center">
                   <a href="https://www.bachhoaxanh.com/kinh-nghiem-hay/huong-dan-cach-lam-pate-cho-cho-thom-ngon-cho-bieng-an-cung-phai-them-1343514">
                     <button type="button" class="btn btn-danger" >Xem chi tiết</button>
                   </a>
@@ -70,7 +70,7 @@ const DogList = (props) => {
                 <img className="picture_item" src="https://petclub.themerex.net/wp-content/uploads/2021/12/image-5-840x473.jpg" />
                 <h3 className="title_item">Lợi ích của việc cho trẻ nuôi thú cưng</h3>
                 <p>Lưu ý: Gia đình có trẻ nhỏ mắc các bệnh về dị ứng và hen suyễn thì không nên cho bé tiếp xúc gần với thú cưng</p>
-                <p>
+                <p className="text-center">
                   <a href="https://www.petcity.vn/loi-ich-cua-viec-cho-tre-nuoi-thu-cung.html-1" alt="Lợi ích của việc cho trẻ nuôi thú cưng">
                     <button type="button" class="btn btn-danger" >Xem chi tiết</button>
                   </a>
@@ -82,7 +82,7 @@ const DogList = (props) => {
                 <img className="picture_item" src="https://petclub.themerex.net/wp-content/uploads/2021/07/image-10.jpg" />
                 <h3 className="title_item">Sự thật bất ngờ về giấc ngủ của chó</h3>
                 <p>Lưu ý: Nếu phát hiện chó của bạn bị thiếu ngủ hay mất ngủ đột ngột, hãy mang cún yêu đến bác sĩ thú y để kiểm tra ngay nhé !</p>
-                <p>
+                <p className="text-center">
                   <a href="https://belppet.com/su-that-bat-ngo-ve-giac-ngu-cua-cho-belp-pets" alt="Lợi ích của việc cho trẻ nuôi thú cưng">
                     <button type="button" class="btn btn-danger" >Xem chi tiết</button>
                   </a>
@@ -100,7 +100,7 @@ const DogList = (props) => {
             <h1 className="title_left">
               Bật mí kinh nghiệm chọn nhà cho chó<br></br>
               phù hợp với tính cách của bé</h1>
-            <p>
+            <p className="text-center">
               <a href="https://noithatthucung.com/2020/05/04/bat-mi-kinh-nghiem-chon-nha-cho-cho-phu-hop-voi-tinh-cach-cua-be/">
                 <button type="button" class="btn btn-danger left" >Xem chi tiết</button>
               </a>
@@ -118,10 +118,10 @@ const DogList = (props) => {
         {/* Line 3 */}
         <div className="row feturette">
           <div className="col-md-7 order-md-2 ">
-            <h1 className="title_left">
+            <h1 className="text-center">
               Tuổi thọ trung bình của chó mèo là bao nhiêu?<br></br>
               Cách quy đổi tuổi chó mèo sang tuổi người</h1>
-            <p>
+            <p className="text-center">
               <a href="https://noithatthucung.com/2020/04/26/tuoi-tho-trung-binh-cua-cho-meo-la-bao-nhieu-cach-quy-doi-tuoi-meo-sang-tuoi-nguoi/">
                 <button type="button" class="btn btn-danger left" >Xem chi tiết</button>
               </a>
