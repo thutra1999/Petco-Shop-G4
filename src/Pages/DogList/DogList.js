@@ -61,7 +61,7 @@ const DogList = (props) => {
                 <p>Lưu ý: Rửa sạch gan heo, sau đó cắt thành từng miếng nhỏ vào xay chung với thịt heo</p>
                 <p>
                   <a href="https://www.bachhoaxanh.com/kinh-nghiem-hay/huong-dan-cach-lam-pate-cho-cho-thom-ngon-cho-bieng-an-cung-phai-them-1343514">
-                    <button type="button" class="btn btn-warning" >Xem chi tiết</button>
+                    <button type="button" class="btn btn-danger" >Xem chi tiết</button>
                   </a>
                 </p>
               </div>
@@ -72,7 +72,7 @@ const DogList = (props) => {
                 <p>Lưu ý: Gia đình có trẻ nhỏ mắc các bệnh về dị ứng và hen suyễn thì không nên cho bé tiếp xúc gần với thú cưng</p>
                 <p>
                   <a href="https://www.petcity.vn/loi-ich-cua-viec-cho-tre-nuoi-thu-cung.html-1" alt="Lợi ích của việc cho trẻ nuôi thú cưng">
-                    <button type="button" class="btn btn-warning" >Xem chi tiết</button>
+                    <button type="button" class="btn btn-danger" >Xem chi tiết</button>
                   </a>
                 </p>
 
@@ -84,7 +84,7 @@ const DogList = (props) => {
                 <p>Lưu ý: Nếu phát hiện chó của bạn bị thiếu ngủ hay mất ngủ đột ngột, hãy mang cún yêu đến bác sĩ thú y để kiểm tra ngay nhé !</p>
                 <p>
                   <a href="https://belppet.com/su-that-bat-ngo-ve-giac-ngu-cua-cho-belp-pets" alt="Lợi ích của việc cho trẻ nuôi thú cưng">
-                    <button type="button" class="btn btn-warning" >Xem chi tiết</button>
+                    <button type="button" class="btn btn-danger" >Xem chi tiết</button>
                   </a>
                 </p>
               </div>
@@ -102,7 +102,7 @@ const DogList = (props) => {
               phù hợp với tính cách của bé</h1>
             <p>
               <a href="https://noithatthucung.com/2020/05/04/bat-mi-kinh-nghiem-chon-nha-cho-cho-phu-hop-voi-tinh-cach-cua-be/">
-                <button type="button" class="btn btn-warning left" >Xem chi tiết</button>
+                <button type="button" class="btn btn-danger left" >Xem chi tiết</button>
               </a>
             </p>
           </div>
@@ -123,7 +123,7 @@ const DogList = (props) => {
               Cách quy đổi tuổi chó mèo sang tuổi người</h1>
             <p>
               <a href="https://noithatthucung.com/2020/04/26/tuoi-tho-trung-binh-cua-cho-meo-la-bao-nhieu-cach-quy-doi-tuoi-meo-sang-tuoi-nguoi/">
-                <button type="button" class="btn btn-warning left" >Xem chi tiết</button>
+                <button type="button" class="btn btn-danger left" >Xem chi tiết</button>
               </a>
             </p>
           </div>
