@@ -39,11 +39,17 @@
     margin-left: 4px;
 }
 
-.product__details__text .product__details__price {
+.product__details__text .product__details__new-price {
     font-size: 30px;
     color: #dd2222;
     font-weight: 600;
     margin-bottom: 15px;
+}
+.product__details__text .product__details__old-price {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-decoration: line-through;
 }
 
 .product__details__text p {
