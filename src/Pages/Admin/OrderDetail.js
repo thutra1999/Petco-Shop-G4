@@ -28,7 +28,7 @@ const OrderDetail = () => {
   var cartList = [];
   if (orders.cart != null) {
     cartList = orders.cart.map((item) => (
-      <ul className="nav navbar-nav">
+      <ul className="nav navbar-nav" key={item.id}>
         <li className="row">
           <div className="col-6">{item.name}</div>
           <div className="col-1">x{item.quantity}</div>
