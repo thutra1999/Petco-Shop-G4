@@ -8,8 +8,8 @@ import { Loader } from '../../Components/Loader/Loader';
 const ProductDetail = () => {
   const params = useParams();
   const [products, setProducts] = useState(null);
+  
   useEffect(() => {
-
     let url =
       'https://62b421ada36f3a973d2c998f.mockapi.io/testShop/' + params.id;
 
