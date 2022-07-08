@@ -181,7 +181,7 @@ const Cart = (props) => {
           <div className="row">
             <div className="col">
               <div>
-                <img src={goShopping} alt="..." />
+                <img src="https://cdn.jsdelivr.net/gh/thutra1999/Petco-Shop-G4@main/src/img/goShoping.gif" alt="..." />
                 <div className=" title">Không có sản phẩm nào trong giỏ hàng của bạn</div>
               </div>
               <Link to="/shop">
@@ -343,7 +343,7 @@ const Cart = (props) => {
               <div className="item_cart-wrap text-center">
                 <div className="title h1">Thanh toán thành công</div>
                 <div>
-                  <img src={success} alt="..." />
+                  <img src="https://cdn.jsdelivr.net/gh/thutra1999/Petco-Shop-G4@main/src/img/XliJ.gif" alt="..." />
                 </div>
                 <Link to="/">
                   <button className="btn btn-danger" onClick={() => props.ResetCart()}>

@@ -8,14 +8,6 @@ import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./Feedback.css";
-import fb01 from "../../img/feedback01.jpg"
-import fb02 from "../../img/feedback02.jpg"
-import fb03 from "../../img/feedback03.jpg"
-import fb04 from "../../img/feedback04.jpg"
-import fb05 from "../../img/feedback05.jpg"
-import fb06 from "../../img/feedback06.jpg"
-import fb07 from "../../img/feedback07.jpg"
-import fb08 from "../../img/feedback08.jpg"
 
 // import required modules
 import { Keyboard, Scrollbar, Navigation, Pagination } from "swiper";
@@ -46,28 +38,28 @@ function Feedback() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={fb01} />
+          <img src="../../img/feedback01.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={fb02} />
+          <img src="../../img/feedback02.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={fb03} />
+          <img src="../../img/feedback03.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={fb04} />
+          <img src="../../img/feedback04.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={fb05} />
+          <img src="../../img/feedback05.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={fb06} />
+          <img src="../../img/feedback06.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={fb07} />
+          <img src="../../img/feedback07.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={fb08} />
+          <img src="../../img/feedback08.jpg" />
         </SwiperSlide>
       </Swiper>
     </>
