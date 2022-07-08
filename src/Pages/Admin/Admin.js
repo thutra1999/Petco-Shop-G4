@@ -14,7 +14,7 @@ function Admin() {
     useEffect(() => {
         
    
-        let url = "https://62b421ada36f3a973d2c998f.mockapi.io/testShop";
+        let url = "https://62b421ada36f3a973d2c998f.mockapi.io/shop";
         if (searchTerm.length > 0) {
             url = url + "?search=" + searchTerm;
         }
