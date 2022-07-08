@@ -78,7 +78,7 @@ img.picture_item {
 h3.title_item {
     text-align: center;
 }
-button.btn.btn-warning {
+button.btn.btn-danger {
     /* padding-left: 25px; */
     margin-left: 156px;
 }
@@ -89,7 +89,7 @@ h1.title_left {
     text-align: center;
     padding-top: 120px;
 }
-button.btn.btn-warning.left {
+button.btn.btn-danger.left {
     margin-left: 470px;
     margin-top: 25px;
 }
