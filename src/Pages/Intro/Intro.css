@@ -14,3 +14,7 @@ img.picintro {
 .bottom {
     margin-top: 40px;
 }
+h5.title_intro {
+    color: black;
+    font-size: 1.5rem;
+}
