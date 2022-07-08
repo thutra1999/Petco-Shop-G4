@@ -4,7 +4,7 @@ import Home from "./Pages/Home/Home";
 import DogList from "./Pages/DogList/DogList";
 import Shop from "./Pages/Shop/Shop";
 import Contact from "./Pages/Contact/Contact";
-import NoPage from "./Pages/NoPage";
+import NoPage from "./Pages/NoPage/NoPage";
 import Cart from "./Pages/Cart/Cart";
 import Intro from "./Pages/Intro/Intro";
 import Detail from "./Pages/Detail/Detail";
@@ -30,7 +30,7 @@ function App() {
           <Route path="shop" element={<Shop />} />
           <Route path="contact" element={<Contact />} />
           <Route path="cart" element={<Cart />} />
-          <Route path="*" element={<NoPage />} />
+          <Route path="nopage" element={<NoPage />} />
           <Route path="intro" element={<Intro />} />
           <Route path="detail/:id" element={<Detail />}/>
         </Route>
