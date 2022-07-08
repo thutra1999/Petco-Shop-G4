@@ -9,21 +9,20 @@ const OrderDetail = () => {
   let navigate = useNavigate();
   const params = useParams();
   const [orders, setOrders] = useState([]);
-
   const [loadItem, setLoadItem] = useState(true);
+  const [editStatusOrder, setEditStatusOrder] = useState(false);
 
   useEffect(() => {
     let url = "https://62b04ad2e460b79df0424941.mockapi.io/id/" + params.id;
 
-        setLoadItem(true);
+    setLoadItem(true);
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
         setOrders(data);
-      }).then(() => setLoadItem(false));
+      })
+      .then(() => setLoadItem(false));
   }, []);
-
-
 
   var cartList = [];
   if (orders.cart != null) {
@@ -36,6 +35,31 @@ const OrderDetail = () => {
       </ul>
     ));
   }
+
+  const handleChange = (event) => {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+    let data = { ...orders };
+    data[name] = value;
+    setOrders(data);
+  };
+
+  const saveUser = () => {
+    const requestOptions = {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(orders),
+    };
+    fetch(
+      "https://62b04ad2e460b79df0424941.mockapi.io/id/" + params.id,
+      requestOptions
+    )
+      .then((response) => response.json())
+      .then(() => {
+        navigate(-1);
+      });
+  };
 
   return (
     <>
@@ -96,15 +120,52 @@ const OrderDetail = () => {
                         <td>
                           <strong>Trạng thái đơn hàng</strong>
                         </td>
-                        <td className="text-primary">{orders.status}</td>
+                        {editStatusOrder ? (
+                          <td className="select-container">
+                            <select
+                              name="status"
+                              value={orders.status}
+                              onChange={(e) => {
+                                handleChange(e);
+                              }}
+                            >
+                              <option key={1} value="Chờ xác nhận">
+                                Chờ xác nhận
+                              </option>
+                              <option
+                                key={2}
+                                value="Đã xác nhận. Đang chuẩn bị hàng"
+                              >
+                                Đã xác nhận. Đang chuẩn bị hàng
+                              </option>
+                              <option key={3} value="Đang giao hàng">
+                                Đang giao hàng
+                              </option>
+                              <option key={4} value="Giao hàng thành công">
+                                Giao hàng thành công
+                              </option>
+                              <option key={5} value="Đơn hủy">
+                                Đơn hủy
+                              </option>
+                              <option key={6} value="Đơn hoàn">
+                                Đơn hoàn
+                              </option>
+                            </select>
+                          </td>
+                        ) : (
+                          <td className="text-primary">{orders.status}</td>
+                        )}
+                        <td>
+                          <button onClick={() => setEditStatusOrder(true)}>
+                            Chỉnh sửa
+                          </button>
+                        </td>
                       </tr>
                       <tr>
-                      <td>
+                        <td>
                           <strong>Tổng giá trị đơn hàng</strong>
                         </td>
-                        <td className="text-primary">
-                            {orders.price}
-                        </td>
+                        <td className="text-primary">{orders.price}</td>
                       </tr>
                     </tbody>
                   </table>
@@ -112,6 +173,15 @@ const OrderDetail = () => {
               </div>
             </div>
           </div>
+          {editStatusOrder && (
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={() => saveUser()}
+            >
+              Save
+            </button>
+          )}
           <button
             type="button"
             className="btn btn-secondary"
@@ -121,7 +191,7 @@ const OrderDetail = () => {
           </button>
         </div>
       ) : (
-        <Loader/>
+        <Loader />
       )}
     </>
   );
