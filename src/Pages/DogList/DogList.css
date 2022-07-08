@@ -72,6 +72,10 @@ img.picture_item {
     padding-left: 15px;
     padding-bottom: 15px;
 }
+.h5, h5 {
+    font-size: 3rem;
+    color: white;
+}
 .container.pic_item {
     margin-top: 170px;
 }
