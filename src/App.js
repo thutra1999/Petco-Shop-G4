@@ -34,7 +34,7 @@ function App() {
           <Route path="intro" element={<Intro />} />
           <Route path="detail/:id" element={<Detail />}/>
         </Route>
-        <Route path="/admin" element={<AdminLayout/>}>
+        <Route path="/admin" element={localStorage.getItem("isLoggedIn") ==="admin" ? <AdminLayout/>: <NoPage />}>
           <Route index element={<Admin />} />
           <Route path="productedit/:id" element={<ProductEdit />} />
           <Route path="productdetail/:id" element={<ProductDetail />} />
