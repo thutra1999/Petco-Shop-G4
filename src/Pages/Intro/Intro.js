@@ -11,7 +11,7 @@ const Intro = () => {
 
             <div className="text-left">
               <h3>GIỚI THIỆU</h3>
-              <h5>Cửa hàng Petco Shop</h5>
+              <h5 className="title_intro">Cửa hàng Petco Shop</h5>
               <br></br>
             </div>
 
