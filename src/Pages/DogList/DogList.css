@@ -82,8 +82,7 @@ img.picture_item {
 h3.title_item {
     text-align: center;
 }
-button.btn.btn-danger {
-    /* padding-left: 25px; */
+.doglist .button.btn.btn-danger {
     margin-left: 156px;
 }
 img.pic_left {
@@ -94,7 +93,6 @@ h1.title_left {
     padding-top: 120px;
 }
 button.btn.btn-danger.left {
-    margin-left: 470px;
     margin-top: 25px;
 }
 hr.featurette-divider {
