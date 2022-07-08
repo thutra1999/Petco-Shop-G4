@@ -64,13 +64,16 @@ function Detail(props) {
                                             <i className="fa fa-star"></i>
                                             <i className="fa fa-star-half-o"></i>
                                         </div>
-                                        <div className="product__details__price">{product.price.toLocaleString('en-US')} VNĐ</div>
+                                        <div className="product__details__new-price">{(product.price * (1 - product.discount)).toLocaleString('en-US')} VNĐ</div>
+                                        {product.discount > 0 && <div className="product__details__old-price">{product.price.toLocaleString('en-US')} VNĐ</div>}
                                         <p>{product.describe}</p>
-                                        <button className="btn btn-outline-danger" onClick={() => props.AddCart(product)}>Thêm vào giỏ hàng</button>
-                                        <a href="#" className="heart-icon btn btn-outline-secondary"><i className="fas fa-heart"></i></a>
+                                        {product.status == true ?  <button className="btn btn-outline-danger" onClick={() => props.AddCart(product)}>Thêm vào giỏ hàng</button>:
+                                         <button className="btn btn-outline-secondary">Hết hàng</button>}
+                                       
+                                        <a href="#" className="heart-icon btn btn-outline-danger"><i className="fas fa-heart"></i></a>
                                         <ul>
-                                            <li><b>Origin</b> <span>{product.origin}</span></li>
-                                            <li><b>Weight</b> <span>{product.weight}</span></li>
+                                            <li><b>Xuất sứ</b> <span>{product.origin}</span></li>
+                                            <li><b>Trọng lượng</b> <span>{product.weight}</span></li>
                                             <li><b>Share on</b>
                                                 <div className="share">
                                                     <a href="#"><i className="fab fa-facebook-f"></i></a>
@@ -88,7 +91,7 @@ function Detail(props) {
                                             <h2 className="accordion-header" id="headingOne">
                                                 <button className="accordion-button" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    Benefits
+                                                    Lợi ích
                                                 </button>
                                             </h2>
                                             <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne"
@@ -104,7 +107,7 @@ function Detail(props) {
                                             <h2 className="accordion-header" id="headingTwo">
                                                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    Guide
+                                                    Hướng dẫn sử dụng
                                                 </button>
                                             </h2>
                                             <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo"
