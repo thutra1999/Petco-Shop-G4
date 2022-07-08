@@ -9,7 +9,7 @@ export const DELETE_CART = "DELETE_CART";
 export const GET_ALL_PRODUCT = "GET_ALL_PRODUCT"; 
 export const RESET_CART = "RESET_CART";
 
-
+import React from "react";
 export function GetNumberCart() {
   return {
     type: "GET_NUMBER_CART"

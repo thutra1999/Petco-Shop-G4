@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import ProductItem from "../../Components/ProductItem/ProductItem";
-import "./Shop.css";
-import { Link } from "react-router-dom";
-import side from "../../side.jpg";
-import Preloader from "../../Components/Preloader/Preloader";
-import { Loader } from "../../Components/Loader/Loader";
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import ProductItem from '../../Components/ProductItem/ProductItem';
+import './Shop.css';
+import { Link } from 'react-router-dom';
+import Preloader from '../../Components/Preloader/Preloader';
+import { Loader } from '../../Components/Loader/Loader';
 
 const Shop = () => {
   const [categories, setCategories] = useState(null);
@@ -16,18 +15,18 @@ const Shop = () => {
 
   let url;
   if (
-    params.id === "Thức ăn" ||
-    params.id === "Thuốc" ||
-    params.id === "Đồ dùng" ||
-    params.id === "Quần áo" ||
-    params.id === "Khác"
+    params.id === 'Thức ăn' ||
+    params.id === 'Thuốc' ||
+    params.id === 'Đồ dùng' ||
+    params.id === 'Quần áo' ||
+    params.id === 'Khác'
   ) {
     url =
-      "https://62b421ada36f3a973d2c998f.mockapi.io/shop?category=" + params.id;
+      'https://62b421ada36f3a973d2c998f.mockapi.io/shop?category=' + params.id;
   } else if (params.id != null) {
-    url = "https://62b421ada36f3a973d2c998f.mockapi.io/shop?name=" + params.id;
+    url = 'https://62b421ada36f3a973d2c998f.mockapi.io/shop?name=' + params.id;
   } else {
-    url = "https://62b421ada36f3a973d2c998f.mockapi.io/shop";
+    url = 'https://62b421ada36f3a973d2c998f.mockapi.io/shop';
   }
   useEffect(() => {
     setLoadItem(true);
@@ -39,7 +38,7 @@ const Shop = () => {
 
   useEffect(() => {
     setPreloader(true);
-    let url_category = "https://62b421ada36f3a973d2c998f.mockapi.io/category";
+    let url_category = 'https://62b421ada36f3a973d2c998f.mockapi.io/category';
     fetch(url_category)
       .then((response) => response.json())
       .then((data) => {
@@ -55,7 +54,7 @@ const Shop = () => {
         {
           (category_jsx = categories.map((item) => (
             <li key={item.id}>
-              <Link to={"/shop/" + item.category_name}>
+              <Link to={'/shop/' + item.category_name}>
                 <span>{item.category_name}</span>
               </Link>
             </li>
@@ -79,7 +78,10 @@ const Shop = () => {
                   </div>
 
                   <div className="sidebar__item">
-                    <img src={side} className="d-sm-none d-md-block"></img>
+                    <img
+                      src="../../side.jpg"
+                      className="d-sm-none d-md-block"
+                    ></img>
                   </div>
                 </div>
               </div>
@@ -87,7 +89,7 @@ const Shop = () => {
                 {!loadItem ? (
                   <ProductItem data={data}></ProductItem>
                 ) : (
-                  <Loader/>
+                  <Loader />
                 )}
               </div>
             </div>
