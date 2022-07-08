@@ -51,38 +51,6 @@ function Admin() {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">Admin</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#"><button
-                  onClick={() => {
-                    setPage(true);
-                    setSearchTerm("");
-                  }}
-                >
-                  Quản lý sản phẩm
-                </button></a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#"><button
-                  onClick={() => {
-                    setPage(false);
-                    setSearchTerm("");
-                  }}
-                >
-                  Quản lý đơn hàng
-                </button></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
       {page ? (
 
         <div className="container">
@@ -102,6 +70,8 @@ function Admin() {
                   </button>
                 </div>
               </div>
+            </div>
+            <div className="col-sm-6">
               <p>
                 <Link to={"/admin/productedit/new"}>
                   <button className="btn btn-primary" type="button">
