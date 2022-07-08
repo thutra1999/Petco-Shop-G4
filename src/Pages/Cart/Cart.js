@@ -136,7 +136,7 @@ const Cart = (props) => {
     let data = { ...products };
     let date = new Date()
     data[name] = value;
-    data.date = date.toLocaleString('en-GB', { timeZone: 'UTC' });
+    data.date = date.toLocaleString('en-GB');
     data.status = 'Chờ xác nhận'
     setProducts(data);
   };
