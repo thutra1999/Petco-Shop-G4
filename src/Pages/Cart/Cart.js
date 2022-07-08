@@ -179,16 +179,16 @@ const Cart = (props) => {
   return (
     <>
     {price_bill === 0 ?
-       <div className="container-fluid">
+       <div className="container-fluid empty-card">
        <div className="row">
        <div className="col">
-         <div className=" title">Giỏ hàng đang trống</div>
          <div>
            <img src={goShopping} alt="..." />
+           <div className=" title">Không có sản phẩm nào trong giỏ hàng của bạn</div>
          </div>
          <Link to="/shop">
            <button className="btn btn-danger">
-             Đi mua hàng
+             TIẾP TỤC MUA HÀNG
            </button>
          </Link>
        </div>
