@@ -1,6 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Outlet, Link } from 'react-router-dom';
+
+import AuthContext from "../usecontact/index";
 const AdminLayout = () => {
+  
+  const authCtx = useContext(AuthContext);
   return (
     <>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -13,6 +17,7 @@ const AdminLayout = () => {
             <div className="navbar-nav">
               <Link className="nav-link" aria-current="page" to="/admin">Quản lý sản phẩm</Link>
               <Link className="nav-link" to="/admin/ordermanager">Quản lý đơn hàng</Link>
+              <Link className="nav-link" to="/"><span onClick={() => authCtx.onLogout()}>Đăng xuất</span></Link>
             </div>
           </div>
         </div>

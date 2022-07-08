@@ -1,18 +1,33 @@
 import "./Header.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,
+  useContext, } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../img/logo/logo.png";
 import { connect } from 'react-redux';
-
+import AuthContext from "../../usecontact/index";
 
 const Header = (props) => {
- 
+  const authCtx = useContext(AuthContext);
+ const accountAdmin = {
+  "username": "admin",
+    "password": "admin",
+ }
   const [login, setLogin] = useState(false);
   const [formLogin, setFormLogin] = useState();
   const [searchIsHandler, setSearchIsHandler] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [numberCart, setNumberCart] = useState(null);
-
+  const [account, setAccount] = useState({
+    "username": "",
+    "password": "",
+  });
+  const loginChangeHandler = (event) => {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+    setAccount(...account[name] =value)
+    console.log(account);
+  } 
   useEffect(() => {
     setNumberCart(props.numberCart);
   }, [props.numberCart]);
@@ -23,19 +38,32 @@ const Header = (props) => {
   };
 
   const choseLogin = () => {
+    setAccount({
+      "username": "",
+      "password": "",
+    })
     setLogin((previous) => !previous);
     loginHandler();
   };
+  const loginNow = () => {
+    if(account.username === accountAdmin.username && account.password === accountAdmin.password){
+      authCtx.onLogin("admin")
+      setLogin(false)
+    } else {
+      authCtx.onLogin("user")
+      setLogin(false)
+    }
+  }
   const loginHandler = () => {
     setFormLogin(
       <>
         <div className="title h1 text-center">Đăng nhập</div>
         <div className="row item_header-form">
           <div className="title h3">Tên đăng nhập</div>
-          <input type="text" placeholder="Enter your username" />
+          <input type="text" placeholder="Enter your username"  name="username" onChange={(e) => loginChangeHandler(e)}/>
           <div className="title h3">Mật khẩu</div>
-          <input type="password" placeholder="Enter your password" />
-          <button className="btn btn-danger">Login</button>
+          <input type="password" placeholder="Enter your password"  name="password" onChange={(e) => loginChangeHandler(e)}/>
+          <button className="btn btn-danger" onClick={loginNow}>Login</button>
         </div>
 
         <div className="row">
@@ -58,7 +86,7 @@ const Header = (props) => {
         <div className="title h1 text-center">Đăng ký tài khoản</div>
         <div className="row item_header-form">
           <div className="title h3">Tên đăng nhập</div>
-          <input type="text" placeholder="Enter your username" />
+          <input type="text" placeholder="Enter your username"/>
           <div className="title h3">Mật khẩu</div>
           <input type="password" placeholder="Enter your password" />
           <div className="title h3">Xác nhận mật khẩu</div>
@@ -102,7 +130,9 @@ const Header = (props) => {
       </>
     );
   };
-
+const logoutHandler = () => {
+  authCtx.onLogout();
+}
  
   return (
     <>
@@ -125,10 +155,16 @@ const Header = (props) => {
               <div className="col-md-6 col-sm-12 col-sm-12 topbar_right">
                 <div className="list-inline">
                   <ul>
+                    {authCtx.isLoggedIn ?
+                    <li>
+                    <i className="fas fa-lock"></i>
+                    <a onClick={logoutHandler}>Đăng xuất</a>
+                  </li>:
                     <li>
                       <i className="fas fa-lock"></i>
                       <a onClick={choseLogin}>Đăng nhập</a>
                     </li>
+                    }
                     <li>
                       <i className="fas fa-map-marker-alt"></i>
                       <a href="">Hệ thống cửa hàng</a>
