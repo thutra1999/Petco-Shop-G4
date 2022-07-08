@@ -1,19 +1,15 @@
 import "./Intro.css"
-import img04 from "../../img/banner01.png"
 
 const Intro = () => {
   return (
     <>
-      <div class="container-fluide ">
-        <div class="row content">
-          <div class="col-sm-2 sidenav">
-            {/* <!-- <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p>
-      <p><a href="#">Link</a></p> --> */}
+      <div className="container-fluide ">
+        <div className="row content">
+          <div className="col-sm-2 sidenav">
           </div>
-          <div class="col-sm-8 text-left">
+          <div className="col-sm-8 text-left">
 
-            <div class="text-left">
+            <div className="text-left">
               <h3>GIỚI THIỆU</h3>
               <h5>Cửa hàng Petco Shop</h5>
               <br></br>
@@ -63,12 +59,8 @@ const Intro = () => {
           </div>
 
         </div>
-        <div class="col-sm-2 sidenav">
+        <div className="col-sm-2 sidenav">
         </div>
-
-        {/* <div className='container-fluide'>
-          <img className='banner' src={img04} />
-        </div> */}
 
       </div>
     </>

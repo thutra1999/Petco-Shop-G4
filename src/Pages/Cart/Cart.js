@@ -12,6 +12,7 @@ import "./Cart.css";
 import { Link } from "react-router-dom";
 import success from "../../img/XliJ.gif";
 import { useForm } from "react-hook-form";
+import goShopping from "../../img/goShoping.gif"
 
 const Cart = (props) => {
   const [cartItems, setCartItems] = useState([]);
@@ -22,6 +23,8 @@ const Cart = (props) => {
     email: "",
     cart: {},
     price: "",
+    date: '',
+    status: '',
   });
   const [isBuyDone, setIsBuyDone] = useState(false);
   useEffect(() => {
@@ -131,9 +134,10 @@ const Cart = (props) => {
     const value = target.value;
     const name = target.name;
     let data = { ...products };
-    
+    let date = new Date()
     data[name] = value;
-   
+    data.date = date.toLocaleString('en-GB');
+    data.status = 'Chờ xác nhận'
     setProducts(data);
   };
 
@@ -165,18 +169,35 @@ const Cart = (props) => {
   } = useForm();
 
   const onSubmit = (data) => {
+
     if(data != null && price_bill > 0){
-     
       buyHandler();
     }
   };
 
 
   return (
+    <>
+    {price_bill === 0 ?
+       <div className="container-fluid empty-card">
+       <div className="row">
+       <div className="col">
+         <div>
+           <img src={goShopping} alt="..." />
+           <div className=" title">Không có sản phẩm nào trong giỏ hàng của bạn</div>
+         </div>
+         <Link to="/shop">
+           <button className="btn btn-danger">
+             TIẾP TỤC MUA HÀNG
+           </button>
+         </Link>
+       </div>
+       </div>
+     </div> :
     <form className="container-fluid" onSubmit={handleSubmit(onSubmit)}>
       <div className="row">
         <div className="col mt-2">
-          <h2 className="text-center">Giỏ hàng của bạn</h2>
+          <h2 className="text-center title">Giỏ hàng của bạn</h2>
           <table className="table table-striped">
             <thead>
               <tr>
@@ -333,7 +354,8 @@ const Cart = (props) => {
           </div>
         </div>
       )}
-    </form>
+    </form>}
+    </>
   );
 };
 

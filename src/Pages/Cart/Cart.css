@@ -80,8 +80,24 @@
 }
 
 .form-floating span {
-	background-color: #dd2222;
-	color: yellow;
-	position: relative;
-	top: 3%;
+	color: #dd2222;
+}
+.form-floating span::before {
+	display: inline;
+	content: "⚠ ";
+  }
+
+.empty-card {
+	margin: 50px auto;
+	text-align: center;
+}
+
+.empty-card .title {
+	font-size: 15px;
+	color: #999;
+	margin: 10px auto;
+}
+
+.empty-card .btn {
+	border-radius: 10px;
 }

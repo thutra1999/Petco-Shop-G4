@@ -1,46 +1,33 @@
 import React from "react";
-import ProductTable from "./ProductTable";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import OrderTable from "./OrderTable";
 import { Loader } from "../../Components/Loader/Loader";
+function OrderManager() {
 
-
-function Admin() {
-    const [products, setProducts] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
-    const [filter, setFilter] = useState("");
+    const [orders, setOrders] = useState([]);
+
     const [loadItem, setLoadItem] = useState(true);
     useEffect(() => {
-        
-   
-        let url = "https://62b421ada36f3a973d2c998f.mockapi.io/testShop";
+        let url_oder = "https://62b04ad2e460b79df0424941.mockapi.io/id/";
         if (searchTerm.length > 0) {
-            url = url + "?search=" + searchTerm;
+            url_oder = url_oder + "?phone=" + searchTerm;
         }
-        if (filter.length > 0) {
-            url = url + "?category=" + filter;
-        }
+
         setLoadItem(true);
-        fetch(url)
+        fetch(url_oder)
             .then((response) => response.json())
             .then((data) => {
-                setProducts(data)
+                setOrders(data);
             }).then(() => setLoadItem(false));
-    }, [searchTerm, filter]);
-
-
-    const categoryFilterHandler = (props) => {
-        setFilter(props);
-    };
-
+    }, [searchTerm]);
 
     return (
-        <>
             <div className="container">
-                <h2>Danh sách sản phẩm</h2>
+                <h2>Danh sách đơn hàng</h2>
                 <div className="row">
-                    <div className="col-sm-6">
+                <div className="col-sm-6">
                         <div className="input-group">
                             <input
                                 type="text"
@@ -55,21 +42,12 @@ function Admin() {
                             </div>
                         </div><br />
                     </div>
-                    <div className="col-sm-6">
-                        <p>
-                            <Link to={"/admin/productedit/new"}>
-                                <button className="btn btn-primary" type="button">
-                                    Thêm mới sản phẩm
-                                </button>
-                            </Link>
-                        </p>
-                    </div>
-                </div><br /><br />
-                {!loadItem ?
-                <ProductTable data={products} filter={categoryFilterHandler} />: <Loader/>}
+                    </div><br/><br/><br/>
+                    {!loadItem ?
+                    <OrderTable data={orders} />: <Loader/>}
+               
             </div>
-        </>
     )
 }
 
-export default Admin;
+export default OrderManager;

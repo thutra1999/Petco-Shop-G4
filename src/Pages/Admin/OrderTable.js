@@ -33,6 +33,8 @@ function OrderTable(props) {
         <td>{item.phone}</td>
         <td>{item.email}</td>
         <td>{item.cart.length}</td>
+        <td>{item.date}</td>
+        <td>{item.status}</td>
         
         <td>
           <Link to={"/admin/orderdetail/" + item.id}>Chi tiết đơn hàng</Link>
@@ -51,6 +53,8 @@ function OrderTable(props) {
           <th>Điện thoại</th>
           <th>Email</th>
           <th>Số lượng sản phẩm</th>
+          <th>Thời gian đặt hàng</th>
+          <th>Trạng thái</th>
           <th><br/></th>
         </tr>
       </thead>
