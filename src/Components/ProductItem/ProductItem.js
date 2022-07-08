@@ -48,7 +48,7 @@ function ProductItem(props) {
             <Link to={"/detail/" + item.id}>
               <img src={item.picture_1} className="card-img-top" alt="..." />
             </Link>
-            <ul className="side-icons">
+            {item.status == true && <ul className="side-icons">
               <span>
                 <i
                   className="fa fa-solid fa-shopping-cart"
@@ -61,23 +61,38 @@ function ProductItem(props) {
               <span>
                 <i className="fa fa-heart"></i>
               </span>
-            </ul>
+            </ul>}
+            
           </div>
           <div className="card-body container text-center">
             <Link to={"/detail/" + item.id}><h5 className="card-title">{item.name}</h5></Link>
             <br />
-            <div className="flex">
-              <div className="">
-                <span className="new_price">
-                  {(item.price * (1 - item.discount)).toLocaleString('en-US')} VND
-                </span>
-              </div>
-              <div className="">
-                {item.discount > 0 ? (
-                  <span className="old-price">{item.price.toLocaleString('en-US')} VND</span>
-                ) : <br />}
-              </div>
-            </div>
+            {item.status == true ?  <div className="flex">
+                  <div className="">
+                    <span className="new_price">
+                      {(item.price * (1 - item.discount)).toLocaleString(
+                        "en-US"
+                      )}{" "}
+                      VND
+                    </span>
+                  </div>
+                  <div className="">
+                    {item.discount > 0 ? (
+                      <span className="old-price">
+                        {item.price.toLocaleString("en-US")} VND
+                      </span>
+                    ) : (
+                      <br />
+                    )}
+                  </div>
+                </div>:  <div className="flex">
+                  <div className="">
+                    <span className="new_price">
+                      Hết hàng
+                    </span>
+                  </div>
+                  <br/>
+                </div>}
           </div>
         </div>
       </div>
