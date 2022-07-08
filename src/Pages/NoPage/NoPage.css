@@ -18,7 +18,7 @@ figure {
 	left: 50%;
 	transform: translate(-50%,-50%);
 	width: 64em;
-    /* justify-content: center; */
+    justify-content: center;
 }
 figcaption {
 	color: #fff;
@@ -26,6 +26,7 @@ figcaption {
 	align-content: space-between;
 	flex-wrap: wrap;
 	height: 17em;
+    justify-content: center;
 }
 figcaption span:before, .sad-mac:before {
 	content: "";
