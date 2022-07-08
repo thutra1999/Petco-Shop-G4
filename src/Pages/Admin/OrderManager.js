@@ -30,7 +30,7 @@ function OrderManager() {
                 <div className="col-sm-6">
                         <div className="input-group">
                             <input
-                                type="text"
+                                type="number"
                                 className="form-control"
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
