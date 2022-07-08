@@ -12,6 +12,7 @@ import "./Cart.css";
 import { Link } from "react-router-dom";
 import success from "../../img/XliJ.gif";
 import { useForm } from "react-hook-form";
+import goShopping from "../../img/goShoping.gif"
 
 const Cart = (props) => {
   const [cartItems, setCartItems] = useState([]);
@@ -24,6 +25,7 @@ const Cart = (props) => {
     price: "",
   });
   const [isBuyDone, setIsBuyDone] = useState(false);
+  const [storeIsEmpty, setStoreIsEmpty] = useState(false)
   useEffect(() => {
     setCartItems(props.store_state.Carts);
   }, [props.store_state]);
@@ -166,8 +168,10 @@ const Cart = (props) => {
 
   const onSubmit = (data) => {
     if(data != null && price_bill > 0){
-     
       buyHandler();
+    }
+    if(price_bill === 0){
+      setStoreIsEmpty(true);
     }
   };
 
@@ -333,6 +337,20 @@ const Cart = (props) => {
           </div>
         </div>
       )}
+      {storeIsEmpty && 
+       <div className="item_cart-popup-wrap">
+       <div className="item_cart-wrap text-center">
+         <div className="title h1">Giỏ hàng đang trống</div>
+         <div>
+           <img src={goShopping} alt="..." />
+         </div>
+         <Link to="/shop">
+           <button className="btn btn-danger">
+             Đi mua hàng
+           </button>
+         </Link>
+       </div>
+     </div>}
     </form>
   );
 };
