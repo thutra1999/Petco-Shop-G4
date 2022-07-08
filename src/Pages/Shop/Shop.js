@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import Preloader from '../../Components/Preloader/Preloader';
 import { Loader } from '../../Components/Loader/Loader';
 
+
 const Shop = () => {
   const [categories, setCategories] = useState(null);
   const [data, setData] = useState([]);
@@ -79,7 +80,7 @@ const Shop = () => {
 
                   <div className="sidebar__item">
                     <img
-                      src="../../side.jpg"
+                      src='../../img/a595971ea8e76bb932f6.jpg'
                       className="d-sm-none d-md-block"
                     ></img>
                   </div>
