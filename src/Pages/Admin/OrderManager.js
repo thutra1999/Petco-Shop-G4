@@ -2,31 +2,32 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import OrderTable from "./OrderTable";
-
+import { Loader } from "../../Components/Loader/Loader";
 function OrderManager() {
 
     const [searchTerm, setSearchTerm] = useState("");
     const [orders, setOrders] = useState([]);
 
+    const [loadItem, setLoadItem] = useState(true);
     useEffect(() => {
         let url_oder = "https://62b04ad2e460b79df0424941.mockapi.io/id/";
         if (searchTerm.length > 0) {
             url_oder = url_oder + "?phone=" + searchTerm;
         }
 
+        setLoadItem(true);
         fetch(url_oder)
             .then((response) => response.json())
             .then((data) => {
                 setOrders(data);
-            });
+            }).then(() => setLoadItem(false));
     }, [searchTerm]);
 
     return (
-        <>
             <div className="container">
                 <h2>Danh sách đơn hàng</h2>
                 <div className="row">
-                    <div className="col-sm-6">
+                <div className="col-sm-6">
                         <div className="input-group">
                             <input
                                 type="text"
@@ -39,12 +40,13 @@ function OrderManager() {
                                     <i className="fa fa-search"></i>
                                 </button>
                             </div>
-                        </div>
-                    </div><br/><br/><br/><br/>
-                    <OrderTable data={orders} />
-                </div>
+                        </div><br />
+                    </div>
+                    </div><br/><br/><br/>
+                    {!loadItem ?
+                    <OrderTable data={orders} />: <Loader/>}
+               
             </div>
-        </>
     )
 }
 
