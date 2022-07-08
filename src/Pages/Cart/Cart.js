@@ -24,6 +24,7 @@ const Cart = (props) => {
     cart: {},
     price: "",
     date: '',
+    status: '',
   });
   const [isBuyDone, setIsBuyDone] = useState(false);
   useEffect(() => {
@@ -134,6 +135,8 @@ const Cart = (props) => {
     const name = target.name;
     let data = { ...products };
     data[name] = value;
+    data.date = new Date();
+    data.status = 'Chờ xác nhận'
     setProducts(data);
   };
 
@@ -164,11 +167,6 @@ const Cart = (props) => {
     formState: { errors },
   } = useForm();
 
-  const setDate = () => {
-    let a = { ...products };
-    a.date = new Date();
-    setProducts(a)
-  }
   const onSubmit = (data) => {
 
     if(data != null && price_bill > 0){
@@ -195,7 +193,7 @@ const Cart = (props) => {
        </div>
        </div>
      </div> :
-    <form className="container-fluid" onSubmit={handleSubmit(onSubmit,setDate)}>
+    <form className="container-fluid" onSubmit={handleSubmit(onSubmit)}>
       <div className="row">
         <div className="col mt-2">
           <h2 className="text-center title">Giỏ hàng của bạn</h2>
