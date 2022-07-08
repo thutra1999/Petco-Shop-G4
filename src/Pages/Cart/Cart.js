@@ -26,7 +26,6 @@ const Cart = (props) => {
     date: '',
   });
   const [isBuyDone, setIsBuyDone] = useState(false);
-  const [storeIsEmpty, setStoreIsEmpty] = useState(false)
   useEffect(() => {
     setCartItems(props.store_state.Carts);
   }, [props.store_state]);
@@ -175,17 +174,31 @@ const Cart = (props) => {
     if(data != null && price_bill > 0){
       buyHandler();
     }
-    if(price_bill === 0){
-      setStoreIsEmpty(true);
-    }
   };
 
 
   return (
+    <>
+    {price_bill === 0 ?
+       <div className="container-fluid">
+       <div className="row">
+       <div className="col mt-2 text-center">
+         <div className=" title">Giỏ hàng đang trống</div>
+         <div>
+           <img src={goShopping} alt="..." />
+         </div>
+         <Link to="/shop">
+           <button className="btn btn-danger">
+             Đi mua hàng
+           </button>
+         </Link>
+       </div>
+       </div>
+     </div> :
     <form className="container-fluid" onSubmit={handleSubmit(onSubmit,setDate)}>
       <div className="row">
         <div className="col mt-2">
-          <h2 className="text-center">Giỏ hàng của bạn</h2>
+          <h2 className="text-center title">Giỏ hàng của bạn</h2>
           <table className="table table-striped">
             <thead>
               <tr>
@@ -342,21 +355,8 @@ const Cart = (props) => {
           </div>
         </div>
       )}
-      {storeIsEmpty && 
-       <div className="item_cart-popup-wrap">
-       <div className="item_cart-wrap text-center">
-         <div className="title h1">Giỏ hàng đang trống</div>
-         <div>
-           <img src={goShopping} alt="..." />
-         </div>
-         <Link to="/shop">
-           <button className="btn btn-danger">
-             Đi mua hàng
-           </button>
-         </Link>
-       </div>
-     </div>}
-    </form>
+    </form>}
+    </>
   );
 };
 
