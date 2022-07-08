@@ -182,7 +182,7 @@ const Cart = (props) => {
     {price_bill === 0 ?
        <div className="container-fluid">
        <div className="row">
-       <div className="col mt-2 text-center">
+       <div className="col">
          <div className=" title">Giỏ hàng đang trống</div>
          <div>
            <img src={goShopping} alt="..." />
