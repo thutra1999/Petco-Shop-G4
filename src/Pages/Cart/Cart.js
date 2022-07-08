@@ -78,21 +78,19 @@ const Cart = (props) => {
         <td className="text-right">
           {item.discount > 0
             ? (
-                item.price * item.quantity -
-                item.discount * item.quantity
-              ).toLocaleString("en-US")
+              item.price * item.quantity -
+              item.discount * item.quantity
+            ).toLocaleString("en-US")
             : (item.price * item.quantity).toLocaleString("en-US")}{" "}
           VNĐ
         </td>
         <td>
-          <div className="row">
-            <button
-              className="btn btn-sm btn-danger"
-              onClick={() => props.DeleteCart(key)}
-            >
-              <i className="fas fa-times"></i>
-            </button>
-          </div>
+          <button
+            className="btn btn-sm btn-danger"
+            onClick={() => props.DeleteCart(key)}
+          >
+            <i className="fas fa-times"></i>
+          </button>
         </td>
       </tr>
     ));
@@ -106,9 +104,9 @@ const Cart = (props) => {
         <span>
           {item.discount > 0
             ? (
-                item.price * item.quantity -
-                item.discount * item.quantity
-              ).toLocaleString("en-US")
+              item.price * item.quantity -
+              item.discount * item.quantity
+            ).toLocaleString("en-US")
             : (item.price * item.quantity).toLocaleString("en-US")}{" "}
           VNĐ
         </span>
@@ -145,7 +143,7 @@ const Cart = (props) => {
     let data = { ...products };
     data.cart = cartItems;
     data.price = price_bill;
-   
+
     setProducts(data);
   }, [cartItems, price_bill]);
 
@@ -170,7 +168,7 @@ const Cart = (props) => {
 
   const onSubmit = (data) => {
 
-    if(data != null && price_bill > 0){
+    if (data != null && price_bill > 0) {
       buyHandler();
     }
   };
@@ -178,183 +176,184 @@ const Cart = (props) => {
 
   return (
     <>
-    {price_bill === 0 ?
-       <div className="container-fluid empty-card">
-       <div className="row">
-       <div className="col">
-         <div>
-           <img src={goShopping} alt="..." />
-           <div className=" title">Không có sản phẩm nào trong giỏ hàng của bạn</div>
-         </div>
-         <Link to="/shop">
-           <button className="btn btn-danger">
-             TIẾP TỤC MUA HÀNG
-           </button>
-         </Link>
-       </div>
-       </div>
-     </div> :
-    <form className="container-fluid" onSubmit={handleSubmit(onSubmit)}>
-      <div className="row">
-        <div className="col mt-2">
-          <h2 className="text-center title">Giỏ hàng của bạn</h2>
-          <table className="table table-striped">
-            <thead>
-              <tr>
-                <th>STT</th>
-                <th>Số lượng</th>
-                <th>Tên sản phẩm</th>
-                <th className="text-right">Giá sản phẩm</th>
-                <th className="text-right">Giảm giá</th>
-                <th className="text-right">Thành tiền</th>
-              </tr>
-            </thead>
-            <tbody>
-              {cartItems.length == 0 ? (
-                <tr>
-                  <td colSpan="4" className="text-center">
-                    Giỏ hàng của bạn trống
-                  </td>
-                </tr>
-              ) : (
-                ""
-              )}
-              {carts_jsx}
-            </tbody>
-            <tfoot>
-              <tr>
-                <td></td>
-                <td colSpan="4" className="text-right">
-                  Tổng tiền:
-                </td>
-                <td className="text-right">
-                  {getTotal().toLocaleString("en-US")} VND
-                </td>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-      </div>
-      <br></br>
-      <br></br>
-      <div className="row">
-        <h3>Thông tin khách hàng</h3>
-
-        <div className="col-lg-6 col-md-6 col-sm-12">
-          <div className="form-floating mb-3">
-            <input
-              type="name"
-              className="form-control"
-              name="useName"
-              placeholder="Name..."
-              {...register("useName", { required: true })}
-              onChange={(e)=> handleChange(e)}
-            />
-            {errors.useName?.type === "required" && (
-              <span>Họ Tên không được bỏ trống!</span>
-            )}
-            <label htmlFor="floatingInput">Họ Tên</label>
-          </div>
-          <div className="form-floating mb-3">
-            <input
-              type="text"
-              className="form-control"
-              name="address"
-              placeholder="Address..."
-              {...register("address", { required: true })}
-              onChange={(e)=> handleChange(e)}
-            />
-            {errors.address?.type === "required" && (
-              <span>Địa Chỉ không được bỏ trống!</span>
-            )}
-            <label htmlFor="floatingPassword">Địa Chỉ</label>
-          </div>
-          <div className="form-floating mb-3">
-            <input
-              type="number"
-              className="form-control"
-              name="phone"
-              placeholder="PhoneNumber..."
-              
-              {...register("phone", {
-                required: true,
-                minLength: 10,
-                maxLength: 10,
-              })}
-
-              onChange={(e)=> handleChange(e)}
-            />
-            {errors.phone?.type === "required" && (
-              <span>Số điện thoại không được bỏ trống!</span>
-            )}
-            {errors.phone?.type === "minLength" && (
-              <span>Số điện thoại chỉ gồm 10 chữ số!</span>
-            )}
-            {errors.phone?.type === "maxLength" && (
-              <span>Số điện thoại chỉ gồm 10 chữ số!</span>
-            )}
-            <label htmlFor="floatingPassword">Số Điện Thoại</label>
-          </div>
-          <div className="form-floating mb-3">
-            <input
-              type="email"
-              className="form-control"
-              name="email"
-              placeholder="Email..."
-              
-              {...register("email", {
-                required: true,
-                pattern: /\S+@\S+\.\S+/,
-              })}
-              onChange={(e)=> handleChange(e)}
-            />
-            {errors.email?.type === "required" && (
-              <span>Email không được bỏ trống!</span>
-            )}
-            {errors.email?.type === "pattern" && (
-              <span>Email chưa chính xác!</span>
-            )}
-            <label htmlFor="floatingPassword">Email</label>
-          </div>
-        </div>
-
-        <div className="col-lg-6 col-md-6 col-sm-12">
-          <div className="checkout__order">
-            <h4>Đơn hàng của bạn</h4>
-            <div className="checkout__order__products">
-              Sản phẩm <span>Tổng</span>
-            </div>
-            <ul>{product_name_bill}</ul>
-            <div className="checkout__order__subtotal">
-              Thành tiền <span>{price_bill.toLocaleString("en-US")} VNĐ</span>
-            </div>
-            <div className="text-center">
+      {price_bill === 0 ?
+        <div className="container-fluid empty-card">
+          <div className="row">
+            <div className="col">
+              <div>
+                <img src={goShopping} alt="..." />
+                <div className=" title">Không có sản phẩm nào trong giỏ hàng của bạn</div>
+              </div>
               <Link to="/shop">
-                <button className="btn btn-primary m-1">Tiếp tục mua hàng</button>
+                <button className="btn btn-danger">
+                  TIẾP TỤC MUA HÀNG
+                </button>
               </Link>
-              <button className="btn btn-danger m-1" type="submit">
-                Thanh toán
-              </button>
             </div>
           </div>
-        </div>
-      </div>
-      {isBuyDone && (
-        <div className="item_cart-popup-wrap">
-          <div className="item_cart-wrap text-center">
-            <div className="title h1">Thanh toán thành công</div>
-            <div>
-              <img src={success} alt="..." />
+        </div> :
+        <form className="container-fluid" onSubmit={handleSubmit(onSubmit)}>
+          <div className="row">
+            <div className="col mt-2">
+              <h2 className="text-center title">Giỏ hàng của bạn</h2>
+              <table className="table table-hover">
+                <thead>
+                  <tr>
+                    <th>STT</th>
+                    <th>Số lượng</th>
+                    <th>Tên sản phẩm</th>
+                    <th className="text-right w-17">Giá sản phẩm</th>
+                    <th className="text-right w-17">Giảm giá</th>
+                    <th className="text-right w-8">Thành tiền</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {cartItems.length == 0 ? (
+                    <tr>
+                      <td colSpan="4" className="text-center">
+                        Giỏ hàng của bạn trống
+                      </td>
+                    </tr>
+                  ) : (
+                    ""
+                  )}
+                  {carts_jsx}
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td></td>
+                    <td colSpan="4" className="text-right">
+                      Tổng tiền:
+                    </td>
+                    <td className="text-right">
+                      {getTotal().toLocaleString("en-US")} VND
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
             </div>
-            <Link to="/">
-              <button className="btn btn-danger" onClick={() => props.ResetCart()}>
-                Trở về trang chủ
-              </button>
-            </Link>
           </div>
-        </div>
-      )}
-    </form>}
+          <br></br>
+          <br></br>
+          <div className="row">
+            <h3>Thông tin khách hàng</h3>
+
+            <div className="col-lg-6 col-md-6 col-sm-12">
+              <div className="form-floating mb-3">
+                <input
+                  type="name"
+                  className="form-control"
+                  name="useName"
+                  placeholder="Name..."
+                  {...register("useName", { required: true })}
+                  onChange={(e) => handleChange(e)}
+                />
+                {errors.useName?.type === "required" && (
+                  <span>Họ Tên không được bỏ trống!</span>
+                )}
+                <label htmlFor="floatingInput">Họ Tên</label>
+              </div>
+              <div className="form-floating mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+                  name="address"
+                  placeholder="Address..."
+                  {...register("address", { required: true })}
+                  onChange={(e) => handleChange(e)}
+                />
+                {errors.address?.type === "required" && (
+                  <span>Địa Chỉ không được bỏ trống!</span>
+                )}
+                <label htmlFor="floatingPassword">Địa Chỉ</label>
+              </div>
+              <div className="form-floating mb-3">
+                <input
+                  type="number"
+                  className="form-control"
+                  name="phone"
+                  placeholder="PhoneNumber..."
+
+                  {...register("phone", {
+                    required: true,
+                    minLength: 10,
+                    maxLength: 10,
+                  })}
+
+                  onChange={(e) => handleChange(e)}
+                />
+                {errors.phone?.type === "required" && (
+                  <span>Số điện thoại không được bỏ trống!</span>
+                )}
+                {errors.phone?.type === "minLength" && (
+                  <span>Số điện thoại chỉ gồm 10 chữ số!</span>
+                )}
+                {errors.phone?.type === "maxLength" && (
+                  <span>Số điện thoại chỉ gồm 10 chữ số!</span>
+                )}
+                <label htmlFor="floatingPassword">Số Điện Thoại</label>
+              </div>
+              <div className="form-floating mb-3">
+                <input
+                  type="email"
+                  className="form-control"
+                  name="email"
+                  placeholder="Email..."
+
+                  {...register("email", {
+                    required: true,
+                    pattern: /\S+@\S+\.\S+/,
+                  })}
+                  onChange={(e) => handleChange(e)}
+                />
+                {errors.email?.type === "required" && (
+                  <span>Email không được bỏ trống!</span>
+                )}
+                {errors.email?.type === "pattern" && (
+                  <span>Email chưa chính xác!</span>
+                )}
+                <label htmlFor="floatingPassword">Email</label>
+              </div>
+            </div>
+
+            <div className="col-lg-6 col-md-6 col-sm-12">
+              <div className="checkout__order">
+                <h4>Đơn hàng của bạn</h4>
+                <div className="checkout__order__products">
+                  Sản phẩm <span>Tổng</span>
+                </div>
+                <ul>{product_name_bill}</ul>
+                <div className="checkout__order__subtotal">
+                  Thành tiền <span>{price_bill.toLocaleString("en-US")} VNĐ</span>
+                </div>
+                <div className="text-center">
+                  <Link to="/shop">
+                    <button className="btn btn-primary m-1">Tiếp tục mua hàng</button>
+                  </Link>
+                  <button className="btn btn-danger m-1" type="submit">
+                    Thanh toán
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          {isBuyDone && (
+            <div className="item_cart-popup-wrap">
+              <div className="item_cart-wrap text-center">
+                <div className="title h1">Thanh toán thành công</div>
+                <div>
+                  <img src={success} alt="..." />
+                </div>
+                <Link to="/">
+                  <button className="btn btn-danger" onClick={() => props.ResetCart()}>
+                    Trở về trang chủ
+                  </button>
+                </Link>
+              </div>
+            </div>
+          )}
+        </form>}
     </>
   );
 };
