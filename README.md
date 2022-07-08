@@ -22,7 +22,7 @@ Pets like dogs and cats are becoming more and more familiar and close to humans.
 
 ## Begin with Petco Shop
 
-Petco Shop is one of the famous stores in the Haong Cau district, which opened from 2015 to present. In Petco Shop, there are extremely attentive medical and care services, and the selection of breeders is especially focused in order to improve the quality of matching.
+Petco Shop is one of the famous stores in the Hoang Cau district, which opened from 2015 to present. In Petco Shop, there are extremely attentive medical and care services, and the selection of breeders is especially focused in order to improve the quality of matching.
 Coming to Petco Shop, everyone will be able to buy quality products and receive advice on how to take care of animals. Not only providing unique accessories, but also Petco Shop also provides nutritional food, medicines, clothing and toys for cuite of your pets. We also treatment, support, assistance, and retail of pet care tools, dedicated and professional service.
 
 
