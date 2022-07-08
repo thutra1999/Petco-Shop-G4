@@ -16,7 +16,6 @@ import OrderTable from "./Pages/Admin/OrderTable";
 import UserLayout from "./Pages/UserLayout";
 import AdminLayout from "./Pages/AdminLayout";
 import ScrollToTop from "./Components/ButtonScrollTop/ScrollToTop";
-import ProductManager from "./Pages/Admin/ProductManager";
 import OrderManager from "./Pages/Admin/OrderManager";
 
 function App() {
@@ -41,7 +40,6 @@ function App() {
           <Route path="productdetail/:id" element={<ProductDetail />} />
           <Route path="ordertable" element={<OrderTable />} />
           <Route path="orderdetail/:id" element={<OrderDetail />} />
-          <Route path="productmanager" element={<ProductManager />} />
           <Route path="ordermanager" element={<OrderManager />} />
         </Route>
       </Routes>
