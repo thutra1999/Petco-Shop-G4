@@ -4,11 +4,9 @@ import React, { useState, useEffect,
 import { Link } from "react-router-dom";
 import logo from "../../img/logo/logo.png";
 import { connect } from 'react-redux';
-import { useNavigate } from "react-router-dom";
 import AuthContext from "../../usecontact/index";
 
 const Header = (props) => {
-  let navigate = useNavigate();
   const authCtx = useContext(AuthContext);
  const accountAdmin = {
   "username": "admin",
@@ -50,8 +48,7 @@ const Header = (props) => {
   const loginNow = () => {
     if(account.username === accountAdmin.username && account.password === accountAdmin.password){
       authCtx.onLogin("admin")
-      
-    navigate(-1);
+      setLogin(false)
     } else {
       authCtx.onLogin("user")
       setLogin(false)

@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Welcome to Petco Shop
+Petco Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Petco Shop was opened by members who share the same passion for pet care and nurturing. Selling at the cheapest price in the market is not the goal of Petco Shop, the quality of products and services is the first criterion.
 
-## Available Scripts
+Petco Shop aims at optimal benefits for customers by bringing the best quality products at the most reasonable prices. With the motto of creating the most convenience and comfort for customers, from providing detailed advice on types and prices to customers to delivery and customer care, Puppy Pet Shop always pays close attention. most unique.
 
-In the project directory, you can run:
+Head office: 242 Kim Ma, Ba Dinh, Hanoi - Tel: 0869125160
 
-### `npm start`
+Facility 2: 32BT8 Van Quan Residential Area, Van Quan (gateway of Ban Mai Primary School) - Tel: 0981111328
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Facility 3: 21 Tran Phu, Ha Dong, Hanoi - Tel: 09128222121
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Hotline: 0869125610
 
-### `npm test`
+Email: petcolu@gmail.com
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Introduction about Pets and Petco Shop
+Pets like dogs and cats are becoming more and more familiar and close to humans. In many families, pets are treated as a family member, bringing joy and entertainment to everyone. However, not all pet owners know the right place to find and buy quality items for their pets. Therefore, Petco Shop will introduce to customers who are pet owners the best quality pet stores in the Hoang Cau District, Hanoi !
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Begin with Petco Shop
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Petco Shop is one of the famous stores in the Haong Cau district, which opened from 2015 to present. In Petco Shop, there are extremely attentive medical and care services, and the selection of breeders is especially focused in order to improve the quality of matching.
+Coming to Petco Shop, everyone will be able to buy quality products and receive advice on how to take care of animals. Not only providing unique accessories, but also Petco Shop also provides nutritional food, medicines, clothing and toys for cuite of your pets. We also treatment, support, assistance, and retail of pet care tools, dedicated and professional service.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## More information about Petco Shop 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Established in 2015, Petco Shop was born to provide essential products for pets. At the same time, it creates a comfortable shopping online space, assisting the owner in taking care of his pet every day.
+Coming to Petco Shop, you can find:
+- Genuine products, imported from the company and reputable distributors.
+- Comfortable shopping space, spacious.
+- Friendly and enthusiastic sales and consulting staff.
+- Many incentives when shopping with attractive points policy.
+Petco Shop is growing day by day and has a large number of loyal customers thanks to its professional after-sales service, Petco Shop always wants to bring the best products for pets, provide services, purchase the most convenient service for owners and become a prestigious, popular pet goods retail brand, leading the market in convenient pet delivery.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## The reason why you should choose Petco Shop for your lovely pet
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Petco Shop is a online shop providing accessories, pet food such as clothes, food, diapers, milk, cages, leashes, sanitary sand,... At Petco Shop, everyone will be helped to find the best and safest dog accessories products from quality brands. From common food products to healthy vitamin supplements, Petco Shop offers a wide range of pet products, regardless of age or weight. Petco Shop always finds new products and effective care methods to help the owner take care of his pet.
+Commitments of Petco Shop:
+- Petco Shop provides the best quality pet products and services.
+- Develop a wide variety of services to make your pet's life fuller and happier.
+- Build and expand the storage system with the best pet utilities.
+- Work tirelessly to improve your pet's life in particular and other animals in Vietnam in general.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

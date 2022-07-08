@@ -17,7 +17,7 @@ const AdminLayout = () => {
             <div className="navbar-nav">
               <Link className="nav-link" aria-current="page" to="/admin">Quản lý sản phẩm</Link>
               <Link className="nav-link" to="/admin/ordermanager">Quản lý đơn hàng</Link>
-              <Link className="nav-link" to="/"><span onClick={() => authCtx.onLogout()}>đăng xuất</span></Link>
+              <Link className="nav-link" to="/"><span onClick={() => authCtx.onLogout()}>Đăng xuất</span></Link>
             </div>
           </div>
         </div>
