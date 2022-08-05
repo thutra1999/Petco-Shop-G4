@@ -14,7 +14,8 @@ root.render(
   <AuthContextProvider>
             <Provider store={store}>
               <App />
-            </Provider></AuthContextProvider>
+            </Provider>
+  </AuthContextProvider>
         
 );
 
